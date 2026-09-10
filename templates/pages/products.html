@@ -20,7 +20,7 @@
 <section class="section {% cycle '' 'section--alt' %}">
   <div class="wrap">
     <div class="narrow">
-      <p class="eyebrow">{{ p.kicker }}</p>
+      <p class="eyebrow"><svg class="icon icon--inline" aria-hidden="true"><use href="#i-{{ p.icon }}"></use></svg>{{ p.kicker }}</p>
       <h2>{{ p.name }}</h2>
       <p class="lede">{{ p.summary }}</p>
       <div class="product-card__outcome" style="max-width:62ch">
@@ -31,7 +31,7 @@
     <ul class="feature-list" style="margin-top:2.4rem">
       {% for f in p.features %}
       <li>
-        <h4><span class="feature-list__mark">—</span>{{ f.title }}</h4>
+        <h4><svg class="icon icon--feature" aria-hidden="true"><use href="#i-{{ f.icon }}"></use></svg>{{ f.title }}</h4>
         <p>{{ f.text }}</p>
       </li>
       {% endfor %}

@@ -63,6 +63,7 @@
     <div class="grid grid--2" style="margin-top:2rem">
       {% for d in differentiators %}
       <div class="card card--bordered">
+        <svg class="icon icon--card" aria-hidden="true"><use href="#i-{{ d.icon }}"></use></svg>
         <h3>{{ d.title }}</h3>
         <p>{{ d.text }}</p>
       </div>

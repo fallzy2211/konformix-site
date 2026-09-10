@@ -74,6 +74,7 @@
     <div class="grid grid--4" style="margin-top:2.5rem">
       {% for p in problem.pains %}
       <div class="card card--bordered reveal">
+        <svg class="icon icon--card" aria-hidden="true"><use href="#i-{{ p.icon }}"></use></svg>
         <h3>{{ p.title }}</h3>
         <p>{{ p.text }}</p>
       </div>
@@ -95,7 +96,7 @@
     <div class="grid grid--2" style="margin-top:2.5rem">
       {% for p in products %}
       <article class="product-card reveal">
-        <span class="product-card__kicker">{{ p.kicker }}</span>
+        <span class="product-card__kicker"><svg class="icon icon--inline" aria-hidden="true"><use href="#i-{{ p.icon }}"></use></svg>{{ p.kicker }}</span>
         <h3>{{ p.name }}</h3>
         <p>{{ p.summary }}</p>
         <div class="product-card__outcome"><strong>{% translate "Résultat visé" %} :</strong> {{ p.outcome }}</div>
@@ -117,6 +118,7 @@
     <div class="grid grid--2" style="margin-top:2.2rem">
       {% for d in differentiators %}
       <div class="card reveal">
+        <svg class="icon icon--card" aria-hidden="true"><use href="#i-{{ d.icon }}"></use></svg>
         <h3>{{ d.title }}</h3>
         <p>{{ d.text }}</p>
       </div>
@@ -156,6 +158,7 @@
     <div class="roles" style="margin-top:2rem">
       {% for a in audiences %}
       <div class="role">
+        <svg class="icon icon--role" aria-hidden="true"><use href="#i-{{ a.icon }}"></use></svg>
         <strong>{{ a.role }}</strong>
         <span>{{ a.need }}</span>
       </div>

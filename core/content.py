@@ -51,6 +51,7 @@ PROBLEM = {
     "pains": [
         {
             "title": _("Des dossiers KYC incomplets"),
+            "icon": "id-card",
             "text": (
                 _("Pièces d'identité expirées, professions non renseignées, "
                 "bénéficiaires effectifs absents des dossiers personnes morales. "
@@ -59,6 +60,7 @@ PROBLEM = {
         },
         {
             "title": _("Des doublons clients invisibles"),
+            "icon": "duplicate",
             "text": (
                 _("Le même client existe sous trois identités dans le core banking. "
                 "Résultat : un risque sous-évalué et des seuils de surveillance "
@@ -67,6 +69,7 @@ PROBLEM = {
         },
         {
             "title": _("Des alertes ingérables"),
+            "icon": "alert",
             "text": (
                 _("Un paramétrage par seuils fixes produit des milliers d'alertes "
                 "par mois, dont plus de 95 % de faux positifs. L'équipe conformité "
@@ -75,6 +78,7 @@ PROBLEM = {
         },
         {
             "title": _("Des contrôles non traçables"),
+            "icon": "clipboard-check",
             "text": (
                 _("Le contrôle permanent s'exécute dans des classeurs Excel non "
                 "versionnés. À l'inspection, prouver qu'un contrôle a bien été "
@@ -87,6 +91,7 @@ PROBLEM = {
 PRODUCTS = [
     {
         "key": "kontrol",
+        "icon": "shield-check",
         "name": "Konformix Kontrol",
         "kicker": _("Fiabilisation et notation des données KYC"),
         "summary": (
@@ -98,6 +103,7 @@ PRODUCTS = [
         "features": [
             {
                 "title": _("Score de fiabilité par dossier"),
+                "icon": "gauge",
                 "text": (
                     _("Chaque client reçoit une note de 0 à 100 fondée sur des règles "
                     "paramétrables : complétude, validité des pièces, cohérence "
@@ -107,6 +113,7 @@ PRODUCTS = [
             },
             {
                 "title": _("Moteur de règles sans code"),
+                "icon": "sliders",
                 "text": (
                     _("Le responsable conformité crée et teste ses propres règles de "
                     "contrôle depuis l'interface, sans passer par la DSI. Chaque "
@@ -115,6 +122,7 @@ PRODUCTS = [
             },
             {
                 "title": _("Détection de doublons"),
+                "icon": "duplicate",
                 "text": (
                     _("Rapprochement approximatif sur les noms, dates de naissance et "
                     "pièces d'identité, adapté aux graphies ouest-africaines "
@@ -123,6 +131,7 @@ PRODUCTS = [
             },
             {
                 "title": _("Campagnes de régularisation"),
+                "icon": "target",
                 "text": (
                     _("Les anomalies sont affectées aux agences ou aux chargés de "
                     "clientèle, avec échéance, relance automatique et suivi du taux "
@@ -131,6 +140,7 @@ PRODUCTS = [
             },
             {
                 "title": _("Tableau de bord direction"),
+                "icon": "chart",
                 "text": (
                     _("Évolution du score global, classement des agences, top des "
                     "anomalies, projection de la date d'atteinte de la cible. "
@@ -139,6 +149,7 @@ PRODUCTS = [
             },
             {
                 "title": _("Piste d'audit complète"),
+                "icon": "history",
                 "text": (
                     _("Qui a modifié quelle règle, quand, et quel dossier a été "
                     "régularisé par qui. Exportable au format attendu par "
@@ -149,6 +160,7 @@ PRODUCTS = [
     },
     {
         "key": "vigil",
+        "icon": "radar",
         "name": "Konformix Vigil",
         "kicker": _("Profilage des clients et surveillance des transactions"),
         "summary": (
@@ -159,6 +171,7 @@ PRODUCTS = [
         "features": [
             {
                 "title": _("Scoring de risque client"),
+                "icon": "user-shield",
                 "text": (
                     _("Notation multi-critères — pays, activité, canal de distribution, "
                     "statut PPE, structure de détention — avec pondérations "
@@ -167,6 +180,7 @@ PRODUCTS = [
             },
             {
                 "title": _("Profils comportementaux"),
+                "icon": "pulse",
                 "text": (
                     _("Chaque client dispose d'un profil transactionnel de référence "
                     "construit sur son historique. L'alerte se déclenche sur l'écart "
@@ -175,6 +189,7 @@ PRODUCTS = [
             },
             {
                 "title": _("Scénarios typologiques"),
+                "icon": "globe",
                 "text": (
                     _("Bibliothèque de scénarios calibrés sur les typologies GIABA : "
                     "fractionnement, comptes de passage, flux transfrontaliers "
@@ -184,6 +199,7 @@ PRODUCTS = [
             },
             {
                 "title": _("Filtrage des listes"),
+                "icon": "list-check",
                 "text": (
                     _("Criblage des clients et des donneurs d'ordre contre les listes "
                     "de sanctions, les listes nationales de gel des avoirs et les "
@@ -193,6 +209,7 @@ PRODUCTS = [
             },
             {
                 "title": _("Gestion du cycle d'alerte"),
+                "icon": "file-search",
                 "text": (
                     _("File d'attente priorisée, affectation, investigation "
                     "documentée, décision motivée et génération du projet de "
@@ -201,6 +218,7 @@ PRODUCTS = [
             },
             {
                 "title": _("Réduction des faux positifs"),
+                "icon": "radar",
                 "text": (
                     _("Le moteur apprend des décisions de clôture des analystes et "
                     "réordonne les alertes en conséquence — sans jamais supprimer "
@@ -214,6 +232,7 @@ PRODUCTS = [
 DIFFERENTIATORS = [
     {
         "title": _("Calibré sur la réglementation UEMOA"),
+        "icon": "scale",
         "text": (
             _("Les référentiels de contrôle sont livrés pré-paramétrés sur les "
             "instructions BCEAO n°001, 002 et 003-03-2025 et la loi uniforme du "
@@ -222,6 +241,7 @@ DIFFERENTIATORS = [
     },
     {
         "title": _("Un coût aligné sur les budgets locaux"),
+        "icon": "coins",
         "text": (
             _("Les solutions internationales sont facturées en devises fortes, avec "
             "des projets d'intégration de douze à dix-huit mois. Nous vendons en "
@@ -230,6 +250,7 @@ DIFFERENTIATORS = [
     },
     {
         "title": _("Vos données restent chez vous"),
+        "icon": "lock",
         "text": (
             _("Déploiement sur l'infrastructure de la banque ou en hébergement "
             "souverain régional. Aucune donnée client ne quitte le territoire, ce "
@@ -238,6 +259,7 @@ DIFFERENTIATORS = [
     },
     {
         "title": _("Une équipe qui a fait le métier"),
+        "icon": "team",
         "text": (
             _("Konformix est fondée par des praticiens du contrôle permanent et de "
             "la conformité bancaire en Afrique de l'Ouest. Nous connaissons la "
@@ -289,6 +311,7 @@ APPROACH_STEPS = [
 AUDIENCES = [
     {
         "role": _("Directeur de la Conformité / RCCI"),
+        "icon": "shield-check",
         "need": (
             _("Démontrer au superviseur et au conseil que le dispositif LBC/FT est "
             "effectif, mesuré et documenté.")
@@ -296,6 +319,7 @@ AUDIENCES = [
     },
     {
         "role": _("Responsable du Contrôle Permanent"),
+        "icon": "clipboard-check",
         "need": (
             _("Exécuter et tracer les contrôles de second niveau sans reconstruire "
             "un classeur Excel à chaque campagne.")
@@ -303,6 +327,7 @@ AUDIENCES = [
     },
     {
         "role": _("Directeur des Risques"),
+        "icon": "chart",
         "need": (
             _("Disposer d'une cartographie des risques clients alimentée par des "
             "données à jour plutôt que par une enquête annuelle.")
@@ -310,6 +335,7 @@ AUDIENCES = [
     },
     {
         "role": _("Directeur des Systèmes d'Information"),
+        "icon": "server",
         "need": (
             _("Ajouter une brique de conformité sans projet de refonte du core "
             "banking, avec une intégration par fichiers ou API.")

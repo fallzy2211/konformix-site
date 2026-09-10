@@ -81,6 +81,18 @@ Django (`/admin/`). Trois notes de démarrage sont fournies par
 Les demandes reçues via le formulaire de contact sont consultables dans
 l'administration, avec suivi « traité / non traité » et notes internes.
 
+## Pictogrammes
+
+Les icônes sont un sprite SVG unique, `templates/partials/icon_sprite.html`,
+inséré une fois par page et appelé par `<use href="#i-...">`. Tracé seulement,
+pas d'aplat : la couleur suit `currentColor` et se règle par les classes
+`icon--card`, `icon--inline`, `icon--feature` et `icon--role` de `site.css`.
+
+Associer une icône à un bloc de contenu se fait par la clé `icon` dans
+`core/content.py`. Ajouter une icône : un `<symbol id="i-mon-icone">` dans le
+sprite, puis `"icon": "mon-icone"`. Un test vérifie que toute clé déclarée
+correspond bien à un symbole existant.
+
 ## Traduction FR / EN
 
 Le site est bilingue : le sélecteur du pied de page bascule entre le français

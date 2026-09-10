@@ -272,11 +272,14 @@ ul, ol { margin: 0 0 1.1em; padding-left: 1.2em; }
 
 /* ---------- Tableau des interlocuteurs ---------- */
 .roles { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--surface); }
-.role { display: grid; grid-template-columns: 260px 1fr; gap: 1.2rem; padding: 1.05rem 1.25rem; }
+.role { display: grid; grid-template-columns: 1.3rem 244px 1fr; gap: 1rem; padding: 1.05rem 1.25rem; align-items: start; }
 .role + .role { border-top: 1px solid var(--line); }
 .role strong { font-size: .95rem; }
 .role span { color: var(--text-muted); font-size: .93rem; }
-@media (max-width: 700px) { .role { grid-template-columns: 1fr; gap: .3rem; } }
+@media (max-width: 700px) {
+  .role { grid-template-columns: 1.3rem 1fr; gap: .3rem .8rem; }
+  .role span { grid-column: 2; }
+}
 
 /* ---------- FAQ ---------- */
 .faq { border-top: 1px solid var(--line); }
@@ -491,4 +494,36 @@ textarea.field { resize: vertical; min-height: 100px; }
   display: inline-flex; align-items: center; gap: .3rem;
   font-size: .76rem; font-weight: 650; padding: .18rem .5rem;
   border-radius: 99px; background: #F7DFDA; color: #8E3324;
+}
+
+/* ---------- Pictogrammes ---------- */
+/* Trait uniquement : la couleur suit celle du texte, l'epaisseur reste
+   constante quelle que soit la taille rendue. */
+.icon-sprite { display: none; }
+.icon {
+  width: 1.5rem; height: 1.5rem; flex: none;
+  fill: none; stroke: currentColor; stroke-width: 1.5;
+  stroke-linecap: round; stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.icon--card {
+  width: 1.85rem; height: 1.85rem;
+  color: var(--brand); margin-bottom: .75rem;
+}
+.card--bordered .icon--card { color: var(--accent); }
+.section--ink .icon--card { color: var(--accent); }
+.icon--inline {
+  width: 1.05rem; height: 1.05rem;
+  color: var(--accent); display: inline-block;
+  vertical-align: -.16em; margin-right: .45rem;
+}
+.icon--feature {
+  width: 1.15rem; height: 1.15rem;
+  color: var(--accent); display: inline-block;
+  vertical-align: -.17em; margin-right: .5rem;
+}
+.icon--role { width: 1.3rem; height: 1.3rem; color: var(--brand-soft); margin-top: .1rem; }
+@media (prefers-reduced-motion: no-preference) {
+  .card .icon--card { transition: transform .25s ease; }
+  .card:hover .icon--card { transform: translateY(-2px); }
 }

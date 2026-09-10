@@ -1,10 +1,14 @@
+import re
 from io import StringIO
+from pathlib import Path
 
+from django.conf import settings
 from django.core import mail
 from django.core.management import call_command
 from django.test import TestCase, override_settings
 from django.urls import reverse
 
+from . import content
 from .models import Article, Lead
 
 
@@ -151,3 +155,34 @@ class TranslationTests(TestCase):
 
     def test_catalog_has_no_untranslated_string(self):
         call_command("build_translations", "--check", stdout=StringIO())
+
+
+class IconTests(TestCase):
+    """Chaque cle "icon" du contenu doit exister dans le sprite."""
+
+    def _sprite_ids(self):
+        sprite = (
+            Path(settings.BASE_DIR) / "templates" / "partials" / "icon_sprite.html"
+        ).read_text(encoding="utf-8")
+        return set(re.findall(r'<symbol id="i-([a-z-]+)"', sprite))
+
+    def test_every_declared_icon_exists(self):
+        declared = set()
+        for group in (content.PRODUCTS, content.DIFFERENTIATORS, content.AUDIENCES):
+            for item in group:
+                if item.get("icon"):
+                    declared.add(item["icon"])
+                for feature in item.get("features", []):
+                    if feature.get("icon"):
+                        declared.add(feature["icon"])
+        for pain in content.PROBLEM["pains"]:
+            declared.add(pain["icon"])
+
+        self.assertTrue(declared)
+        self.assertFalse(declared - self._sprite_ids())
+
+    def test_home_page_references_only_known_icons(self):
+        html = self.client.get(reverse("home")).content.decode()
+        used = set(re.findall(r'<use href="#i-([a-z-]*)"', html))
+        self.assertTrue(used)
+        self.assertFalse(used - self._sprite_ids())

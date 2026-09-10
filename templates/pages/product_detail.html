@@ -8,7 +8,7 @@
 
 <section class="hero" style="padding-block:clamp(2.8rem,6vw,4.5rem)">
   <div class="wrap narrow">
-    <p class="eyebrow">{{ product.kicker }}</p>
+    <p class="eyebrow"><svg class="icon icon--inline" aria-hidden="true"><use href="#i-{{ product.icon }}"></use></svg>{{ product.kicker }}</p>
     <h1>{{ product.name }}</h1>
     <p class="lede">{{ product.summary }}</p>
     <div class="product-card__outcome" style="max-width:60ch">
@@ -27,7 +27,7 @@
     <ul class="feature-list" style="margin-top:2rem">
       {% for f in product.features %}
       <li>
-        <h4><span class="feature-list__mark">—</span>{{ f.title }}</h4>
+        <h4><svg class="icon icon--feature" aria-hidden="true"><use href="#i-{{ f.icon }}"></use></svg>{{ f.title }}</h4>
         <p>{{ f.text }}</p>
       </li>
       {% endfor %}
@@ -57,7 +57,7 @@
     <div class="grid grid--2" style="margin-top:1.8rem">
       {% for p in others %}
       <article class="product-card">
-        <span class="product-card__kicker">{{ p.kicker }}</span>
+        <span class="product-card__kicker"><svg class="icon icon--inline" aria-hidden="true"><use href="#i-{{ p.icon }}"></use></svg>{{ p.kicker }}</span>
         <h3>{{ p.name }}</h3>
         <p>{{ p.summary }}</p>
         <a class="product-card__link" href="{% url 'product_detail' p.key %}">{% translate "Découvrir" %} {{ p.name }} →</a>
