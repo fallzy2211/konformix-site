@@ -1,14 +1,15 @@
 {% extends "base.html" %}
-{% block title %}Page introuvable — {{ brand.name }}{% endblock %}
+{% load i18n %}
+{% block title %}{% translate "Page introuvable" %} — {{ brand.name }}{% endblock %}
 {% block content %}
 <section class="section">
   <div class="wrap narrow center">
-    <p class="eyebrow">Erreur 404</p>
-    <h1>Cette page n'existe pas</h1>
-    <p class="lede">Le lien est peut-être obsolète. Revenez à l'accueil ou consultez nos solutions.</p>
+    <p class="eyebrow">{% translate "Erreur 404" %}</p>
+    <h1>{% translate "Cette page n'existe pas" %}</h1>
+    <p class="lede">{% blocktranslate %}Le lien est peut-être obsolète. Revenez à l'accueil ou consultez nos solutions.{% endblocktranslate %}</p>
     <div class="btn-row" style="justify-content:center;margin-top:1.5rem">
-      <a class="btn btn--primary" href="{% url 'home' %}">Accueil</a>
-      <a class="btn btn--ghost" href="{% url 'products' %}">Solutions</a>
+      <a class="btn btn--primary" href="{% url 'home' %}">{% translate "Accueil" %}</a>
+      <a class="btn btn--ghost" href="{% url 'products' %}">{% translate "Solutions" %}</a>
     </div>
   </div>
 </section>

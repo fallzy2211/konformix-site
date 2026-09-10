@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block title %}{{ article.title }} — {{ brand.name }}{% endblock %}
 {% block description %}{{ article.excerpt|truncatechars:200 }}{% endblock %}
@@ -10,7 +11,7 @@
     <p class="eyebrow">{{ article.get_category_display }}</p>
     <h1 style="font-size:clamp(1.8rem,4vw,2.6rem)">{{ article.title }}</h1>
     <p style="font-size:.86rem;color:var(--text-muted)">
-      {{ article.published_at|date:"j F Y" }} · {{ article.reading_minutes }} min de lecture
+      {{ article.published_at|date:"j F Y" }} · {{ article.reading_minutes }} {% translate "min de lecture" %}
     </p>
     <p class="lede">{{ article.excerpt }}</p>
     <div class="prose" style="margin-top:2rem">{{ article.body|safe }}</div>
@@ -20,7 +21,7 @@
 {% if related %}
 <section class="section section--alt">
   <div class="wrap">
-    <h2>À lire également</h2>
+    <h2>{% translate "À lire également" %}</h2>
     <div class="grid grid--3" style="margin-top:1.6rem">
       {% for a in related %}
       <article class="article-card">

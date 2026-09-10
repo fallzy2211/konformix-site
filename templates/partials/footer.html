@@ -8,32 +8,31 @@
           <span class="brandmark__word">{{ brand.name }}</span>
         </a>
         <p class="footer-note">
-          Éditeur de logiciels de conformité pour les banques et établissements
-          financiers d'Afrique de l'Ouest. {{ brand.address }}.
+          {% blocktranslate %}Éditeur de logiciels de conformité pour les banques et établissements financiers d'Afrique de l'Ouest.{% endblocktranslate %} {{ brand.address }}.
         </p>
       </div>
 
       <div>
-        <h4>Solutions</h4>
+        <h4>{% translate "Solutions" %}</h4>
         <ul>
           <li><a href="{% url 'product_detail' 'kontrol' %}">Konformix Kontrol</a></li>
           <li><a href="{% url 'product_detail' 'vigil' %}">Konformix Vigil</a></li>
-          <li><a href="{% url 'products' %}">Notre démarche</a></li>
+          <li><a href="{% url 'products' %}">{% translate "Notre démarche" %}</a></li>
         </ul>
       </div>
 
       <div>
-        <h4>Société</h4>
+        <h4>{% translate "Société" %}</h4>
         <ul>
-          <li><a href="{% url 'about' %}">À propos</a></li>
-          <li><a href="{% url 'resources' %}">Ressources</a></li>
-          <li><a href="{% url 'contact' %}">Contact</a></li>
+          <li><a href="{% url 'about' %}">{% translate "À propos" %}</a></li>
+          <li><a href="{% url 'resources' %}">{% translate "Ressources" %}</a></li>
+          <li><a href="{% url 'contact' %}">{% translate "Contact" %}</a></li>
           {% if brand.linkedin %}<li><a href="{{ brand.linkedin }}" rel="noopener">LinkedIn</a></li>{% endif %}
         </ul>
       </div>
 
       <div>
-        <h4>Contact</h4>
+        <h4>{% translate "Contact" %}</h4>
         <ul>
           <li><a href="mailto:{{ brand.email }}">{{ brand.email }}</a></li>
           <li><a href="tel:{{ brand.phone|cut:' ' }}">{{ brand.phone }}</a></li>
@@ -43,10 +42,10 @@
     </div>
 
     <div class="footer-bottom">
-      <div>© {% now "Y" %} {{ brand.legal_name }}. Tous droits réservés.</div>
+      <div>© {% now "Y" %} {{ brand.legal_name }}. {% translate "Tous droits réservés." %}</div>
       <div>
-        <a href="{% url 'legal' %}">Mentions légales</a> ·
-        <a href="{% url 'privacy' %}">Données personnelles</a>
+        <a href="{% url 'legal' %}">{% translate "Mentions légales" %}</a> ·
+        <a href="{% url 'privacy' %}">{% translate "Données personnelles" %}</a>
       </div>
       <form class="lang-switch" action="{% url 'set_language' %}" method="post">
         {% csrf_token %}

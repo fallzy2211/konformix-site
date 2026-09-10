@@ -1,3 +1,4 @@
+{% load i18n %}
 {% comment %}
 Graphique — escalade des mesures disciplinaires de la Commission Bancaire de l'UMOA.
 Le SVG contient les valeurs finales : sans JavaScript, le graphique s'affiche complet.
@@ -5,17 +6,14 @@ Le script ne fait qu'animer la croissance des barres et gérer l'infobulle.
 {% endcomment %}
 <figure class="figure reveal">
   <div class="figure__head">
-    <h3 class="figure__title">Le superviseur a changé de comportement en 2025</h3>
+    <h3 class="figure__title">{% translate "Le superviseur a changé de comportement en 2025" %}</h3>
     <div class="legend">
       <span><i style="background:var(--serie-a)"></i>2024</span>
       <span><i style="background:var(--serie-b)"></i>2025</span>
     </div>
   </div>
   <p class="figure__sub">
-    Mesures prononcées par la Commission Bancaire de l'UMOA à l'encontre des établissements
-    assujettis. Le nombre d'injonctions a doublé en un an, les sanctions pécuniaires ont
-    augmenté de 118 %. Les motifs récurrents : dispositif LBC/FT non conforme, contrôle
-    interne défaillant, gouvernance insuffisante.
+    {% blocktranslate %}Mesures prononcées par la Commission Bancaire de l'UMOA à l'encontre des établissements assujettis. Le nombre d'injonctions a doublé en un an, les sanctions pécuniaires ont augmenté de 118 %. Les motifs récurrents : dispositif LBC/FT non conforme, contrôle interne défaillant, gouvernance insuffisante.{% endblocktranslate %}
   </p>
 
   <div class="chart-wrap">
@@ -77,22 +75,21 @@ Le script ne fait qu'animer la croissance des barres et gérer l'infobulle.
   </div>
 
   <p class="figure__source">
-    Source : Commission Bancaire de l'UMOA — 82 missions de vérification menées en 2025
-    sur 493 assujettis, soit une probabilité de contrôle supérieure à 16 % dans l'année.
+    {% blocktranslate %}Source : Commission Bancaire de l'UMOA — 82 missions de vérification menées en 2025 sur 493 assujettis, soit une probabilité de contrôle supérieure à 16 % dans l'année.{% endblocktranslate %}
   </p>
 
   <details>
-    <summary>Voir les données sous forme de tableau</summary>
+    <summary>{% translate "Voir les données sous forme de tableau" %}</summary>
     <table>
       <caption class="hidden">Mesures disciplinaires de la Commission Bancaire de l'UMOA</caption>
       <thead>
-        <tr><th scope="col">Mesure</th><th scope="col">2024</th><th scope="col">2025</th><th scope="col">Évolution</th></tr>
+        <tr><th scope="col">{% translate "Mesure" %}</th><th scope="col">2024</th><th scope="col">2025</th><th scope="col">{% translate "Évolution" %}</th></tr>
       </thead>
       <tbody>
-        <tr><th scope="row">Injonctions</th><td>20</td><td>40</td><td>+100 %</td></tr>
-        <tr><th scope="row">Blâmes</th><td>14</td><td>30</td><td>+114 %</td></tr>
-        <tr><th scope="row">Avertissements</th><td>6</td><td>6</td><td>stable</td></tr>
-        <tr><th scope="row">Sanctions pécuniaires</th><td>16</td><td>35</td><td>+119 %</td></tr>
+        <tr><th scope="row">{% translate "Injonctions" %}</th><td>20</td><td>40</td><td>+100 %</td></tr>
+        <tr><th scope="row">{% translate "Blâmes" %}</th><td>14</td><td>30</td><td>+114 %</td></tr>
+        <tr><th scope="row">{% translate "Avertissements" %}</th><td>6</td><td>6</td><td>{% translate "stable" %}</td></tr>
+        <tr><th scope="row">{% translate "Sanctions pécuniaires" %}</th><td>16</td><td>35</td><td>+119 %</td></tr>
       </tbody>
     </table>
   </details>

@@ -1,41 +1,35 @@
 {% extends "base.html" %}
-{% block title %}Mentions légales — {{ brand.name }}{% endblock %}
+{% load i18n %}
+{% block title %}{% translate "Mentions légales" %} — {{ brand.name }}{% endblock %}
 
 {% block content %}
 <section class="section">
   <div class="wrap narrow prose">
-    <p class="eyebrow">Informations légales</p>
-    <h1>Mentions légales</h1>
+    <p class="eyebrow">{% translate "Informations légales" %}</p>
+    <h1>{% translate "Mentions légales" %}</h1>
 
-    <h2>Éditeur du site</h2>
+    <h2>{% translate "Éditeur du site" %}</h2>
     <p>
       {{ brand.legal_name }}<br>
       {{ brand.address }}<br>
-      E-mail : <a href="mailto:{{ brand.email }}">{{ brand.email }}</a><br>
-      Téléphone : {{ brand.phone }}
+      {% translate "E-mail" %} : <a href="mailto:{{ brand.email }}">{{ brand.email }}</a><br>
+      {% translate "Téléphone" %} : {{ brand.phone }}
     </p>
     <p style="color:var(--text-muted);font-size:.9rem">
-      <em>À compléter après immatriculation : numéro RCCM, NINEA, capital social,
-      nom du directeur de la publication.</em>
+      <em>{% blocktranslate %}À compléter après immatriculation : numéro RCCM, NINEA, capital social, nom du directeur de la publication.{% endblocktranslate %}</em>
     </p>
 
-    <h2>Hébergement</h2>
-    <p style="color:var(--text-muted);font-size:.9rem"><em>À compléter : raison sociale et adresse de l'hébergeur.</em></p>
+    <h2>{% translate "Hébergement" %}</h2>
+    <p style="color:var(--text-muted);font-size:.9rem"><em>{% translate "À compléter : raison sociale et adresse de l'hébergeur." %}</em></p>
 
-    <h2>Propriété intellectuelle</h2>
+    <h2>{% translate "Propriété intellectuelle" %}</h2>
     <p>
-      L'ensemble des contenus de ce site — textes, éléments graphiques, logiciels
-      présentés et marques — est la propriété de {{ brand.legal_name }} ou fait
-      l'objet d'une autorisation d'usage. Toute reproduction sans accord écrit
-      préalable est interdite.
+      {% blocktranslate with legal_name=brand.legal_name %}L'ensemble des contenus de ce site — textes, éléments graphiques, logiciels présentés et marques — est la propriété de {{ legal_name }} ou fait l'objet d'une autorisation d'usage. Toute reproduction sans accord écrit préalable est interdite.{% endblocktranslate %}
     </p>
 
-    <h2>Responsabilité</h2>
+    <h2>{% translate "Responsabilité" %}</h2>
     <p>
-      Les informations réglementaires présentées sur ce site le sont à titre
-      indicatif et ne constituent pas un conseil juridique. Elles ne sauraient se
-      substituer aux textes officiels publiés par la BCEAO, la Commission
-      Bancaire de l'UMOA ou les autorités nationales compétentes.
+      {% blocktranslate %}Les informations réglementaires présentées sur ce site le sont à titre indicatif et ne constituent pas un conseil juridique. Elles ne sauraient se substituer aux textes officiels publiés par la BCEAO, la Commission Bancaire de l'UMOA ou les autorités nationales compétentes.{% endblocktranslate %}
     </p>
   </div>
 </section>

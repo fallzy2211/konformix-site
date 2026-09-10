@@ -24,3 +24,7 @@ db.sqlite3-journal
 .idea/
 .vscode/
 *.swp
+
+# Environnement local
+.venv/
+.claude/

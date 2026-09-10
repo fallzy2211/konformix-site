@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block title %}{{ product.name }} — {{ brand.name }}{% endblock %}
 {% block description %}{{ product.summary }}{% endblock %}
@@ -11,18 +12,18 @@
     <h1>{{ product.name }}</h1>
     <p class="lede">{{ product.summary }}</p>
     <div class="product-card__outcome" style="max-width:60ch">
-      <strong>Résultat visé :</strong> {{ product.outcome }}
+      <strong>{% translate "Résultat visé" %} :</strong> {{ product.outcome }}
     </div>
     <div class="btn-row" style="margin-top:1.5rem">
-      <a class="btn btn--primary" href="{% url 'contact' %}?interet={{ product.key }}">Demander une démonstration</a>
-      <a class="btn btn--ghost" href="{% url 'products' %}">Voir toutes les solutions</a>
+      <a class="btn btn--primary" href="{% url 'contact' %}?interet={{ product.key }}">{% translate "Demander une démonstration" %}</a>
+      <a class="btn btn--ghost" href="{% url 'products' %}">{% translate "Voir toutes les solutions" %}</a>
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="narrow"><h2>Fonctionnalités</h2></div>
+    <div class="narrow"><h2>{% translate "Fonctionnalités" %}</h2></div>
     <ul class="feature-list" style="margin-top:2rem">
       {% for f in product.features %}
       <li>
@@ -36,8 +37,8 @@
 
 <section class="section section--alt">
   <div class="wrap narrow">
-    <p class="eyebrow">Questions fréquentes</p>
-    <h2>Ce que nous demandent les directions de la conformité</h2>
+    <p class="eyebrow">{% translate "Questions fréquentes" %}</p>
+    <h2>{% translate "Ce que nous demandent les directions de la conformité" %}</h2>
     <div class="faq" style="margin-top:1.6rem">
       {% for item in faq %}
       <details {% if forloop.first %}open{% endif %}>
@@ -52,14 +53,14 @@
 {% if others %}
 <section class="section">
   <div class="wrap">
-    <div class="narrow"><h2>L'autre module</h2></div>
+    <div class="narrow"><h2>{% translate "L'autre module" %}</h2></div>
     <div class="grid grid--2" style="margin-top:1.8rem">
       {% for p in others %}
       <article class="product-card">
         <span class="product-card__kicker">{{ p.kicker }}</span>
         <h3>{{ p.name }}</h3>
         <p>{{ p.summary }}</p>
-        <a class="product-card__link" href="{% url 'product_detail' p.key %}">Découvrir {{ p.name }} →</a>
+        <a class="product-card__link" href="{% url 'product_detail' p.key %}">{% translate "Découvrir" %} {{ p.name }} →</a>
       </article>
       {% endfor %}
     </div>

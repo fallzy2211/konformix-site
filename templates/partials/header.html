@@ -1,20 +1,20 @@
-{% load static %}
+{% load static i18n %}
 <header class="site-header">
   <div class="wrap site-header__inner">
-    <a class="brandmark" href="{% url 'home' %}" aria-label="{{ brand.name }} — accueil">
+    <a class="brandmark" href="{% url 'home' %}" aria-label="{{ brand.name }} — {% translate "accueil" %}">
       {% include "partials/logo.html" %}
       <span class="brandmark__word">{{ brand.name }}</span>
     </a>
 
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Ouvrir le menu">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="{% translate "Ouvrir le menu" %}">
       <span></span><span></span><span></span>
     </button>
 
-    <nav class="nav" id="primary-nav" aria-label="Navigation principale">
-      <a href="{% url 'products' %}" {% if page == 'products' %}aria-current="page"{% endif %}>Solutions</a>
-      <a href="{% url 'about' %}" {% if page == 'about' %}aria-current="page"{% endif %}>À propos</a>
-      <a href="{% url 'resources' %}" {% if page == 'resources' %}aria-current="page"{% endif %}>Ressources</a>
-      <a class="btn btn--primary nav__cta" href="{% url 'contact' %}">Demander une démo</a>
+    <nav class="nav" id="primary-nav" aria-label="{% translate "Navigation principale" %}">
+      <a href="{% url 'products' %}" {% if page == 'products' %}aria-current="page"{% endif %}>{% translate "Solutions" %}</a>
+      <a href="{% url 'about' %}" {% if page == 'about' %}aria-current="page"{% endif %}>{% translate "À propos" %}</a>
+      <a href="{% url 'resources' %}" {% if page == 'resources' %}aria-current="page"{% endif %}>{% translate "Ressources" %}</a>
+      <a class="btn btn--primary nav__cta" href="{% url 'contact' %}">{% translate "Demander une démo" %}</a>
     </nav>
   </div>
 </header>

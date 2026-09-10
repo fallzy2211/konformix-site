@@ -1,58 +1,45 @@
 {% extends "base.html" %}
-{% block title %}Données personnelles — {{ brand.name }}{% endblock %}
+{% load i18n %}
+{% block title %}{% translate "Données personnelles" %} — {{ brand.name }}{% endblock %}
 
 {% block content %}
 <section class="section">
   <div class="wrap narrow prose">
-    <p class="eyebrow">Confidentialité</p>
-    <h1>Traitement des données personnelles</h1>
+    <p class="eyebrow">{% translate "Confidentialité" %}</p>
+    <h1>{% translate "Traitement des données personnelles" %}</h1>
 
-    <h2>Responsable du traitement</h2>
+    <h2>{% translate "Responsable du traitement" %}</h2>
     <p>{{ brand.legal_name }}, {{ brand.address }} — <a href="mailto:{{ brand.email }}">{{ brand.email }}</a>.</p>
 
-    <h2>Données collectées</h2>
+    <h2>{% translate "Données collectées" %}</h2>
     <p>
-      Ce site ne collecte que les informations que vous saisissez volontairement
-      dans le formulaire de contact : nom, adresse e-mail professionnelle,
-      téléphone, établissement, fonction, pays et message. Aucun traceur
-      publicitaire n'est déposé sur votre terminal.
+      {% blocktranslate %}Ce site ne collecte que les informations que vous saisissez volontairement dans le formulaire de contact : nom, adresse e-mail professionnelle, téléphone, établissement, fonction, pays et message. Aucun traceur publicitaire n'est déposé sur votre terminal.{% endblocktranslate %}
     </p>
 
-    <h2>Finalité et base légale</h2>
+    <h2>{% translate "Finalité et base légale" %}</h2>
     <p>
-      Ces données servent exclusivement à traiter votre demande et à assurer le
-      suivi de la relation commerciale qui pourrait en découler. La base légale
-      est votre consentement, recueilli au moment de l'envoi du formulaire.
+      {% blocktranslate %}Ces données servent exclusivement à traiter votre demande et à assurer le suivi de la relation commerciale qui pourrait en découler. La base légale est votre consentement, recueilli au moment de l'envoi du formulaire.{% endblocktranslate %}
     </p>
 
-    <h2>Durée de conservation</h2>
+    <h2>{% translate "Durée de conservation" %}</h2>
     <p>
-      Trente-six mois à compter du dernier contact, sauf entrée en relation
-      contractuelle, auquel cas les durées légales de conservation s'appliquent.
+      {% blocktranslate %}Trente-six mois à compter du dernier contact, sauf entrée en relation contractuelle, auquel cas les durées légales de conservation s'appliquent.{% endblocktranslate %}
     </p>
 
-    <h2>Destinataires</h2>
+    <h2>{% translate "Destinataires" %}</h2>
     <p>
-      Les données ne sont accessibles qu'aux associés de {{ brand.legal_name }}.
-      Elles ne sont ni cédées ni louées à des tiers.
+      {% blocktranslate with legal_name=brand.legal_name %}Les données ne sont accessibles qu'aux associés de {{ legal_name }}. Elles ne sont ni cédées ni louées à des tiers.{% endblocktranslate %}
     </p>
 
-    <h2>Vos droits</h2>
+    <h2>{% translate "Vos droits" %}</h2>
     <p>
-      Conformément à la loi n°2008-12 du 25 janvier 2008 sur la protection des
-      données à caractère personnel au Sénégal, vous disposez d'un droit d'accès,
-      de rectification, d'opposition et de suppression. Pour l'exercer, écrivez à
-      <a href="mailto:{{ brand.email }}">{{ brand.email }}</a>. Vous pouvez
-      également saisir la Commission de Protection des Données Personnelles (CDP).
+      {% translate "Conformément à la loi n°2008-12 du 25 janvier 2008 sur la protection des données à caractère personnel au Sénégal, vous disposez d'un droit d'accès, de rectification, d'opposition et de suppression. Pour l'exercer, écrivez à" %}
+      <a href="mailto:{{ brand.email }}">{{ brand.email }}</a>. {% translate "Vous pouvez également saisir la Commission de Protection des Données Personnelles (CDP)." %}
     </p>
 
-    <h2>Données de nos clients bancaires</h2>
+    <h2>{% translate "Données de nos clients bancaires" %}</h2>
     <p>
-      Les données traitées dans le cadre de nos prestations logicielles font
-      l'objet d'un contrat de sous-traitance distinct. Elles restent hébergées sur
-      l'infrastructure de l'établissement client ou dans un centre de données de
-      la région, selon la configuration retenue, et ne transitent jamais par ce
-      site.
+      {% blocktranslate %}Les données traitées dans le cadre de nos prestations logicielles font l'objet d'un contrat de sous-traitance distinct. Elles restent hébergées sur l'infrastructure de l'établissement client ou dans un centre de données de la région, selon la configuration retenue, et ne transitent jamais par ce site.{% endblocktranslate %}
     </p>
   </div>
 </section>

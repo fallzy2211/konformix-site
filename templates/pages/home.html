@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block content %}
 
@@ -13,34 +14,33 @@
         <a class="btn btn--ghost" href="{% url 'products' %}">{{ hero.cta_secondary }}</a>
       </div>
       <p class="hero__note">
-        Diagnostic de fiabilité de votre référentiel client livré en deux semaines,
-        sans engagement.
+        {% blocktranslate %}Diagnostic de fiabilité de votre référentiel client livré en deux semaines, sans engagement.{% endblocktranslate %}
       </p>
     </div>
 
     <div class="mock reveal" aria-hidden="true">
       <div class="mock__bar">
         <span class="mock__dot"></span><span class="mock__dot"></span><span class="mock__dot"></span>
-        <span class="mock__title">Konformix Kontrol — Fiabilité du référentiel</span>
+        <span class="mock__title">Konformix Kontrol — {% translate "Fiabilité du référentiel" %}</span>
       </div>
       <div class="mock__body">
         <div class="mock__score">
           <b data-count="72">72</b>
-          <span>/ 100 &nbsp;·&nbsp; score global</span>
-          <span class="mock__delta">▲ 11 pts / trimestre</span>
+          <span>/ 100 &nbsp;·&nbsp; {% translate "score global" %}</span>
+          <span class="mock__delta">▲ 11 {% translate "pts / trimestre" %}</span>
         </div>
         <div class="bar"><i style="--w:72%;width:72%"></i></div>
 
         <div class="mock__rows">
-          <div class="mock__row"><span>Complétude des pièces d'identité</span><b><span data-count="91" data-suffix="&nbsp;%">91&nbsp;%</span></b></div>
-          <div class="mock__row"><span>Bénéficiaires effectifs renseignés</span><b><span data-count="54" data-suffix="&nbsp;%">54&nbsp;%</span> <span class="pill pill--risk">critique</span></b></div>
-          <div class="mock__row"><span>Dossiers mis à jour &lt; 24 mois</span><b><span data-count="68" data-suffix="&nbsp;%">68&nbsp;%</span> <span class="pill pill--warn">à suivre</span></b></div>
-          <div class="mock__row"><span>Doublons clients résolus</span><b><span data-count="1284" data-sep="1">1&nbsp;284</span> <span class="pill pill--ok">conforme</span></b></div>
+          <div class="mock__row"><span>{% translate "Complétude des pièces d'identité" %}</span><b><span data-count="91" data-suffix="&nbsp;%">91&nbsp;%</span></b></div>
+          <div class="mock__row"><span>{% translate "Bénéficiaires effectifs renseignés" %}</span><b><span data-count="54" data-suffix="&nbsp;%">54&nbsp;%</span> <span class="pill pill--risk">{% translate "critique" %}</span></b></div>
+          <div class="mock__row"><span>{% translate "Dossiers mis à jour" %} &lt; 24 {% translate "mois" %}</span><b><span data-count="68" data-suffix="&nbsp;%">68&nbsp;%</span> <span class="pill pill--warn">{% translate "à suivre" %}</span></b></div>
+          <div class="mock__row"><span>{% translate "Doublons clients résolus" %}</span><b><span data-count="1284" data-sep="1">1&nbsp;284</span> <span class="pill pill--ok">{% translate "conforme" %}</span></b></div>
         </div>
 
         <div class="bar" style="margin-top:.2rem"><i style="--w:54%;width:54%;background:var(--danger)"></i></div>
         <div class="mock__row" style="font-size:.74rem;color:var(--text-muted)">
-          <span>Campagne « BE personnes morales » — 3 agences en retard</span><b>J-14</b>
+          <span>{% translate "Campagne « BE personnes morales »" %} — 3 {% translate "agences en retard" %}</span><b>J-14</b>
         </div>
       </div>
     </div>
@@ -52,7 +52,7 @@
   <div class="stat reveal">
     <div class="stat__value" data-count="{{ s.value }}">{{ s.value }}</div>
     <div class="stat__label">{{ s.label }}</div>
-    <div class="stat__source">Source : {{ s.source }}</div>
+    <div class="stat__source">{% translate "Source" %} : {{ s.source }}</div>
   </div>
   {% endfor %}
 </div>
@@ -66,7 +66,7 @@
 <section class="section">
   <div class="wrap">
     <div class="narrow">
-      <p class="eyebrow">Le constat</p>
+      <p class="eyebrow">{% translate "Le constat" %}</p>
       <h2>{{ problem.title }}</h2>
       <p class="lede">{{ problem.intro }}</p>
     </div>
@@ -85,12 +85,10 @@
 <section class="section section--alt">
   <div class="wrap">
     <div class="narrow">
-      <p class="eyebrow">Nos deux modules</p>
-      <h2>Une plateforme, deux chantiers qui se renforcent</h2>
+      <p class="eyebrow">{% translate "Nos deux modules" %}</p>
+      <h2>{% translate "Une plateforme, deux chantiers qui se renforcent" %}</h2>
       <p class="lede">
-        Kontrol assainit la donnée ; Vigil s'en sert pour produire des alertes
-        crédibles. Les deux modules fonctionnent séparément, mais l'un décuple
-        la valeur de l'autre.
+        {% blocktranslate %}Kontrol assainit la donnée ; Vigil s'en sert pour produire des alertes crédibles. Les deux modules fonctionnent séparément, mais l'un décuple la valeur de l'autre.{% endblocktranslate %}
       </p>
     </div>
 
@@ -100,9 +98,9 @@
         <span class="product-card__kicker">{{ p.kicker }}</span>
         <h3>{{ p.name }}</h3>
         <p>{{ p.summary }}</p>
-        <div class="product-card__outcome"><strong>Résultat visé :</strong> {{ p.outcome }}</div>
+        <div class="product-card__outcome"><strong>{% translate "Résultat visé" %} :</strong> {{ p.outcome }}</div>
         <a class="product-card__link" href="{% url 'product_detail' p.key %}">
-          Découvrir {{ p.name }} →
+          {% translate "Découvrir" %} {{ p.name }} →
         </a>
       </article>
       {% endfor %}
@@ -113,8 +111,8 @@
 <section class="section">
   <div class="wrap">
     <div class="narrow">
-      <p class="eyebrow">Pourquoi nous</p>
-      <h2>Ce qui nous distingue des plateformes internationales</h2>
+      <p class="eyebrow">{% translate "Pourquoi nous" %}</p>
+      <h2>{% translate "Ce qui nous distingue des plateformes internationales" %}</h2>
     </div>
     <div class="grid grid--2" style="margin-top:2.2rem">
       {% for d in differentiators %}
@@ -130,11 +128,10 @@
 <section class="section section--ink">
   <div class="wrap">
     <div class="narrow">
-      <p class="eyebrow">Notre démarche</p>
-      <h2>Des résultats mesurables dès la deuxième semaine</h2>
+      <p class="eyebrow">{% translate "Notre démarche" %}</p>
+      <h2>{% translate "Des résultats mesurables dès la deuxième semaine" %}</h2>
       <p class="lede">
-        Nous ne vendons pas un projet de dix-huit mois. Chaque étape produit un
-        livrable exploitable, y compris si vous décidez de ne pas poursuivre.
+        {% blocktranslate %}Nous ne vendons pas un projet de dix-huit mois. Chaque étape produit un livrable exploitable, y compris si vous décidez de ne pas poursuivre.{% endblocktranslate %}
       </p>
     </div>
     <div class="steps" style="margin-top:2.5rem">
@@ -153,8 +150,8 @@
 <section class="section">
   <div class="wrap">
     <div class="narrow">
-      <p class="eyebrow">À qui nous parlons</p>
-      <h2>Quatre interlocuteurs, un même besoin de preuve</h2>
+      <p class="eyebrow">{% translate "À qui nous parlons" %}</p>
+      <h2>{% translate "Quatre interlocuteurs, un même besoin de preuve" %}</h2>
     </div>
     <div class="roles" style="margin-top:2rem">
       {% for a in audiences %}
@@ -171,15 +168,13 @@
   <div class="wrap">
     <div class="cta-band reveal">
       <div>
-        <h2>Commençons par mesurer, pas par vendre.</h2>
+        <h2>{% translate "Commençons par mesurer, pas par vendre." %}</h2>
         <p>
-          Envoyez-nous un extrait anonymisé de votre référentiel client. Nous vous
-          remettons sous deux semaines un diagnostic chiffré de sa fiabilité —
-          sans engagement de votre part.
+          {% blocktranslate %}Envoyez-nous un extrait anonymisé de votre référentiel client. Nous vous remettons sous deux semaines un diagnostic chiffré de sa fiabilité — sans engagement de votre part.{% endblocktranslate %}
         </p>
       </div>
       <div class="btn-row">
-        <a class="btn btn--accent" href="{% url 'contact' %}">Demander le diagnostic</a>
+        <a class="btn btn--accent" href="{% url 'contact' %}">{% translate "Demander le diagnostic" %}</a>
       </div>
     </div>
   </div>

@@ -1,17 +1,17 @@
 {% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}Ressources — {{ brand.name }}{% endblock %}
-{% block description %}Veille réglementaire BCEAO/GIABA et notes de méthode sur la fiabilisation des données KYC et la surveillance des transactions.{% endblock %}
+{% block title %}{% translate "Ressources" %} — {{ brand.name }}{% endblock %}
+{% block description %}{% translate "Veille réglementaire BCEAO/GIABA et notes de méthode sur la fiabilisation des données KYC et la surveillance des transactions." %}{% endblock %}
 
 {% block content %}
 
 <section class="section section--tight" style="border-bottom:1px solid var(--line)">
   <div class="wrap narrow">
-    <p class="eyebrow">Ressources</p>
-    <h1>Veille réglementaire et notes de méthode</h1>
+    <p class="eyebrow">{% translate "Ressources" %}</p>
+    <h1>{% translate "Veille réglementaire et notes de méthode" %}</h1>
     <p class="lede">
-      Ce que nous apprenons sur le terrain, mis à disposition des équipes
-      conformité et contrôle permanent de la zone.
+      {% blocktranslate %}Ce que nous apprenons sur le terrain, mis à disposition des équipes conformité et contrôle permanent de la zone.{% endblocktranslate %}
     </p>
   </div>
 </section>
@@ -26,18 +26,17 @@
         <h3><a href="{{ a.get_absolute_url }}">{{ a.title }}</a></h3>
         <p>{{ a.excerpt }}</p>
         <div class="article-card__foot">
-          {{ a.published_at|date:"j F Y" }} · {{ a.reading_minutes }} min de lecture
+          {{ a.published_at|date:"j F Y" }} · {{ a.reading_minutes }} {% translate "min de lecture" %}
         </div>
       </article>
       {% endfor %}
     </div>
     {% else %}
     <div class="card" style="max-width:60ch">
-      <h3>Premières publications en préparation</h3>
+      <h3>{% translate "Premières publications en préparation" %}</h3>
       <p>
-        Nos notes de veille sont en cours de rédaction. Écrivez-nous à
-        <a href="mailto:{{ brand.email }}">{{ brand.email }}</a> pour être prévenu
-        de leur parution.
+        {% translate "Nos notes de veille sont en cours de rédaction. Écrivez-nous à" %}
+        <a href="mailto:{{ brand.email }}">{{ brand.email }}</a> {% translate "pour être prévenu de leur parution." %}
       </p>
     </div>
     {% endif %}

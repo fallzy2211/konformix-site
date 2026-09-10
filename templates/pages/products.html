@@ -1,18 +1,17 @@
 {% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}Solutions — {{ brand.name }}{% endblock %}
-{% block description %}Konformix Kontrol fiabilise les données KYC, Konformix Vigil profile les clients et surveille les transactions. Deux modules calibrés sur la réglementation BCEAO.{% endblock %}
+{% block title %}{% translate "Solutions" %} — {{ brand.name }}{% endblock %}
+{% block description %}{% translate "Konformix Kontrol fiabilise les données KYC, Konformix Vigil profile les clients et surveille les transactions. Deux modules calibrés sur la réglementation BCEAO." %}{% endblock %}
 
 {% block content %}
 
 <section class="section section--tight" style="border-bottom:1px solid var(--line)">
   <div class="wrap narrow">
-    <p class="eyebrow">Solutions</p>
-    <h1>Deux logiciels pour un dispositif de conformité qui tient devant l'inspection</h1>
+    <p class="eyebrow">{% translate "Solutions" %}</p>
+    <h1>{% translate "Deux logiciels pour un dispositif de conformité qui tient devant l'inspection" %}</h1>
     <p class="lede">
-      Konformix couvre la chaîne complète : d'abord rendre la donnée client
-      fiable, ensuite l'exploiter pour détecter les comportements atypiques.
-      Chaque module se déploie indépendamment.
+      {% blocktranslate %}Konformix couvre la chaîne complète : d'abord rendre la donnée client fiable, ensuite l'exploiter pour détecter les comportements atypiques. Chaque module se déploie indépendamment.{% endblocktranslate %}
     </p>
   </div>
 </section>
@@ -25,7 +24,7 @@
       <h2>{{ p.name }}</h2>
       <p class="lede">{{ p.summary }}</p>
       <div class="product-card__outcome" style="max-width:62ch">
-        <strong>Résultat visé :</strong> {{ p.outcome }}
+        <strong>{% translate "Résultat visé" %} :</strong> {{ p.outcome }}
       </div>
     </div>
 
@@ -39,8 +38,8 @@
     </ul>
 
     <div class="btn-row" style="margin-top:2rem">
-      <a class="btn btn--primary" href="{% url 'product_detail' p.key %}">Fiche détaillée</a>
-      <a class="btn btn--ghost" href="{% url 'contact' %}?interet={{ p.key }}">Demander une démo de {{ p.name }}</a>
+      <a class="btn btn--primary" href="{% url 'product_detail' p.key %}">{% translate "Fiche détaillée" %}</a>
+      <a class="btn btn--ghost" href="{% url 'contact' %}?interet={{ p.key }}">{% translate "Demander une démo de" %} {{ p.name }}</a>
     </div>
   </div>
 </section>
@@ -49,8 +48,8 @@
 <section class="section section--ink">
   <div class="wrap">
     <div class="narrow">
-      <p class="eyebrow">Déploiement</p>
-      <h2>Comment se déroule un projet Konformix</h2>
+      <p class="eyebrow">{% translate "Déploiement" %}</p>
+      <h2>{% translate "Comment se déroule un projet Konformix" %}</h2>
     </div>
     <div class="steps" style="margin-top:2.5rem">
       {% for s in steps %}
@@ -69,10 +68,10 @@
   <div class="wrap">
     <div class="cta-band">
       <div>
-        <h2>Une démonstration sur vos propres données</h2>
-        <p>Nous préparons la démonstration à partir d'un extrait anonymisé de votre référentiel, pas d'un jeu de données fictif.</p>
+        <h2>{% translate "Une démonstration sur vos propres données" %}</h2>
+        <p>{% translate "Nous préparons la démonstration à partir d'un extrait anonymisé de votre référentiel, pas d'un jeu de données fictif." %}</p>
       </div>
-      <div class="btn-row"><a class="btn btn--accent" href="{% url 'contact' %}">Nous contacter</a></div>
+      <div class="btn-row"><a class="btn btn--accent" href="{% url 'contact' %}">{% translate "Nous contacter" %}</a></div>
     </div>
   </div>
 </section>

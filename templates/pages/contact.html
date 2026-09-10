@@ -1,7 +1,8 @@
 {% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}Contact & démonstration — {{ brand.name }}{% endblock %}
-{% block description %}Demandez une démonstration de Konformix Kontrol ou Konformix Vigil, ou un diagnostic de fiabilité de votre référentiel client.{% endblock %}
+{% block title %}{% translate "Contact & démonstration" %} — {{ brand.name }}{% endblock %}
+{% block description %}{% translate "Demandez une démonstration de Konformix Kontrol ou Konformix Vigil, ou un diagnostic de fiabilité de votre référentiel client." %}{% endblock %}
 
 {% block content %}
 
@@ -9,29 +10,25 @@
   <div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:start">
 
     <div>
-      <p class="eyebrow">Contact</p>
-      <h1 style="font-size:clamp(1.9rem,4vw,2.7rem)">Demander une démonstration</h1>
+      <p class="eyebrow">{% translate "Contact" %}</p>
+      <h1 style="font-size:clamp(1.9rem,4vw,2.7rem)">{% translate "Demander une démonstration" %}</h1>
       <p class="lede">
-        Décrivez-nous brièvement votre contexte. Nous revenons vers vous sous un
-        jour ouvré avec une proposition de créneau.
+        {% blocktranslate %}Décrivez-nous brièvement votre contexte. Nous revenons vers vous sous un jour ouvré avec une proposition de créneau.{% endblocktranslate %}
       </p>
 
       <div class="card" style="margin-top:1.8rem">
-        <h3>Le diagnostic de fiabilité</h3>
+        <h3>{% translate "Le diagnostic de fiabilité" %}</h3>
         <p>
-          Notre point d'entrée habituel : vous nous transmettez un extrait
-          anonymisé de votre référentiel client, nous vous remettons sous deux
-          semaines un rapport chiffré de sa qualité. Sans engagement, et
-          exploitable même si vous ne poursuivez pas avec nous.
+          {% blocktranslate %}Notre point d'entrée habituel : vous nous transmettez un extrait anonymisé de votre référentiel client, nous vous remettons sous deux semaines un rapport chiffré de sa qualité. Sans engagement, et exploitable même si vous ne poursuivez pas avec nous.{% endblocktranslate %}
         </p>
       </div>
 
       <div style="margin-top:1.8rem;font-size:.94rem;color:var(--text-muted)">
-        <p style="margin-bottom:.4rem"><strong style="color:var(--text)">E-mail</strong><br>
+        <p style="margin-bottom:.4rem"><strong style="color:var(--text)">{% translate "E-mail" %}</strong><br>
           <a href="mailto:{{ brand.email }}">{{ brand.email }}</a></p>
-        <p style="margin-bottom:.4rem"><strong style="color:var(--text)">Téléphone</strong><br>
+        <p style="margin-bottom:.4rem"><strong style="color:var(--text)">{% translate "Téléphone" %}</strong><br>
           <a href="tel:{{ brand.phone|cut:' ' }}">{{ brand.phone }}</a></p>
-        <p><strong style="color:var(--text)">Adresse</strong><br>{{ brand.address }}</p>
+        <p><strong style="color:var(--text)">{% translate "Adresse" %}</strong><br>{{ brand.address }}</p>
       </div>
     </div>
 
@@ -87,13 +84,13 @@
           <div class="form-row form-row--full">
             <label class="consent">
               {{ form.consent }}
-              <span>{{ form.consent.label }} Voir notre <a href="{% url 'privacy' %}">politique de données personnelles</a>.</span>
+              <span>{{ form.consent.label }} {% translate "Voir notre" %} <a href="{% url 'privacy' %}">{% translate "politique de données personnelles" %}</a>.</span>
             </label>
             {{ form.consent.errors }}
           </div>
         </div>
 
-        <button class="btn btn--primary" type="submit" style="margin-top:1.4rem">Envoyer ma demande</button>
+        <button class="btn btn--primary" type="submit" style="margin-top:1.4rem">{% translate "Envoyer ma demande" %}</button>
       </form>
     </div>
 
@@ -102,7 +99,7 @@
 
 <section class="section section--alt">
   <div class="wrap narrow">
-    <h2>Questions fréquentes</h2>
+    <h2>{% translate "Questions fréquentes" %}</h2>
     <div class="faq" style="margin-top:1.4rem">
       {% for item in faq %}
       <details><summary>{{ item.q }}</summary><p>{{ item.a }}</p></details>

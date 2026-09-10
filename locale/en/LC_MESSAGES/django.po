@@ -1,0 +1,1121 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: konformix-site\n"
+"POT-Creation-Date: 2026-09-10 19:11+0000\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: core/forms.py:7
+msgid "Sélectionnez un pays"
+msgstr ""
+
+#: core/forms.py:26
+msgid "Autre"
+msgstr ""
+
+#: core/forms.py:31
+msgid "Pays"
+msgstr ""
+
+#: core/forms.py:50
+msgid "Nom et prénom"
+msgstr ""
+
+#: core/forms.py:51
+msgid "E-mail professionnel"
+msgstr ""
+
+#: core/forms.py:52 templates/pages/contact.html:29 templates/pages/legal.html:16
+msgid "Téléphone"
+msgstr ""
+
+#: core/forms.py:53
+msgid "Établissement"
+msgstr ""
+
+#: core/forms.py:54
+msgid "Fonction"
+msgstr ""
+
+#: core/forms.py:55
+msgid "Votre besoin"
+msgstr ""
+
+#: core/forms.py:56
+msgid "Votre message"
+msgstr ""
+
+#: core/forms.py:57
+msgid "J'accepte que mes données soient utilisées pour traiter ma demande."
+msgstr ""
+
+#: core/forms.py:68
+msgid "Aminata Ndiaye"
+msgstr ""
+
+#: core/forms.py:69
+msgid "a.ndiaye@votrebanque.com"
+msgstr ""
+
+#: core/forms.py:70
+msgid "+221 …"
+msgstr ""
+
+#: core/forms.py:71
+msgid "Nom de votre banque ou établissement"
+msgstr ""
+
+#: core/forms.py:72
+msgid "Directeur de la Conformité"
+msgstr ""
+
+#: core/forms.py:73
+msgid "Décrivez brièvement votre contexte et votre échéance."
+msgstr ""
+
+#: core/forms.py:87
+msgid "Requête invalide."
+msgstr ""
+
+#: core/forms.py:94
+msgid "Merci de confirmer votre accord pour que nous puissions vous répondre."
+msgstr ""
+
+#: core/models.py:20
+msgid "nom complet"
+msgstr ""
+
+#: core/models.py:21
+msgid "e-mail professionnel"
+msgstr ""
+
+#: core/models.py:22
+msgid "téléphone"
+msgstr ""
+
+#: core/models.py:23
+msgid "établissement"
+msgstr ""
+
+#: core/models.py:24
+msgid "fonction"
+msgstr ""
+
+#: core/models.py:25
+msgid "pays"
+msgstr ""
+
+#: core/models.py:27
+msgid "centre d'intérêt"
+msgstr ""
+
+#: core/models.py:32
+msgid "message"
+msgstr ""
+
+#: core/models.py:34
+msgid "origine"
+msgstr ""
+
+#: core/models.py:36
+msgid "consentement au traitement des données"
+msgstr ""
+
+#: core/models.py:37
+msgid "reçu le"
+msgstr ""
+
+#: core/models.py:38
+msgid "traité"
+msgstr ""
+
+#: core/models.py:39
+msgid "notes internes"
+msgstr ""
+
+#: core/models.py:42
+msgid "demande entrante"
+msgstr ""
+
+#: core/models.py:43
+msgid "demandes entrantes"
+msgstr ""
+
+#: core/models.py:59
+msgid "titre"
+msgstr ""
+
+#: core/models.py:60
+msgid "slug"
+msgstr ""
+
+#: core/models.py:62
+msgid "catégorie"
+msgstr ""
+
+#: core/models.py:64
+msgid "chapô"
+msgstr ""
+
+#: core/models.py:65
+msgid "contenu"
+msgstr ""
+
+#: core/models.py:66
+msgid "publié le"
+msgstr ""
+
+#: core/models.py:67
+msgid "en ligne"
+msgstr ""
+
+#: core/models.py:68
+msgid "durée de lecture (min)"
+msgstr ""
+
+#: core/models.py:71
+msgid "article"
+msgstr ""
+
+#: core/models.py:72
+msgid "articles"
+msgstr ""
+
+#: core/models.py:10
+msgid "Demande de démonstration"
+msgstr ""
+
+#: core/models.py:11
+msgid "Contact général"
+msgstr ""
+
+#: core/models.py:12
+msgid "Téléchargement de ressource"
+msgstr ""
+
+#: core/models.py:15
+msgid "Fiabilisation des données KYC"
+msgstr ""
+
+#: core/models.py:16
+msgid "Profilage clients & transactions"
+msgstr ""
+
+#: core/models.py:17
+msgid "Les deux modules"
+msgstr ""
+
+#: core/models.py:18
+msgid "Autre besoin"
+msgstr ""
+
+#: core/models.py:54
+msgid "Veille réglementaire"
+msgstr ""
+
+#: core/models.py:55
+msgid "Méthode & bonnes pratiques"
+msgstr ""
+
+#: core/models.py:56
+msgid "Produit"
+msgstr ""
+
+#: core/models.py:57
+msgid "Retour d'expérience"
+msgstr ""
+
+#: core/models.py:65
+msgid "HTML simple accepté."
+msgstr ""
+
+#: core/views.py:102
+msgid "Merci, votre demande est enregistrée. Nous revenons vers vous sous un jour ouvré."
+msgstr ""
+
+#: core/content.py:11
+msgid "Logiciels de conformité pour les banques d'Afrique de l'Ouest"
+msgstr ""
+
+#: core/content.py:12
+msgid "Vos données clients sont votre premier risque de conformité."
+msgstr ""
+
+#: core/content.py:14
+msgid "Konformix industrialise deux chantiers que les banques de l'UEMOA traitent encore sous Excel : la fiabilisation des dossiers KYC et la surveillance des clients et des transactions. Conçu à Dakar, pour les exigences de la BCEAO et du GIABA."
+msgstr ""
+
+#: core/content.py:19 templates/pages/contact.html:14 templates/pages/product_detail.html:18
+msgid "Demander une démonstration"
+msgstr ""
+
+#: core/content.py:20
+msgid "Voir les deux modules"
+msgstr ""
+
+#: core/content.py:42
+msgid "Le problème n'est pas le manque de règles. C'est la qualité de la donnée."
+msgstr ""
+
+#: core/content.py:44
+msgid "Les instructions BCEAO du 18 mars 2025 ont considérablement relevé le niveau d'exigence sur l'identification du client, la connaissance du bénéficiaire effectif et le dispositif de contrôle interne. Or la plupart des établissements de la zone butent sur le même mur : un référentiel client incomplet, dupliqué et non daté, sur lequel aucun dispositif de surveillance ne peut produire de résultats fiables."
+msgstr ""
+
+#: core/content.py:26
+msgid "établissements de crédit agréés dans l'UEMOA à fin 2025"
+msgstr ""
+
+#: core/content.py:31
+msgid "nouvelles instructions BCEAO LBC/FT entrées en vigueur le 18 mars 2025"
+msgstr ""
+
+#: core/content.py:36
+msgid "pays couverts par un cadre réglementaire unique"
+msgstr ""
+
+#: core/content.py:91
+msgid "Fiabilisation et notation des données KYC"
+msgstr ""
+
+#: core/content.py:93
+msgid "Mesure en continu la qualité du référentiel client, détecte les anomalies et pilote les campagnes de régularisation jusqu'à leur clôture."
+msgstr ""
+
+#: core/content.py:97
+msgid "Passer d'un taux de complétude inconnu à un indicateur suivi mensuellement."
+msgstr ""
+
+#: core/content.py:153
+msgid "Profilage des clients et surveillance des transactions"
+msgstr ""
+
+#: core/content.py:155
+msgid "Classe les clients par niveau de risque, apprend leur comportement normal et n'alerte que sur les écarts qui méritent un examen humain."
+msgstr ""
+
+#: core/content.py:158
+msgid "Réduire le volume d'alertes tout en augmentant le taux de déclarations de soupçon pertinentes."
+msgstr ""
+
+#: core/content.py:216
+msgid "Calibré sur la réglementation UEMOA"
+msgstr ""
+
+#: core/content.py:218
+msgid "Les référentiels de contrôle sont livrés pré-paramétrés sur les instructions BCEAO n°001, 002 et 003-03-2025 et la loi uniforme du 31 mars 2023 — pas sur une réglementation européenne adaptée après coup."
+msgstr ""
+
+#: core/content.py:224
+msgid "Un coût aligné sur les budgets locaux"
+msgstr ""
+
+#: core/content.py:226
+msgid "Les solutions internationales sont facturées en devises fortes, avec des projets d'intégration de douze à dix-huit mois. Nous vendons en FCFA, avec un déploiement initial mesuré en semaines."
+msgstr ""
+
+#: core/content.py:232
+msgid "Vos données restent chez vous"
+msgstr ""
+
+#: core/content.py:234
+msgid "Déploiement sur l'infrastructure de la banque ou en hébergement souverain régional. Aucune donnée client ne quitte le territoire, ce qui règle d'emblée la question du superviseur."
+msgstr ""
+
+#: core/content.py:240
+msgid "Une équipe qui a fait le métier"
+msgstr ""
+
+#: core/content.py:242
+msgid "Konformix est fondée par des praticiens du contrôle permanent et de la conformité bancaire en Afrique de l'Ouest. Nous connaissons la réalité d'un référentiel client de core banking, pas seulement la théorie."
+msgstr ""
+
+#: core/content.py:252
+msgid "Diagnostic de fiabilité"
+msgstr ""
+
+#: core/content.py:253
+msgid "2 semaines"
+msgstr ""
+
+#: core/content.py:255
+msgid "Extraction d'un échantillon du référentiel client, mesure du taux de complétude réel et chiffrage des anomalies. Livrable : un rapport de diagnostic chiffré, utile même sans suite commerciale."
+msgstr ""
+
+#: core/content.py:262
+msgid "Pilote cadré"
+msgstr ""
+
+#: core/content.py:263
+msgid "6 à 8 semaines"
+msgstr ""
+
+#: core/content.py:265
+msgid "Déploiement sur un périmètre restreint — un segment de clientèle ou un réseau d'agences — avec des objectifs chiffrés convenus à l'avance."
+msgstr ""
+
+#: core/content.py:271
+msgid "Généralisation"
+msgstr ""
+
+#: core/content.py:272
+msgid "3 mois"
+msgstr ""
+
+#: core/content.py:274
+msgid "Extension à l'ensemble du référentiel, intégration au core banking, formation des équipes conformité et contrôle permanent."
+msgstr ""
+
+#: core/content.py:280
+msgid "Exploitation et veille"
+msgstr ""
+
+#: core/content.py:281
+msgid "en continu"
+msgstr ""
+
+#: core/content.py:283
+msgid "Mise à jour des référentiels réglementaires, ajout de scénarios, revue trimestrielle des indicateurs avec la direction de la conformité."
+msgstr ""
+
+#: core/content.py:291
+msgid "Directeur de la Conformité / RCCI"
+msgstr ""
+
+#: core/content.py:293
+msgid "Démontrer au superviseur et au conseil que le dispositif LBC/FT est effectif, mesuré et documenté."
+msgstr ""
+
+#: core/content.py:298
+msgid "Responsable du Contrôle Permanent"
+msgstr ""
+
+#: core/content.py:300
+msgid "Exécuter et tracer les contrôles de second niveau sans reconstruire un classeur Excel à chaque campagne."
+msgstr ""
+
+#: core/content.py:305
+msgid "Directeur des Risques"
+msgstr ""
+
+#: core/content.py:307
+msgid "Disposer d'une cartographie des risques clients alimentée par des données à jour plutôt que par une enquête annuelle."
+msgstr ""
+
+#: core/content.py:312
+msgid "Directeur des Systèmes d'Information"
+msgstr ""
+
+#: core/content.py:314
+msgid "Ajouter une brique de conformité sans projet de refonte du core banking, avec une intégration par fichiers ou API."
+msgstr ""
+
+#: core/content.py:322
+msgid "Faut-il remplacer notre core banking ?"
+msgstr ""
+
+#: core/content.py:324
+msgid "Non. Konformix se connecte en lecture à votre référentiel existant, par extraction de fichiers ou par API. Aucune modification de votre système de production n'est nécessaire pour démarrer."
+msgstr ""
+
+#: core/content.py:330
+msgid "Où sont hébergées les données ?"
+msgstr ""
+
+#: core/content.py:332
+msgid "Au choix : sur votre propre infrastructure, ou dans un centre de données de la région. Nous n'exportons jamais de données clients hors du périmètre que vous définissez."
+msgstr ""
+
+#: core/content.py:338
+msgid "Combien de temps avant les premiers résultats ?"
+msgstr ""
+
+#: core/content.py:340
+msgid "Le diagnostic de fiabilité produit des chiffres exploitables en deux semaines. Un pilote complet est opérationnel en six à huit semaines."
+msgstr ""
+
+#: core/content.py:345
+msgid "Comment se situe Konformix face aux solutions internationales ?"
+msgstr ""
+
+#: core/content.py:347
+msgid "Les plateformes internationales couvrent un périmètre fonctionnel plus large et conviennent aux grands groupes disposant d'une équipe projet dédiée. Nous nous adressons aux établissements qui ont besoin d'un dispositif effectif rapidement, à un coût cohérent avec un bilan de la zone, et pré-calibré sur la réglementation UEMOA."
+msgstr ""
+
+#: core/content.py:355
+msgid "Le moteur d'alerte est-il explicable ?"
+msgstr ""
+
+#: core/content.py:357
+msgid "Oui, et c'est un choix structurant. Chaque alerte affiche la règle ou le scénario qui l'a déclenchée et les valeurs en cause. Aucune décision ne repose sur un modèle que vous ne pourriez pas justifier devant un inspecteur."
+msgstr ""
+
+#: core/content.py:364
+msgid "Proposez-vous un accompagnement au-delà du logiciel ?"
+msgstr ""
+
+#: core/content.py:366
+msgid "Oui : cadrage du dispositif, rédaction des procédures associées, formation des équipes et préparation aux missions d'inspection font partie de nos prestations."
+msgstr ""
+
+#: core/content.py:376
+msgid "Cofondateur — Produit & Conformité"
+msgstr ""
+
+#: core/content.py:378
+msgid "Praticien de la conformité et du contrôle permanent en banque, concepteur de la première plateforme de notation de la fiabilité des données KYC dont Konformix Kontrol est issu."
+msgstr ""
+
+#: core/content.py:385
+msgid "Cofondateur — Technologie & Opérations"
+msgstr ""
+
+#: core/content.py:387
+msgid "En charge de l'architecture logicielle, des déploiements chez les établissements clients et de la sécurité de la plateforme."
+msgstr ""
+
+#: core/content.py:395
+msgid "Instructions BCEAO du 18 mars 2025 : ce qui change concrètement pour votre dispositif"
+msgstr ""
+
+#: core/content.py:399
+msgid "Les trois instructions adoptées le 18 mars 2025 opérationnalisent la loi uniforme UEMOA de 2023. Lecture pratique de leurs conséquences sur l'organisation de la conformité, le KYC et le contrôle interne."
+msgstr ""
+
+#: core/content.py:406
+msgid "Mesurer la fiabilité d'un référentiel KYC : la méthode en cinq indicateurs"
+msgstr ""
+
+#: core/content.py:410
+msgid "Complétude, validité, cohérence, fraîcheur, unicité. Comment construire un score de fiabilité défendable devant un inspecteur, et quels seuils viser la première année."
+msgstr ""
+
+#: core/content.py:417
+msgid "Faux positifs : pourquoi le paramétrage par seuils fixes a atteint sa limite"
+msgstr ""
+
+#: core/content.py:421
+msgid "Un seuil unique appliqué à une clientèle hétérogène génère du bruit et manque les vrais signaux. Le passage au profil comportemental, expliqué sans jargon statistique."
+msgstr ""
+
+#: core/content.py:53
+msgid "Des dossiers KYC incomplets"
+msgstr ""
+
+#: core/content.py:55
+msgid "Pièces d'identité expirées, professions non renseignées, bénéficiaires effectifs absents des dossiers personnes morales. Personne ne sait chiffrer précisément le taux de complétude."
+msgstr ""
+
+#: core/content.py:61
+msgid "Des doublons clients invisibles"
+msgstr ""
+
+#: core/content.py:63
+msgid "Le même client existe sous trois identités dans le core banking. Résultat : un risque sous-évalué et des seuils de surveillance contournés sans intention."
+msgstr ""
+
+#: core/content.py:69
+msgid "Des alertes ingérables"
+msgstr ""
+
+#: core/content.py:71
+msgid "Un paramétrage par seuils fixes produit des milliers d'alertes par mois, dont plus de 95 % de faux positifs. L'équipe conformité traite le volume, pas le risque."
+msgstr ""
+
+#: core/content.py:77
+msgid "Des contrôles non traçables"
+msgstr ""
+
+#: core/content.py:79
+msgid "Le contrôle permanent s'exécute dans des classeurs Excel non versionnés. À l'inspection, prouver qu'un contrôle a bien été réalisé — et par qui — devient un exercice périlleux."
+msgstr ""
+
+#: core/content.py:100
+msgid "Score de fiabilité par dossier"
+msgstr ""
+
+#: core/content.py:102
+msgid "Chaque client reçoit une note de 0 à 100 fondée sur des règles paramétrables : complétude, validité des pièces, cohérence inter-champs, fraîcheur de la mise à jour, présence du bénéficiaire effectif."
+msgstr ""
+
+#: core/content.py:109
+msgid "Moteur de règles sans code"
+msgstr ""
+
+#: core/content.py:111
+msgid "Le responsable conformité crée et teste ses propres règles de contrôle depuis l'interface, sans passer par la DSI. Chaque règle est versionnée et horodatée."
+msgstr ""
+
+#: core/content.py:117
+msgid "Détection de doublons"
+msgstr ""
+
+#: core/content.py:119
+msgid "Rapprochement approximatif sur les noms, dates de naissance et pièces d'identité, adapté aux graphies ouest-africaines (variantes Mamadou/Mamadu, Ndiaye/Ndiaye/Niaye, translittérations arabes)."
+msgstr ""
+
+#: core/content.py:125
+msgid "Campagnes de régularisation"
+msgstr ""
+
+#: core/content.py:127
+msgid "Les anomalies sont affectées aux agences ou aux chargés de clientèle, avec échéance, relance automatique et suivi du taux de traitement par entité."
+msgstr ""
+
+#: core/content.py:133
+msgid "Tableau de bord direction"
+msgstr ""
+
+#: core/content.py:135
+msgid "Évolution du score global, classement des agences, top des anomalies, projection de la date d'atteinte de la cible. Exportable pour le comité des risques."
+msgstr ""
+
+#: core/content.py:141
+msgid "Piste d'audit complète"
+msgstr ""
+
+#: core/content.py:143
+msgid "Qui a modifié quelle règle, quand, et quel dossier a été régularisé par qui. Exportable au format attendu par l'inspection et le contrôle permanent."
+msgstr ""
+
+#: core/content.py:161
+msgid "Scoring de risque client"
+msgstr ""
+
+#: core/content.py:163
+msgid "Notation multi-critères — pays, activité, canal de distribution, statut PPE, structure de détention — avec pondérations ajustables selon la cartographie des risques de l'établissement."
+msgstr ""
+
+#: core/content.py:169
+msgid "Profils comportementaux"
+msgstr ""
+
+#: core/content.py:171
+msgid "Chaque client dispose d'un profil transactionnel de référence construit sur son historique. L'alerte se déclenche sur l'écart au profil, pas sur un seuil universel arbitraire."
+msgstr ""
+
+#: core/content.py:177
+msgid "Scénarios typologiques"
+msgstr ""
+
+#: core/content.py:179
+msgid "Bibliothèque de scénarios calibrés sur les typologies GIABA : fractionnement, comptes de passage, flux transfrontaliers atypiques, écarts entre activité déclarée et flux constatés, mobile money vers compte bancaire."
+msgstr ""
+
+#: core/content.py:186
+msgid "Filtrage des listes"
+msgstr ""
+
+#: core/content.py:188
+msgid "Criblage des clients et des donneurs d'ordre contre les listes de sanctions, les listes nationales de gel des avoirs et les bases de personnes politiquement exposées, avec gestion des homonymies."
+msgstr ""
+
+#: core/content.py:195
+msgid "Gestion du cycle d'alerte"
+msgstr ""
+
+#: core/content.py:197
+msgid "File d'attente priorisée, affectation, investigation documentée, décision motivée et génération du projet de déclaration de soupçon à destination de la CENTIF."
+msgstr ""
+
+#: core/content.py:203
+msgid "Réduction des faux positifs"
+msgstr ""
+
+#: core/content.py:205
+msgid "Le moteur apprend des décisions de clôture des analystes et réordonne les alertes en conséquence — sans jamais supprimer automatiquement une alerte, pour rester explicable en contrôle."
+msgstr ""
+
+#: templates/base.html:40
+msgid "Aller au contenu"
+msgstr ""
+
+#: templates/pages/404.html:3
+msgid "Page introuvable"
+msgstr ""
+
+#: templates/pages/404.html:7
+msgid "Erreur 404"
+msgstr ""
+
+#: templates/pages/404.html:11
+msgid "Accueil"
+msgstr ""
+
+#: templates/pages/404.html:12 templates/pages/products.html:4 templates/pages/products.html:11 templates/partials/footer.html:16 templates/partials/header.html:14
+msgid "Solutions"
+msgstr ""
+
+#: templates/pages/404.html:9
+msgid "Le lien est peut-être obsolète. Revenez à l'accueil ou consultez nos solutions."
+msgstr ""
+
+#: templates/pages/about.html:4 templates/pages/about.html:11 templates/partials/footer.html:27 templates/partials/header.html:15
+msgid "À propos"
+msgstr ""
+
+#: templates/pages/about.html:21
+msgid "Notre conviction"
+msgstr ""
+
+#: templates/pages/about.html:32
+msgid "Ce que nous ne faisons pas"
+msgstr ""
+
+#: templates/pages/about.html:43
+msgid "Deux associés, une expérience du terrain bancaire"
+msgstr ""
+
+#: templates/pages/about.html:60
+msgid "Nos engagements"
+msgstr ""
+
+#: templates/pages/about.html:61
+msgid "Quatre principes que nous tenons"
+msgstr ""
+
+#: templates/pages/about.html:78
+msgid "Parlons de votre dispositif"
+msgstr ""
+
+#: templates/pages/about.html:79
+msgid "Un échange de trente minutes suffit à savoir si nous pouvons vous être utiles."
+msgstr ""
+
+#: templates/pages/about.html:81
+msgid "Prendre contact"
+msgstr ""
+
+#: templates/pages/about.html:14
+msgid "Konformix est née d'un constat fait de l'intérieur : dans la plupart des banques de la zone, la conformité produit des rapports, pas des mesures. Faute d'un référentiel client fiable, les dispositifs les plus coûteux restent déclaratifs."
+msgstr ""
+
+#: templates/pages/about.html:23
+msgid "Depuis l'entrée en vigueur des instructions BCEAO du 18 mars 2025, le superviseur n'attend plus une procédure écrite : il attend la preuve que le dispositif fonctionne. Cette preuve est nécessairement chiffrée, datée et traçable. Elle repose donc entièrement sur la qualité de la donnée client."
+msgstr ""
+
+#: templates/pages/about.html:26
+msgid "Un dispositif de surveillance greffé sur un référentiel client non fiabilisé produit du volume, pas de la détection."
+msgstr ""
+
+#: templates/pages/about.html:29
+msgid "C'est pourquoi nous avons choisi de commencer par la fiabilisation des données avant de proposer le profilage. L'ordre n'est pas commercial, il est méthodologique."
+msgstr ""
+
+#: templates/pages/about.html:34
+msgid "Nous ne prétendons pas remplacer les plateformes internationales sur toute leur étendue fonctionnelle. Nous ne vendons pas de modèle d'intelligence artificielle dont les décisions ne pourraient pas être expliquées à un inspecteur. Et nous ne demandons jamais qu'une donnée client quitte le territoire où elle a été collectée."
+msgstr ""
+
+#: templates/pages/article_detail.html:14 templates/pages/resources.html:29
+msgid "min de lecture"
+msgstr ""
+
+#: templates/pages/article_detail.html:24
+msgid "À lire également"
+msgstr ""
+
+#: templates/pages/contact.html:4
+msgid "Contact & démonstration"
+msgstr ""
+
+#: templates/pages/contact.html:5
+msgid "Demandez une démonstration de Konformix Kontrol ou Konformix Vigil, ou un diagnostic de fiabilité de votre référentiel client."
+msgstr ""
+
+#: templates/pages/contact.html:13 templates/partials/footer.html:29 templates/partials/footer.html:35
+msgid "Contact"
+msgstr ""
+
+#: templates/pages/contact.html:20
+msgid "Le diagnostic de fiabilité"
+msgstr ""
+
+#: templates/pages/contact.html:27 templates/pages/legal.html:15
+msgid "E-mail"
+msgstr ""
+
+#: templates/pages/contact.html:31
+msgid "Adresse"
+msgstr ""
+
+#: templates/pages/contact.html:87
+msgid "Voir notre"
+msgstr ""
+
+#: templates/pages/contact.html:87
+msgid "politique de données personnelles"
+msgstr ""
+
+#: templates/pages/contact.html:93
+msgid "Envoyer ma demande"
+msgstr ""
+
+#: templates/pages/contact.html:102 templates/pages/product_detail.html:40
+msgid "Questions fréquentes"
+msgstr ""
+
+#: templates/pages/contact.html:16
+msgid "Décrivez-nous brièvement votre contexte. Nous revenons vers vous sous un jour ouvré avec une proposition de créneau."
+msgstr ""
+
+#: templates/pages/contact.html:22
+msgid "Notre point d'entrée habituel : vous nous transmettez un extrait anonymisé de votre référentiel client, nous vous remettons sous deux semaines un rapport chiffré de sa qualité. Sans engagement, et exploitable même si vous ne poursuivez pas avec nous."
+msgstr ""
+
+#: templates/pages/home.html:24
+msgid "Fiabilité du référentiel"
+msgstr ""
+
+#: templates/pages/home.html:29
+msgid "score global"
+msgstr ""
+
+#: templates/pages/home.html:30
+msgid "pts / trimestre"
+msgstr ""
+
+#: templates/pages/home.html:36
+msgid "Bénéficiaires effectifs renseignés"
+msgstr ""
+
+#: templates/pages/home.html:36
+msgid "critique"
+msgstr ""
+
+#: templates/pages/home.html:37
+msgid "Dossiers mis à jour"
+msgstr ""
+
+#: templates/pages/home.html:37
+msgid "mois"
+msgstr ""
+
+#: templates/pages/home.html:37
+msgid "à suivre"
+msgstr ""
+
+#: templates/pages/home.html:38
+msgid "Doublons clients résolus"
+msgstr ""
+
+#: templates/pages/home.html:38
+msgid "conforme"
+msgstr ""
+
+#: templates/pages/home.html:43
+msgid "Campagne « BE personnes morales »"
+msgstr ""
+
+#: templates/pages/home.html:43
+msgid "agences en retard"
+msgstr ""
+
+#: templates/pages/home.html:55
+msgid "Source"
+msgstr ""
+
+#: templates/pages/home.html:69
+msgid "Le constat"
+msgstr ""
+
+#: templates/pages/home.html:88
+msgid "Nos deux modules"
+msgstr ""
+
+#: templates/pages/home.html:89
+msgid "Une plateforme, deux chantiers qui se renforcent"
+msgstr ""
+
+#: templates/pages/home.html:101 templates/pages/product_detail.html:15 templates/pages/products.html:27
+msgid "Résultat visé"
+msgstr ""
+
+#: templates/pages/home.html:103 templates/pages/product_detail.html:63
+msgid "Découvrir"
+msgstr ""
+
+#: templates/pages/home.html:114
+msgid "Pourquoi nous"
+msgstr ""
+
+#: templates/pages/home.html:115
+msgid "Ce qui nous distingue des plateformes internationales"
+msgstr ""
+
+#: templates/pages/home.html:131 templates/partials/footer.html:20
+msgid "Notre démarche"
+msgstr ""
+
+#: templates/pages/home.html:132
+msgid "Des résultats mesurables dès la deuxième semaine"
+msgstr ""
+
+#: templates/pages/home.html:153
+msgid "À qui nous parlons"
+msgstr ""
+
+#: templates/pages/home.html:154
+msgid "Quatre interlocuteurs, un même besoin de preuve"
+msgstr ""
+
+#: templates/pages/home.html:171
+msgid "Commençons par mesurer, pas par vendre."
+msgstr ""
+
+#: templates/pages/home.html:177
+msgid "Demander le diagnostic"
+msgstr ""
+
+#: templates/pages/home.html:17
+msgid "Diagnostic de fiabilité de votre référentiel client livré en deux semaines, sans engagement."
+msgstr ""
+
+#: templates/pages/home.html:91
+msgid "Kontrol assainit la donnée ; Vigil s'en sert pour produire des alertes crédibles. Les deux modules fonctionnent séparément, mais l'un décuple la valeur de l'autre."
+msgstr ""
+
+#: templates/pages/home.html:134
+msgid "Nous ne vendons pas un projet de dix-huit mois. Chaque étape produit un livrable exploitable, y compris si vous décidez de ne pas poursuivre."
+msgstr ""
+
+#: templates/pages/home.html:173
+msgid "Envoyez-nous un extrait anonymisé de votre référentiel client. Nous vous remettons sous deux semaines un diagnostic chiffré de sa fiabilité — sans engagement de votre part."
+msgstr ""
+
+#: templates/pages/legal.html:3 templates/pages/legal.html:9 templates/partials/footer.html:47
+msgid "Mentions légales"
+msgstr ""
+
+#: templates/pages/legal.html:8
+msgid "Informations légales"
+msgstr ""
+
+#: templates/pages/legal.html:11
+msgid "Éditeur du site"
+msgstr ""
+
+#: templates/pages/legal.html:22
+msgid "Hébergement"
+msgstr ""
+
+#: templates/pages/legal.html:25
+msgid "Propriété intellectuelle"
+msgstr ""
+
+#: templates/pages/legal.html:30
+msgid "Responsabilité"
+msgstr ""
+
+#: templates/pages/legal.html:19
+msgid "À compléter après immatriculation : numéro RCCM, NINEA, capital social, nom du directeur de la publication."
+msgstr ""
+
+#: templates/pages/legal.html:32
+msgid "Les informations réglementaires présentées sur ce site le sont à titre indicatif et ne constituent pas un conseil juridique. Elles ne sauraient se substituer aux textes officiels publiés par la BCEAO, la Commission Bancaire de l'UMOA ou les autorités nationales compétentes."
+msgstr ""
+
+#: templates/pages/privacy.html:3 templates/partials/footer.html:48
+msgid "Données personnelles"
+msgstr ""
+
+#: templates/pages/privacy.html:8
+msgid "Confidentialité"
+msgstr ""
+
+#: templates/pages/privacy.html:9
+msgid "Traitement des données personnelles"
+msgstr ""
+
+#: templates/pages/privacy.html:11
+msgid "Responsable du traitement"
+msgstr ""
+
+#: templates/pages/privacy.html:14
+msgid "Données collectées"
+msgstr ""
+
+#: templates/pages/privacy.html:19
+msgid "Finalité et base légale"
+msgstr ""
+
+#: templates/pages/privacy.html:24
+msgid "Durée de conservation"
+msgstr ""
+
+#: templates/pages/privacy.html:29
+msgid "Destinataires"
+msgstr ""
+
+#: templates/pages/privacy.html:34
+msgid "Vos droits"
+msgstr ""
+
+#: templates/pages/privacy.html:37
+msgid "Vous pouvez également saisir la Commission de Protection des Données Personnelles (CDP)."
+msgstr ""
+
+#: templates/pages/privacy.html:40
+msgid "Données de nos clients bancaires"
+msgstr ""
+
+#: templates/pages/privacy.html:16
+msgid "Ce site ne collecte que les informations que vous saisissez volontairement dans le formulaire de contact : nom, adresse e-mail professionnelle, téléphone, établissement, fonction, pays et message. Aucun traceur publicitaire n'est déposé sur votre terminal."
+msgstr ""
+
+#: templates/pages/privacy.html:21
+msgid "Ces données servent exclusivement à traiter votre demande et à assurer le suivi de la relation commerciale qui pourrait en découler. La base légale est votre consentement, recueilli au moment de l'envoi du formulaire."
+msgstr ""
+
+#: templates/pages/privacy.html:26
+msgid "Trente-six mois à compter du dernier contact, sauf entrée en relation contractuelle, auquel cas les durées légales de conservation s'appliquent."
+msgstr ""
+
+#: templates/pages/privacy.html:42
+msgid "Les données traitées dans le cadre de nos prestations logicielles font l'objet d'un contrat de sous-traitance distinct. Elles restent hébergées sur l'infrastructure de l'établissement client ou dans un centre de données de la région, selon la configuration retenue, et ne transitent jamais par ce site."
+msgstr ""
+
+#: templates/pages/product_detail.html:19
+msgid "Voir toutes les solutions"
+msgstr ""
+
+#: templates/pages/product_detail.html:26
+msgid "Fonctionnalités"
+msgstr ""
+
+#: templates/pages/product_detail.html:41
+msgid "Ce que nous demandent les directions de la conformité"
+msgstr ""
+
+#: templates/pages/products.html:5
+msgid "Konformix Kontrol fiabilise les données KYC, Konformix Vigil profile les clients et surveille les transactions. Deux modules calibrés sur la réglementation BCEAO."
+msgstr ""
+
+#: templates/pages/products.html:41
+msgid "Fiche détaillée"
+msgstr ""
+
+#: templates/pages/products.html:42
+msgid "Demander une démo de"
+msgstr ""
+
+#: templates/pages/products.html:51
+msgid "Déploiement"
+msgstr ""
+
+#: templates/pages/products.html:52
+msgid "Comment se déroule un projet Konformix"
+msgstr ""
+
+#: templates/pages/products.html:71
+msgid "Une démonstration sur vos propres données"
+msgstr ""
+
+#: templates/pages/products.html:74
+msgid "Nous contacter"
+msgstr ""
+
+#: templates/pages/products.html:14
+msgid "Konformix couvre la chaîne complète : d'abord rendre la donnée client fiable, ensuite l'exploiter pour détecter les comportements atypiques. Chaque module se déploie indépendamment."
+msgstr ""
+
+#: templates/pages/resources.html:4 templates/pages/resources.html:11 templates/partials/footer.html:28 templates/partials/header.html:16
+msgid "Ressources"
+msgstr ""
+
+#: templates/pages/resources.html:5
+msgid "Veille réglementaire BCEAO/GIABA et notes de méthode sur la fiabilisation des données KYC et la surveillance des transactions."
+msgstr ""
+
+#: templates/pages/resources.html:12
+msgid "Veille réglementaire et notes de méthode"
+msgstr ""
+
+#: templates/pages/resources.html:36
+msgid "Premières publications en préparation"
+msgstr ""
+
+#: templates/pages/resources.html:38
+msgid "Nos notes de veille sont en cours de rédaction. Écrivez-nous à"
+msgstr ""
+
+#: templates/pages/resources.html:39
+msgid "pour être prévenu de leur parution."
+msgstr ""
+
+#: templates/pages/resources.html:14
+msgid "Ce que nous apprenons sur le terrain, mis à disposition des équipes conformité et contrôle permanent de la zone."
+msgstr ""
+
+#: templates/partials/chart_sanctions.html:9
+msgid "Le superviseur a changé de comportement en 2025"
+msgstr ""
+
+#: templates/partials/chart_sanctions.html:82
+msgid "Voir les données sous forme de tableau"
+msgstr ""
+
+#: templates/partials/chart_sanctions.html:86
+msgid "Mesure"
+msgstr ""
+
+#: templates/partials/chart_sanctions.html:86
+msgid "Évolution"
+msgstr ""
+
+#: templates/partials/chart_sanctions.html:89
+msgid "Injonctions"
+msgstr ""
+
+#: templates/partials/chart_sanctions.html:90
+msgid "Blâmes"
+msgstr ""
+
+#: templates/partials/chart_sanctions.html:91
+msgid "Avertissements"
+msgstr ""
+
+#: templates/partials/chart_sanctions.html:91
+msgid "stable"
+msgstr ""
+
+#: templates/partials/chart_sanctions.html:92
+msgid "Sanctions pécuniaires"
+msgstr ""
+
+#: templates/partials/chart_sanctions.html:16
+msgid "Mesures prononcées par la Commission Bancaire de l'UMOA à l'encontre des établissements assujettis. Le nombre d'injonctions a doublé en un an, les sanctions pécuniaires ont augmenté de 118 %. Les motifs récurrents : dispositif LBC/FT non conforme, contrôle interne défaillant, gouvernance insuffisante."
+msgstr ""
+
+#: templates/partials/chart_sanctions.html:78
+msgid "Source : Commission Bancaire de l'UMOA — 82 missions de vérification menées en 2025 sur 493 assujettis, soit une probabilité de contrôle supérieure à 16 % dans l'année."
+msgstr ""
+
+#: templates/partials/footer.html:25
+msgid "Société"
+msgstr ""
+
+#: templates/partials/footer.html:45
+msgid "Tous droits réservés."
+msgstr ""
+
+#: templates/partials/footer.html:11
+msgid "Éditeur de logiciels de conformité pour les banques et établissements financiers d'Afrique de l'Ouest."
+msgstr ""
+
+#: templates/partials/header.html:4
+msgid "accueil"
+msgstr ""
+
+#: templates/partials/header.html:9
+msgid "Ouvrir le menu"
+msgstr ""
+
+#: templates/partials/header.html:13
+msgid "Navigation principale"
+msgstr ""
+
+#: templates/partials/header.html:17
+msgid "Demander une démo"
+msgstr ""
