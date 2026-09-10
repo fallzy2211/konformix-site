@@ -1,5 +1,5 @@
 {% load static i18n %}<!DOCTYPE html>
-<html lang="{{ LANGUAGE_CODE|default:'fr' }}">
+{% get_current_language as LANG %}<html lang="{{ LANG|default:'fr' }}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">

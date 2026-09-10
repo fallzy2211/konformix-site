@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: konformix-site\n"
-"POT-Creation-Date: 2026-09-10 19:11+0000\n"
+"POT-Creation-Date: 2026-09-10 19:12+0000\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -10,1112 +10,1120 @@ msgstr ""
 
 #: core/forms.py:7
 msgid "Sélectionnez un pays"
-msgstr ""
+msgstr "Select a country"
 
 #: core/forms.py:26
 msgid "Autre"
-msgstr ""
+msgstr "Other"
 
 #: core/forms.py:31
 msgid "Pays"
-msgstr ""
+msgstr "Country"
 
 #: core/forms.py:50
 msgid "Nom et prénom"
-msgstr ""
+msgstr "Full name"
 
 #: core/forms.py:51
 msgid "E-mail professionnel"
-msgstr ""
+msgstr "Work e-mail"
 
 #: core/forms.py:52 templates/pages/contact.html:29 templates/pages/legal.html:16
 msgid "Téléphone"
-msgstr ""
+msgstr "Phone"
 
 #: core/forms.py:53
 msgid "Établissement"
-msgstr ""
+msgstr "Institution"
 
 #: core/forms.py:54
 msgid "Fonction"
-msgstr ""
+msgstr "Job title"
 
 #: core/forms.py:55
 msgid "Votre besoin"
-msgstr ""
+msgstr "What you need"
 
 #: core/forms.py:56
 msgid "Votre message"
-msgstr ""
+msgstr "Your message"
 
 #: core/forms.py:57
 msgid "J'accepte que mes données soient utilisées pour traiter ma demande."
-msgstr ""
+msgstr "I agree that my data may be used to handle my request."
 
 #: core/forms.py:68
 msgid "Aminata Ndiaye"
-msgstr ""
+msgstr "Aminata Ndiaye"
 
 #: core/forms.py:69
 msgid "a.ndiaye@votrebanque.com"
-msgstr ""
+msgstr "a.ndiaye@yourbank.com"
 
 #: core/forms.py:70
 msgid "+221 …"
-msgstr ""
+msgstr "+221 …"
 
 #: core/forms.py:71
 msgid "Nom de votre banque ou établissement"
-msgstr ""
+msgstr "Name of your bank or institution"
 
 #: core/forms.py:72
 msgid "Directeur de la Conformité"
-msgstr ""
+msgstr "Head of Compliance"
 
 #: core/forms.py:73
 msgid "Décrivez brièvement votre contexte et votre échéance."
-msgstr ""
+msgstr "Briefly describe your context and your deadline."
 
 #: core/forms.py:87
 msgid "Requête invalide."
-msgstr ""
+msgstr "Invalid request."
 
 #: core/forms.py:94
 msgid "Merci de confirmer votre accord pour que nous puissions vous répondre."
-msgstr ""
+msgstr "Please confirm your agreement so that we can reply to you."
 
 #: core/models.py:20
 msgid "nom complet"
-msgstr ""
+msgstr "full name"
 
 #: core/models.py:21
 msgid "e-mail professionnel"
-msgstr ""
+msgstr "work e-mail"
 
 #: core/models.py:22
 msgid "téléphone"
-msgstr ""
+msgstr "phone"
 
 #: core/models.py:23
 msgid "établissement"
-msgstr ""
+msgstr "institution"
 
 #: core/models.py:24
 msgid "fonction"
-msgstr ""
+msgstr "job title"
 
 #: core/models.py:25
 msgid "pays"
-msgstr ""
+msgstr "country"
 
 #: core/models.py:27
 msgid "centre d'intérêt"
-msgstr ""
+msgstr "area of interest"
 
 #: core/models.py:32
 msgid "message"
-msgstr ""
+msgstr "message"
 
 #: core/models.py:34
 msgid "origine"
-msgstr ""
+msgstr "origin"
 
 #: core/models.py:36
 msgid "consentement au traitement des données"
-msgstr ""
+msgstr "consent to data processing"
 
 #: core/models.py:37
 msgid "reçu le"
-msgstr ""
+msgstr "received on"
 
 #: core/models.py:38
 msgid "traité"
-msgstr ""
+msgstr "handled"
 
 #: core/models.py:39
 msgid "notes internes"
-msgstr ""
+msgstr "internal notes"
 
 #: core/models.py:42
 msgid "demande entrante"
-msgstr ""
+msgstr "incoming request"
 
 #: core/models.py:43
 msgid "demandes entrantes"
-msgstr ""
+msgstr "incoming requests"
 
 #: core/models.py:59
 msgid "titre"
-msgstr ""
+msgstr "title"
 
 #: core/models.py:60
 msgid "slug"
-msgstr ""
+msgstr "slug"
 
 #: core/models.py:62
 msgid "catégorie"
-msgstr ""
+msgstr "category"
 
 #: core/models.py:64
 msgid "chapô"
-msgstr ""
+msgstr "standfirst"
 
 #: core/models.py:65
 msgid "contenu"
-msgstr ""
+msgstr "body"
 
 #: core/models.py:66
 msgid "publié le"
-msgstr ""
+msgstr "published on"
 
 #: core/models.py:67
 msgid "en ligne"
-msgstr ""
+msgstr "online"
 
 #: core/models.py:68
 msgid "durée de lecture (min)"
-msgstr ""
+msgstr "reading time (min)"
 
 #: core/models.py:71
 msgid "article"
-msgstr ""
+msgstr "article"
 
 #: core/models.py:72
 msgid "articles"
-msgstr ""
+msgstr "articles"
 
 #: core/models.py:10
 msgid "Demande de démonstration"
-msgstr ""
+msgstr "Demonstration request"
 
 #: core/models.py:11
 msgid "Contact général"
-msgstr ""
+msgstr "General enquiry"
 
 #: core/models.py:12
 msgid "Téléchargement de ressource"
-msgstr ""
+msgstr "Resource download"
 
 #: core/models.py:15
 msgid "Fiabilisation des données KYC"
-msgstr ""
+msgstr "KYC data remediation"
 
 #: core/models.py:16
 msgid "Profilage clients & transactions"
-msgstr ""
+msgstr "Customer & transaction profiling"
 
 #: core/models.py:17
 msgid "Les deux modules"
-msgstr ""
+msgstr "Both modules"
 
 #: core/models.py:18
 msgid "Autre besoin"
-msgstr ""
+msgstr "Another need"
 
 #: core/models.py:54
 msgid "Veille réglementaire"
-msgstr ""
+msgstr "Regulatory watch"
 
 #: core/models.py:55
 msgid "Méthode & bonnes pratiques"
-msgstr ""
+msgstr "Method & best practice"
 
 #: core/models.py:56
 msgid "Produit"
-msgstr ""
+msgstr "Product"
 
 #: core/models.py:57
 msgid "Retour d'expérience"
-msgstr ""
+msgstr "Field experience"
 
 #: core/models.py:65
 msgid "HTML simple accepté."
-msgstr ""
+msgstr "Simple HTML accepted."
 
 #: core/views.py:102
 msgid "Merci, votre demande est enregistrée. Nous revenons vers vous sous un jour ouvré."
-msgstr ""
+msgstr "Thank you, your request has been recorded. We will get back to you within one business day."
 
 #: core/content.py:11
 msgid "Logiciels de conformité pour les banques d'Afrique de l'Ouest"
-msgstr ""
+msgstr "Compliance software for West African banks"
 
 #: core/content.py:12
 msgid "Vos données clients sont votre premier risque de conformité."
-msgstr ""
+msgstr "Your customer data is your first compliance risk."
 
 #: core/content.py:14
 msgid "Konformix industrialise deux chantiers que les banques de l'UEMOA traitent encore sous Excel : la fiabilisation des dossiers KYC et la surveillance des clients et des transactions. Conçu à Dakar, pour les exigences de la BCEAO et du GIABA."
-msgstr ""
+msgstr "Konformix industrialises two areas that WAEMU banks still handle in Excel: KYC file remediation and customer and transaction monitoring. Designed in Dakar, for the requirements of the BCEAO and GIABA."
 
 #: core/content.py:19 templates/pages/contact.html:14 templates/pages/product_detail.html:18
 msgid "Demander une démonstration"
-msgstr ""
+msgstr "Request a demonstration"
 
 #: core/content.py:20
 msgid "Voir les deux modules"
-msgstr ""
+msgstr "See both modules"
 
 #: core/content.py:42
 msgid "Le problème n'est pas le manque de règles. C'est la qualité de la donnée."
-msgstr ""
+msgstr "The problem is not a lack of rules. It is data quality."
 
 #: core/content.py:44
 msgid "Les instructions BCEAO du 18 mars 2025 ont considérablement relevé le niveau d'exigence sur l'identification du client, la connaissance du bénéficiaire effectif et le dispositif de contrôle interne. Or la plupart des établissements de la zone butent sur le même mur : un référentiel client incomplet, dupliqué et non daté, sur lequel aucun dispositif de surveillance ne peut produire de résultats fiables."
-msgstr ""
+msgstr "The BCEAO instructions of 18 March 2025 raised the bar considerably on customer identification, beneficial ownership and internal control. Yet most institutions in the region hit the same wall: an incomplete, duplicated and undated customer master file, on which no monitoring system can produce reliable results."
 
 #: core/content.py:26
 msgid "établissements de crédit agréés dans l'UEMOA à fin 2025"
-msgstr ""
+msgstr "credit institutions licensed in WAEMU at end-2025"
 
 #: core/content.py:31
 msgid "nouvelles instructions BCEAO LBC/FT entrées en vigueur le 18 mars 2025"
-msgstr ""
+msgstr "new BCEAO AML/CFT instructions in force since 18 March 2025"
 
 #: core/content.py:36
 msgid "pays couverts par un cadre réglementaire unique"
-msgstr ""
+msgstr "countries covered by a single regulatory framework"
 
 #: core/content.py:91
 msgid "Fiabilisation et notation des données KYC"
-msgstr ""
+msgstr "KYC data remediation and scoring"
 
 #: core/content.py:93
 msgid "Mesure en continu la qualité du référentiel client, détecte les anomalies et pilote les campagnes de régularisation jusqu'à leur clôture."
-msgstr ""
+msgstr "Continuously measures the quality of the customer master file, detects anomalies and steers remediation campaigns through to closure."
 
 #: core/content.py:97
 msgid "Passer d'un taux de complétude inconnu à un indicateur suivi mensuellement."
-msgstr ""
+msgstr "Move from an unknown completeness rate to an indicator tracked every month."
 
 #: core/content.py:153
 msgid "Profilage des clients et surveillance des transactions"
-msgstr ""
+msgstr "Customer profiling and transaction monitoring"
 
 #: core/content.py:155
 msgid "Classe les clients par niveau de risque, apprend leur comportement normal et n'alerte que sur les écarts qui méritent un examen humain."
-msgstr ""
+msgstr "Ranks customers by risk level, learns their normal behaviour and only raises alerts on deviations that deserve human review."
 
 #: core/content.py:158
 msgid "Réduire le volume d'alertes tout en augmentant le taux de déclarations de soupçon pertinentes."
-msgstr ""
+msgstr "Reduce alert volume while increasing the share of relevant suspicious transaction reports."
 
 #: core/content.py:216
 msgid "Calibré sur la réglementation UEMOA"
-msgstr ""
+msgstr "Calibrated on WAEMU regulation"
 
 #: core/content.py:218
 msgid "Les référentiels de contrôle sont livrés pré-paramétrés sur les instructions BCEAO n°001, 002 et 003-03-2025 et la loi uniforme du 31 mars 2023 — pas sur une réglementation européenne adaptée après coup."
-msgstr ""
+msgstr "Control frameworks ship pre-configured against BCEAO instructions no. 001, 002 and 003-03-2025 and the uniform law of 31 March 2023 — not on European regulation retrofitted after the fact."
 
 #: core/content.py:224
 msgid "Un coût aligné sur les budgets locaux"
-msgstr ""
+msgstr "Pricing aligned with local budgets"
 
 #: core/content.py:226
 msgid "Les solutions internationales sont facturées en devises fortes, avec des projets d'intégration de douze à dix-huit mois. Nous vendons en FCFA, avec un déploiement initial mesuré en semaines."
-msgstr ""
+msgstr "International solutions are billed in hard currency, with integration projects running twelve to eighteen months. We sell in CFA francs, with an initial roll-out measured in weeks."
 
 #: core/content.py:232
 msgid "Vos données restent chez vous"
-msgstr ""
+msgstr "Your data stays with you"
 
 #: core/content.py:234
 msgid "Déploiement sur l'infrastructure de la banque ou en hébergement souverain régional. Aucune donnée client ne quitte le territoire, ce qui règle d'emblée la question du superviseur."
-msgstr ""
+msgstr "Deployed on the bank's own infrastructure or in regional sovereign hosting. No customer data leaves the territory, which settles the supervisor's question from the outset."
 
 #: core/content.py:240
 msgid "Une équipe qui a fait le métier"
-msgstr ""
+msgstr "A team that has done the job"
 
 #: core/content.py:242
 msgid "Konformix est fondée par des praticiens du contrôle permanent et de la conformité bancaire en Afrique de l'Ouest. Nous connaissons la réalité d'un référentiel client de core banking, pas seulement la théorie."
-msgstr ""
+msgstr "Konformix was founded by practitioners of permanent control and banking compliance in West Africa. We know what a core banking customer master file really looks like, not just the theory."
 
 #: core/content.py:252
 msgid "Diagnostic de fiabilité"
-msgstr ""
+msgstr "Reliability assessment"
 
 #: core/content.py:253
 msgid "2 semaines"
-msgstr ""
+msgstr "2 weeks"
 
 #: core/content.py:255
 msgid "Extraction d'un échantillon du référentiel client, mesure du taux de complétude réel et chiffrage des anomalies. Livrable : un rapport de diagnostic chiffré, utile même sans suite commerciale."
-msgstr ""
+msgstr "Extraction of a sample of the customer master file, measurement of the actual completeness rate and quantification of anomalies. Deliverable: a quantified assessment report, useful even with no commercial follow-up."
 
 #: core/content.py:262
 msgid "Pilote cadré"
-msgstr ""
+msgstr "Scoped pilot"
 
 #: core/content.py:263
 msgid "6 à 8 semaines"
-msgstr ""
+msgstr "6 to 8 weeks"
 
 #: core/content.py:265
 msgid "Déploiement sur un périmètre restreint — un segment de clientèle ou un réseau d'agences — avec des objectifs chiffrés convenus à l'avance."
-msgstr ""
+msgstr "Roll-out on a limited perimeter — one customer segment or one branch network — against quantified objectives agreed in advance."
 
 #: core/content.py:271
 msgid "Généralisation"
-msgstr ""
+msgstr "Full roll-out"
 
 #: core/content.py:272
 msgid "3 mois"
-msgstr ""
+msgstr "3 months"
 
 #: core/content.py:274
 msgid "Extension à l'ensemble du référentiel, intégration au core banking, formation des équipes conformité et contrôle permanent."
-msgstr ""
+msgstr "Extension to the whole master file, integration with core banking, training of the compliance and permanent control teams."
 
 #: core/content.py:280
 msgid "Exploitation et veille"
-msgstr ""
+msgstr "Run and regulatory watch"
 
 #: core/content.py:281
 msgid "en continu"
-msgstr ""
+msgstr "ongoing"
 
 #: core/content.py:283
 msgid "Mise à jour des référentiels réglementaires, ajout de scénarios, revue trimestrielle des indicateurs avec la direction de la conformité."
-msgstr ""
+msgstr "Updating of regulatory frameworks, addition of scenarios, quarterly review of indicators with the compliance department."
 
 #: core/content.py:291
 msgid "Directeur de la Conformité / RCCI"
-msgstr ""
+msgstr "Head of Compliance / RCCI"
 
 #: core/content.py:293
 msgid "Démontrer au superviseur et au conseil que le dispositif LBC/FT est effectif, mesuré et documenté."
-msgstr ""
+msgstr "Demonstrate to the supervisor and the board that the AML/CFT framework is effective, measured and documented."
 
 #: core/content.py:298
 msgid "Responsable du Contrôle Permanent"
-msgstr ""
+msgstr "Head of Permanent Control"
 
 #: core/content.py:300
 msgid "Exécuter et tracer les contrôles de second niveau sans reconstruire un classeur Excel à chaque campagne."
-msgstr ""
+msgstr "Run and evidence second-level controls without rebuilding an Excel workbook for every campaign."
 
 #: core/content.py:305
 msgid "Directeur des Risques"
-msgstr ""
+msgstr "Chief Risk Officer"
 
 #: core/content.py:307
 msgid "Disposer d'une cartographie des risques clients alimentée par des données à jour plutôt que par une enquête annuelle."
-msgstr ""
+msgstr "Hold a customer risk map fed by up-to-date data rather than by an annual survey."
 
 #: core/content.py:312
 msgid "Directeur des Systèmes d'Information"
-msgstr ""
+msgstr "Chief Information Officer"
 
 #: core/content.py:314
 msgid "Ajouter une brique de conformité sans projet de refonte du core banking, avec une intégration par fichiers ou API."
-msgstr ""
+msgstr "Add a compliance component without a core banking overhaul, integrating through files or an API."
 
 #: core/content.py:322
 msgid "Faut-il remplacer notre core banking ?"
-msgstr ""
+msgstr "Do we have to replace our core banking system?"
 
 #: core/content.py:324
 msgid "Non. Konformix se connecte en lecture à votre référentiel existant, par extraction de fichiers ou par API. Aucune modification de votre système de production n'est nécessaire pour démarrer."
-msgstr ""
+msgstr "No. Konformix connects read-only to your existing master file, through file extraction or an API. No change to your production system is needed to get started."
 
 #: core/content.py:330
 msgid "Où sont hébergées les données ?"
-msgstr ""
+msgstr "Where is the data hosted?"
 
 #: core/content.py:332
 msgid "Au choix : sur votre propre infrastructure, ou dans un centre de données de la région. Nous n'exportons jamais de données clients hors du périmètre que vous définissez."
-msgstr ""
+msgstr "Your choice: on your own infrastructure, or in a data centre in the region. We never export customer data outside the perimeter you define."
 
 #: core/content.py:338
 msgid "Combien de temps avant les premiers résultats ?"
-msgstr ""
+msgstr "How long before the first results?"
 
 #: core/content.py:340
 msgid "Le diagnostic de fiabilité produit des chiffres exploitables en deux semaines. Un pilote complet est opérationnel en six à huit semaines."
-msgstr ""
+msgstr "The reliability assessment produces usable figures in two weeks. A full pilot is operational in six to eight weeks."
 
 #: core/content.py:345
 msgid "Comment se situe Konformix face aux solutions internationales ?"
-msgstr ""
+msgstr "How does Konformix compare with international solutions?"
 
 #: core/content.py:347
 msgid "Les plateformes internationales couvrent un périmètre fonctionnel plus large et conviennent aux grands groupes disposant d'une équipe projet dédiée. Nous nous adressons aux établissements qui ont besoin d'un dispositif effectif rapidement, à un coût cohérent avec un bilan de la zone, et pré-calibré sur la réglementation UEMOA."
-msgstr ""
+msgstr "International platforms cover a broader functional scope and suit large groups with a dedicated project team. We address institutions that need an effective framework quickly, at a cost consistent with a regional balance sheet, and pre-calibrated on WAEMU regulation."
 
 #: core/content.py:355
 msgid "Le moteur d'alerte est-il explicable ?"
-msgstr ""
+msgstr "Is the alert engine explainable?"
 
 #: core/content.py:357
 msgid "Oui, et c'est un choix structurant. Chaque alerte affiche la règle ou le scénario qui l'a déclenchée et les valeurs en cause. Aucune décision ne repose sur un modèle que vous ne pourriez pas justifier devant un inspecteur."
-msgstr ""
+msgstr "Yes, and that is a structural choice. Every alert shows the rule or scenario that triggered it and the values involved. No decision rests on a model you could not justify to an inspector."
 
 #: core/content.py:364
 msgid "Proposez-vous un accompagnement au-delà du logiciel ?"
-msgstr ""
+msgstr "Do you provide support beyond the software?"
 
 #: core/content.py:366
 msgid "Oui : cadrage du dispositif, rédaction des procédures associées, formation des équipes et préparation aux missions d'inspection font partie de nos prestations."
-msgstr ""
+msgstr "Yes: framework scoping, drafting of the related procedures, team training and preparation for inspection missions are part of our services."
 
 #: core/content.py:376
 msgid "Cofondateur — Produit & Conformité"
-msgstr ""
+msgstr "Co-founder — Product & Compliance"
 
 #: core/content.py:378
 msgid "Praticien de la conformité et du contrôle permanent en banque, concepteur de la première plateforme de notation de la fiabilité des données KYC dont Konformix Kontrol est issu."
-msgstr ""
+msgstr "Compliance and permanent control practitioner in banking, designer of the first KYC data reliability scoring platform, from which Konformix Kontrol originates."
 
 #: core/content.py:385
 msgid "Cofondateur — Technologie & Opérations"
-msgstr ""
+msgstr "Co-founder — Technology & Operations"
 
 #: core/content.py:387
 msgid "En charge de l'architecture logicielle, des déploiements chez les établissements clients et de la sécurité de la plateforme."
-msgstr ""
+msgstr "In charge of software architecture, deployments at client institutions and platform security."
 
 #: core/content.py:395
 msgid "Instructions BCEAO du 18 mars 2025 : ce qui change concrètement pour votre dispositif"
-msgstr ""
+msgstr "BCEAO instructions of 18 March 2025: what actually changes for your framework"
 
 #: core/content.py:399
 msgid "Les trois instructions adoptées le 18 mars 2025 opérationnalisent la loi uniforme UEMOA de 2023. Lecture pratique de leurs conséquences sur l'organisation de la conformité, le KYC et le contrôle interne."
-msgstr ""
+msgstr "The three instructions adopted on 18 March 2025 operationalise the 2023 WAEMU uniform law. A practical reading of their consequences for the organisation of compliance, KYC and internal control."
 
 #: core/content.py:406
 msgid "Mesurer la fiabilité d'un référentiel KYC : la méthode en cinq indicateurs"
-msgstr ""
+msgstr "Measuring the reliability of a KYC master file: the five-indicator method"
 
 #: core/content.py:410
 msgid "Complétude, validité, cohérence, fraîcheur, unicité. Comment construire un score de fiabilité défendable devant un inspecteur, et quels seuils viser la première année."
-msgstr ""
+msgstr "Completeness, validity, consistency, freshness, uniqueness. How to build a reliability score you can defend to an inspector, and which thresholds to aim for in the first year."
 
 #: core/content.py:417
 msgid "Faux positifs : pourquoi le paramétrage par seuils fixes a atteint sa limite"
-msgstr ""
+msgstr "False positives: why fixed-threshold configuration has reached its limit"
 
 #: core/content.py:421
 msgid "Un seuil unique appliqué à une clientèle hétérogène génère du bruit et manque les vrais signaux. Le passage au profil comportemental, expliqué sans jargon statistique."
-msgstr ""
+msgstr "A single threshold applied to a heterogeneous customer base generates noise and misses the real signals. The move to behavioural profiling, explained without statistical jargon."
 
 #: core/content.py:53
 msgid "Des dossiers KYC incomplets"
-msgstr ""
+msgstr "Incomplete KYC files"
 
 #: core/content.py:55
 msgid "Pièces d'identité expirées, professions non renseignées, bénéficiaires effectifs absents des dossiers personnes morales. Personne ne sait chiffrer précisément le taux de complétude."
-msgstr ""
+msgstr "Expired identity documents, missing occupations, beneficial owners absent from corporate files. Nobody can put a precise figure on the completeness rate."
 
 #: core/content.py:61
 msgid "Des doublons clients invisibles"
-msgstr ""
+msgstr "Invisible duplicate customers"
 
 #: core/content.py:63
 msgid "Le même client existe sous trois identités dans le core banking. Résultat : un risque sous-évalué et des seuils de surveillance contournés sans intention."
-msgstr ""
+msgstr "The same customer exists under three identities in the core banking system. The result: understated risk and monitoring thresholds bypassed without intent."
 
 #: core/content.py:69
 msgid "Des alertes ingérables"
-msgstr ""
+msgstr "Unmanageable alerts"
 
 #: core/content.py:71
 msgid "Un paramétrage par seuils fixes produit des milliers d'alertes par mois, dont plus de 95 % de faux positifs. L'équipe conformité traite le volume, pas le risque."
-msgstr ""
+msgstr "Fixed-threshold configuration produces thousands of alerts a month, more than 95% of them false positives. The compliance team processes volume, not risk."
 
 #: core/content.py:77
 msgid "Des contrôles non traçables"
-msgstr ""
+msgstr "Untraceable controls"
 
 #: core/content.py:79
 msgid "Le contrôle permanent s'exécute dans des classeurs Excel non versionnés. À l'inspection, prouver qu'un contrôle a bien été réalisé — et par qui — devient un exercice périlleux."
-msgstr ""
+msgstr "Permanent control runs in unversioned Excel workbooks. At inspection time, proving that a control was actually performed — and by whom — becomes a perilous exercise."
 
 #: core/content.py:100
 msgid "Score de fiabilité par dossier"
-msgstr ""
+msgstr "Reliability score per file"
 
 #: core/content.py:102
 msgid "Chaque client reçoit une note de 0 à 100 fondée sur des règles paramétrables : complétude, validité des pièces, cohérence inter-champs, fraîcheur de la mise à jour, présence du bénéficiaire effectif."
-msgstr ""
+msgstr "Each customer receives a score from 0 to 100 based on configurable rules: completeness, document validity, cross-field consistency, freshness of the last update, presence of the beneficial owner."
 
 #: core/content.py:109
 msgid "Moteur de règles sans code"
-msgstr ""
+msgstr "No-code rules engine"
 
 #: core/content.py:111
 msgid "Le responsable conformité crée et teste ses propres règles de contrôle depuis l'interface, sans passer par la DSI. Chaque règle est versionnée et horodatée."
-msgstr ""
+msgstr "The compliance officer creates and tests their own control rules from the interface, without going through IT. Every rule is versioned and time-stamped."
 
 #: core/content.py:117
 msgid "Détection de doublons"
-msgstr ""
+msgstr "Duplicate detection"
 
 #: core/content.py:119
 msgid "Rapprochement approximatif sur les noms, dates de naissance et pièces d'identité, adapté aux graphies ouest-africaines (variantes Mamadou/Mamadu, Ndiaye/Ndiaye/Niaye, translittérations arabes)."
-msgstr ""
+msgstr "Fuzzy matching on names, dates of birth and identity documents, adapted to West African spellings (Mamadou/Mamadu, Ndiaye/Niaye variants, Arabic transliterations)."
 
 #: core/content.py:125
 msgid "Campagnes de régularisation"
-msgstr ""
+msgstr "Remediation campaigns"
 
 #: core/content.py:127
 msgid "Les anomalies sont affectées aux agences ou aux chargés de clientèle, avec échéance, relance automatique et suivi du taux de traitement par entité."
-msgstr ""
+msgstr "Anomalies are assigned to branches or relationship managers, with a due date, automatic reminders and tracking of the completion rate per entity."
 
 #: core/content.py:133
 msgid "Tableau de bord direction"
-msgstr ""
+msgstr "Executive dashboard"
 
 #: core/content.py:135
 msgid "Évolution du score global, classement des agences, top des anomalies, projection de la date d'atteinte de la cible. Exportable pour le comité des risques."
-msgstr ""
+msgstr "Trend of the overall score, branch ranking, top anomalies, projected date for reaching the target. Exportable for the risk committee."
 
 #: core/content.py:141
 msgid "Piste d'audit complète"
-msgstr ""
+msgstr "Complete audit trail"
 
 #: core/content.py:143
 msgid "Qui a modifié quelle règle, quand, et quel dossier a été régularisé par qui. Exportable au format attendu par l'inspection et le contrôle permanent."
-msgstr ""
+msgstr "Who changed which rule, when, and which file was remediated by whom. Exportable in the format expected by inspection and permanent control."
 
 #: core/content.py:161
 msgid "Scoring de risque client"
-msgstr ""
+msgstr "Customer risk scoring"
 
 #: core/content.py:163
 msgid "Notation multi-critères — pays, activité, canal de distribution, statut PPE, structure de détention — avec pondérations ajustables selon la cartographie des risques de l'établissement."
-msgstr ""
+msgstr "Multi-criteria scoring — country, activity, distribution channel, PEP status, ownership structure — with weightings adjustable to the institution's risk map."
 
 #: core/content.py:169
 msgid "Profils comportementaux"
-msgstr ""
+msgstr "Behavioural profiles"
 
 #: core/content.py:171
 msgid "Chaque client dispose d'un profil transactionnel de référence construit sur son historique. L'alerte se déclenche sur l'écart au profil, pas sur un seuil universel arbitraire."
-msgstr ""
+msgstr "Each customer has a baseline transactional profile built from their history. The alert fires on the deviation from that profile, not on an arbitrary universal threshold."
 
 #: core/content.py:177
 msgid "Scénarios typologiques"
-msgstr ""
+msgstr "Typology scenarios"
 
 #: core/content.py:179
 msgid "Bibliothèque de scénarios calibrés sur les typologies GIABA : fractionnement, comptes de passage, flux transfrontaliers atypiques, écarts entre activité déclarée et flux constatés, mobile money vers compte bancaire."
-msgstr ""
+msgstr "A library of scenarios calibrated on GIABA typologies: structuring, pass-through accounts, atypical cross-border flows, gaps between declared activity and observed flows, mobile money to bank account."
 
 #: core/content.py:186
 msgid "Filtrage des listes"
-msgstr ""
+msgstr "List screening"
 
 #: core/content.py:188
 msgid "Criblage des clients et des donneurs d'ordre contre les listes de sanctions, les listes nationales de gel des avoirs et les bases de personnes politiquement exposées, avec gestion des homonymies."
-msgstr ""
+msgstr "Screening of customers and originators against sanctions lists, national asset-freeze lists and politically exposed person databases, with homonym handling."
 
 #: core/content.py:195
 msgid "Gestion du cycle d'alerte"
-msgstr ""
+msgstr "Alert lifecycle management"
 
 #: core/content.py:197
 msgid "File d'attente priorisée, affectation, investigation documentée, décision motivée et génération du projet de déclaration de soupçon à destination de la CENTIF."
-msgstr ""
+msgstr "Prioritised queue, assignment, documented investigation, reasoned decision and generation of the draft suspicious transaction report for CENTIF."
 
 #: core/content.py:203
 msgid "Réduction des faux positifs"
-msgstr ""
+msgstr "False positive reduction"
 
 #: core/content.py:205
 msgid "Le moteur apprend des décisions de clôture des analystes et réordonne les alertes en conséquence — sans jamais supprimer automatiquement une alerte, pour rester explicable en contrôle."
-msgstr ""
+msgstr "The engine learns from analysts' closing decisions and reorders alerts accordingly — without ever closing an alert automatically, so that it stays explainable under review."
 
 #: templates/base.html:40
 msgid "Aller au contenu"
-msgstr ""
+msgstr "Skip to content"
 
 #: templates/pages/404.html:3
 msgid "Page introuvable"
-msgstr ""
+msgstr "Page not found"
 
 #: templates/pages/404.html:7
 msgid "Erreur 404"
-msgstr ""
+msgstr "Error 404"
 
 #: templates/pages/404.html:11
 msgid "Accueil"
-msgstr ""
+msgstr "Home"
 
 #: templates/pages/404.html:12 templates/pages/products.html:4 templates/pages/products.html:11 templates/partials/footer.html:16 templates/partials/header.html:14
 msgid "Solutions"
-msgstr ""
+msgstr "Solutions"
 
 #: templates/pages/404.html:9
 msgid "Le lien est peut-être obsolète. Revenez à l'accueil ou consultez nos solutions."
-msgstr ""
+msgstr "The link may be out of date. Return to the home page or browse our solutions."
 
 #: templates/pages/about.html:4 templates/pages/about.html:11 templates/partials/footer.html:27 templates/partials/header.html:15
 msgid "À propos"
-msgstr ""
+msgstr "About"
 
 #: templates/pages/about.html:21
 msgid "Notre conviction"
-msgstr ""
+msgstr "What we believe"
 
 #: templates/pages/about.html:32
 msgid "Ce que nous ne faisons pas"
-msgstr ""
+msgstr "What we do not do"
 
 #: templates/pages/about.html:43
 msgid "Deux associés, une expérience du terrain bancaire"
-msgstr ""
+msgstr "Two partners, hands-on banking experience"
 
 #: templates/pages/about.html:60
 msgid "Nos engagements"
-msgstr ""
+msgstr "Our commitments"
 
 #: templates/pages/about.html:61
 msgid "Quatre principes que nous tenons"
-msgstr ""
+msgstr "Four principles we hold to"
 
 #: templates/pages/about.html:78
 msgid "Parlons de votre dispositif"
-msgstr ""
+msgstr "Let's talk about your framework"
 
 #: templates/pages/about.html:79
 msgid "Un échange de trente minutes suffit à savoir si nous pouvons vous être utiles."
-msgstr ""
+msgstr "A thirty-minute conversation is enough to tell whether we can be useful to you."
 
 #: templates/pages/about.html:81
 msgid "Prendre contact"
-msgstr ""
+msgstr "Get in touch"
 
 #: templates/pages/about.html:14
 msgid "Konformix est née d'un constat fait de l'intérieur : dans la plupart des banques de la zone, la conformité produit des rapports, pas des mesures. Faute d'un référentiel client fiable, les dispositifs les plus coûteux restent déclaratifs."
-msgstr ""
+msgstr "Konformix was born of an observation made from the inside: in most banks in the region, compliance produces reports, not measurements. Without a reliable customer master file, even the most expensive frameworks stay declarative."
 
 #: templates/pages/about.html:23
 msgid "Depuis l'entrée en vigueur des instructions BCEAO du 18 mars 2025, le superviseur n'attend plus une procédure écrite : il attend la preuve que le dispositif fonctionne. Cette preuve est nécessairement chiffrée, datée et traçable. Elle repose donc entièrement sur la qualité de la donnée client."
-msgstr ""
+msgstr "Since the BCEAO instructions of 18 March 2025 came into force, the supervisor no longer expects a written procedure: it expects proof that the framework works. That proof is necessarily quantified, dated and traceable. It therefore rests entirely on customer data quality."
 
 #: templates/pages/about.html:26
 msgid "Un dispositif de surveillance greffé sur un référentiel client non fiabilisé produit du volume, pas de la détection."
-msgstr ""
+msgstr "A monitoring system grafted onto an unremediated customer master file produces volume, not detection."
 
 #: templates/pages/about.html:29
 msgid "C'est pourquoi nous avons choisi de commencer par la fiabilisation des données avant de proposer le profilage. L'ordre n'est pas commercial, il est méthodologique."
-msgstr ""
+msgstr "That is why we chose to start with data remediation before offering profiling. The order is not commercial, it is methodological."
 
 #: templates/pages/about.html:34
 msgid "Nous ne prétendons pas remplacer les plateformes internationales sur toute leur étendue fonctionnelle. Nous ne vendons pas de modèle d'intelligence artificielle dont les décisions ne pourraient pas être expliquées à un inspecteur. Et nous ne demandons jamais qu'une donnée client quitte le territoire où elle a été collectée."
-msgstr ""
+msgstr "We do not claim to replace international platforms across their full functional scope. We do not sell an artificial intelligence model whose decisions could not be explained to an inspector. And we never require customer data to leave the territory where it was collected."
 
 #: templates/pages/article_detail.html:14 templates/pages/resources.html:29
 msgid "min de lecture"
-msgstr ""
+msgstr "min read"
 
 #: templates/pages/article_detail.html:24
 msgid "À lire également"
-msgstr ""
+msgstr "Further reading"
 
 #: templates/pages/contact.html:4
 msgid "Contact & démonstration"
-msgstr ""
+msgstr "Contact & demonstration"
 
 #: templates/pages/contact.html:5
 msgid "Demandez une démonstration de Konformix Kontrol ou Konformix Vigil, ou un diagnostic de fiabilité de votre référentiel client."
-msgstr ""
+msgstr "Request a demonstration of Konformix Kontrol or Konformix Vigil, or a reliability assessment of your customer master file."
 
 #: templates/pages/contact.html:13 templates/partials/footer.html:29 templates/partials/footer.html:35
 msgid "Contact"
-msgstr ""
+msgstr "Contact"
 
 #: templates/pages/contact.html:20
 msgid "Le diagnostic de fiabilité"
-msgstr ""
+msgstr "The reliability assessment"
 
 #: templates/pages/contact.html:27 templates/pages/legal.html:15
 msgid "E-mail"
-msgstr ""
+msgstr "E-mail"
 
 #: templates/pages/contact.html:31
 msgid "Adresse"
-msgstr ""
+msgstr "Address"
 
 #: templates/pages/contact.html:87
 msgid "Voir notre"
-msgstr ""
+msgstr "See our"
 
 #: templates/pages/contact.html:87
 msgid "politique de données personnelles"
-msgstr ""
+msgstr "personal data policy"
 
 #: templates/pages/contact.html:93
 msgid "Envoyer ma demande"
-msgstr ""
+msgstr "Send my request"
 
 #: templates/pages/contact.html:102 templates/pages/product_detail.html:40
 msgid "Questions fréquentes"
-msgstr ""
+msgstr "Frequently asked questions"
 
 #: templates/pages/contact.html:16
 msgid "Décrivez-nous brièvement votre contexte. Nous revenons vers vous sous un jour ouvré avec une proposition de créneau."
-msgstr ""
+msgstr "Tell us briefly about your context. We get back to you within one business day with a proposed slot."
 
 #: templates/pages/contact.html:22
 msgid "Notre point d'entrée habituel : vous nous transmettez un extrait anonymisé de votre référentiel client, nous vous remettons sous deux semaines un rapport chiffré de sa qualité. Sans engagement, et exploitable même si vous ne poursuivez pas avec nous."
-msgstr ""
+msgstr "Our usual starting point: you send us an anonymised extract of your customer master file, and within two weeks we hand you a quantified report on its quality. No commitment, and usable even if you do not continue with us."
 
 #: templates/pages/home.html:24
 msgid "Fiabilité du référentiel"
-msgstr ""
+msgstr "Master file reliability"
 
 #: templates/pages/home.html:29
 msgid "score global"
-msgstr ""
+msgstr "overall score"
 
 #: templates/pages/home.html:30
 msgid "pts / trimestre"
-msgstr ""
+msgstr "pts / quarter"
 
 #: templates/pages/home.html:36
 msgid "Bénéficiaires effectifs renseignés"
-msgstr ""
+msgstr "Beneficial owners recorded"
 
 #: templates/pages/home.html:36
 msgid "critique"
-msgstr ""
+msgstr "critical"
 
 #: templates/pages/home.html:37
 msgid "Dossiers mis à jour"
-msgstr ""
+msgstr "Files updated"
 
 #: templates/pages/home.html:37
 msgid "mois"
-msgstr ""
+msgstr "months"
 
 #: templates/pages/home.html:37
 msgid "à suivre"
-msgstr ""
+msgstr "to watch"
 
 #: templates/pages/home.html:38
 msgid "Doublons clients résolus"
-msgstr ""
+msgstr "Duplicate customers resolved"
 
 #: templates/pages/home.html:38
 msgid "conforme"
-msgstr ""
+msgstr "compliant"
 
 #: templates/pages/home.html:43
 msgid "Campagne « BE personnes morales »"
-msgstr ""
+msgstr "“Corporate beneficial owners” campaign"
 
 #: templates/pages/home.html:43
 msgid "agences en retard"
-msgstr ""
+msgstr "branches behind schedule"
 
 #: templates/pages/home.html:55
 msgid "Source"
-msgstr ""
+msgstr "Source"
 
 #: templates/pages/home.html:69
 msgid "Le constat"
-msgstr ""
+msgstr "The situation"
 
 #: templates/pages/home.html:88
 msgid "Nos deux modules"
-msgstr ""
+msgstr "Our two modules"
 
 #: templates/pages/home.html:89
 msgid "Une plateforme, deux chantiers qui se renforcent"
-msgstr ""
+msgstr "One platform, two efforts that reinforce each other"
 
 #: templates/pages/home.html:101 templates/pages/product_detail.html:15 templates/pages/products.html:27
 msgid "Résultat visé"
-msgstr ""
+msgstr "Target outcome"
 
 #: templates/pages/home.html:103 templates/pages/product_detail.html:63
 msgid "Découvrir"
-msgstr ""
+msgstr "Discover"
 
 #: templates/pages/home.html:114
 msgid "Pourquoi nous"
-msgstr ""
+msgstr "Why us"
 
 #: templates/pages/home.html:115
 msgid "Ce qui nous distingue des plateformes internationales"
-msgstr ""
+msgstr "What sets us apart from international platforms"
 
 #: templates/pages/home.html:131 templates/partials/footer.html:20
 msgid "Notre démarche"
-msgstr ""
+msgstr "Our approach"
 
 #: templates/pages/home.html:132
 msgid "Des résultats mesurables dès la deuxième semaine"
-msgstr ""
+msgstr "Measurable results from the second week"
 
 #: templates/pages/home.html:153
 msgid "À qui nous parlons"
-msgstr ""
+msgstr "Who we talk to"
 
 #: templates/pages/home.html:154
 msgid "Quatre interlocuteurs, un même besoin de preuve"
-msgstr ""
+msgstr "Four counterparts, one shared need for proof"
 
 #: templates/pages/home.html:171
 msgid "Commençons par mesurer, pas par vendre."
-msgstr ""
+msgstr "Let's start by measuring, not by selling."
 
 #: templates/pages/home.html:177
 msgid "Demander le diagnostic"
-msgstr ""
+msgstr "Request the assessment"
 
 #: templates/pages/home.html:17
 msgid "Diagnostic de fiabilité de votre référentiel client livré en deux semaines, sans engagement."
-msgstr ""
+msgstr "Reliability assessment of your customer master file delivered in two weeks, with no commitment."
 
 #: templates/pages/home.html:91
 msgid "Kontrol assainit la donnée ; Vigil s'en sert pour produire des alertes crédibles. Les deux modules fonctionnent séparément, mais l'un décuple la valeur de l'autre."
-msgstr ""
+msgstr "Kontrol cleans up the data; Vigil uses it to produce credible alerts. Both modules work on their own, but each multiplies the value of the other."
 
 #: templates/pages/home.html:134
 msgid "Nous ne vendons pas un projet de dix-huit mois. Chaque étape produit un livrable exploitable, y compris si vous décidez de ne pas poursuivre."
-msgstr ""
+msgstr "We do not sell an eighteen-month project. Every stage produces a usable deliverable, including if you decide not to go further."
 
 #: templates/pages/home.html:173
 msgid "Envoyez-nous un extrait anonymisé de votre référentiel client. Nous vous remettons sous deux semaines un diagnostic chiffré de sa fiabilité — sans engagement de votre part."
-msgstr ""
+msgstr "Send us an anonymised extract of your customer master file. Within two weeks we hand you a quantified assessment of its reliability — with no commitment on your part."
 
 #: templates/pages/legal.html:3 templates/pages/legal.html:9 templates/partials/footer.html:47
 msgid "Mentions légales"
-msgstr ""
+msgstr "Legal notice"
 
 #: templates/pages/legal.html:8
 msgid "Informations légales"
-msgstr ""
+msgstr "Legal information"
 
 #: templates/pages/legal.html:11
 msgid "Éditeur du site"
-msgstr ""
+msgstr "Site publisher"
 
 #: templates/pages/legal.html:22
 msgid "Hébergement"
-msgstr ""
+msgstr "Hosting"
 
 #: templates/pages/legal.html:25
 msgid "Propriété intellectuelle"
-msgstr ""
+msgstr "Intellectual property"
 
 #: templates/pages/legal.html:30
 msgid "Responsabilité"
-msgstr ""
+msgstr "Liability"
 
 #: templates/pages/legal.html:19
 msgid "À compléter après immatriculation : numéro RCCM, NINEA, capital social, nom du directeur de la publication."
-msgstr ""
+msgstr "To be completed after registration: RCCM number, NINEA, share capital, name of the publication director."
 
 #: templates/pages/legal.html:32
 msgid "Les informations réglementaires présentées sur ce site le sont à titre indicatif et ne constituent pas un conseil juridique. Elles ne sauraient se substituer aux textes officiels publiés par la BCEAO, la Commission Bancaire de l'UMOA ou les autorités nationales compétentes."
-msgstr ""
+msgstr "The regulatory information presented on this site is indicative and does not constitute legal advice. It cannot replace the official texts published by the BCEAO, the WAMU Banking Commission or the competent national authorities."
 
 #: templates/pages/privacy.html:3 templates/partials/footer.html:48
 msgid "Données personnelles"
-msgstr ""
+msgstr "Personal data"
 
 #: templates/pages/privacy.html:8
 msgid "Confidentialité"
-msgstr ""
+msgstr "Privacy"
 
 #: templates/pages/privacy.html:9
 msgid "Traitement des données personnelles"
-msgstr ""
+msgstr "Processing of personal data"
 
 #: templates/pages/privacy.html:11
 msgid "Responsable du traitement"
-msgstr ""
+msgstr "Data controller"
 
 #: templates/pages/privacy.html:14
 msgid "Données collectées"
-msgstr ""
+msgstr "Data collected"
 
 #: templates/pages/privacy.html:19
 msgid "Finalité et base légale"
-msgstr ""
+msgstr "Purpose and legal basis"
 
 #: templates/pages/privacy.html:24
 msgid "Durée de conservation"
-msgstr ""
+msgstr "Retention period"
 
 #: templates/pages/privacy.html:29
 msgid "Destinataires"
-msgstr ""
+msgstr "Recipients"
 
 #: templates/pages/privacy.html:34
 msgid "Vos droits"
-msgstr ""
+msgstr "Your rights"
 
 #: templates/pages/privacy.html:37
 msgid "Vous pouvez également saisir la Commission de Protection des Données Personnelles (CDP)."
-msgstr ""
+msgstr "You may also refer the matter to the Personal Data Protection Commission (CDP)."
 
 #: templates/pages/privacy.html:40
 msgid "Données de nos clients bancaires"
-msgstr ""
+msgstr "Data belonging to our banking clients"
 
 #: templates/pages/privacy.html:16
 msgid "Ce site ne collecte que les informations que vous saisissez volontairement dans le formulaire de contact : nom, adresse e-mail professionnelle, téléphone, établissement, fonction, pays et message. Aucun traceur publicitaire n'est déposé sur votre terminal."
-msgstr ""
+msgstr "This site collects only the information you voluntarily enter in the contact form: name, work e-mail address, phone, institution, job title, country and message. No advertising tracker is placed on your device."
 
 #: templates/pages/privacy.html:21
 msgid "Ces données servent exclusivement à traiter votre demande et à assurer le suivi de la relation commerciale qui pourrait en découler. La base légale est votre consentement, recueilli au moment de l'envoi du formulaire."
-msgstr ""
+msgstr "This data is used solely to handle your request and to follow up on any commercial relationship that may result. The legal basis is your consent, obtained when the form is submitted."
 
 #: templates/pages/privacy.html:26
 msgid "Trente-six mois à compter du dernier contact, sauf entrée en relation contractuelle, auquel cas les durées légales de conservation s'appliquent."
-msgstr ""
+msgstr "Thirty-six months from the last contact, unless a contractual relationship is entered into, in which case the statutory retention periods apply."
 
 #: templates/pages/privacy.html:42
 msgid "Les données traitées dans le cadre de nos prestations logicielles font l'objet d'un contrat de sous-traitance distinct. Elles restent hébergées sur l'infrastructure de l'établissement client ou dans un centre de données de la région, selon la configuration retenue, et ne transitent jamais par ce site."
-msgstr ""
+msgstr "Data processed as part of our software services is covered by a separate processing agreement. It remains hosted on the client institution's infrastructure or in a data centre in the region, depending on the chosen configuration, and never passes through this site."
 
 #: templates/pages/product_detail.html:19
 msgid "Voir toutes les solutions"
-msgstr ""
+msgstr "See all solutions"
 
 #: templates/pages/product_detail.html:26
 msgid "Fonctionnalités"
-msgstr ""
+msgstr "Features"
 
 #: templates/pages/product_detail.html:41
 msgid "Ce que nous demandent les directions de la conformité"
-msgstr ""
+msgstr "What compliance departments ask us"
 
 #: templates/pages/products.html:5
 msgid "Konformix Kontrol fiabilise les données KYC, Konformix Vigil profile les clients et surveille les transactions. Deux modules calibrés sur la réglementation BCEAO."
-msgstr ""
+msgstr "Konformix Kontrol makes KYC data reliable, Konformix Vigil profiles customers and monitors transactions. Two modules calibrated on BCEAO regulation."
 
 #: templates/pages/products.html:41
 msgid "Fiche détaillée"
-msgstr ""
+msgstr "Detailed sheet"
 
 #: templates/pages/products.html:42
 msgid "Demander une démo de"
-msgstr ""
+msgstr "Request a demo of"
 
 #: templates/pages/products.html:51
 msgid "Déploiement"
-msgstr ""
+msgstr "Roll-out"
 
 #: templates/pages/products.html:52
 msgid "Comment se déroule un projet Konformix"
-msgstr ""
+msgstr "How a Konformix project unfolds"
 
 #: templates/pages/products.html:71
 msgid "Une démonstration sur vos propres données"
-msgstr ""
+msgstr "A demonstration on your own data"
 
 #: templates/pages/products.html:74
 msgid "Nous contacter"
-msgstr ""
+msgstr "Contact us"
 
 #: templates/pages/products.html:14
 msgid "Konformix couvre la chaîne complète : d'abord rendre la donnée client fiable, ensuite l'exploiter pour détecter les comportements atypiques. Chaque module se déploie indépendamment."
-msgstr ""
+msgstr "Konformix covers the full chain: first make customer data reliable, then use it to detect atypical behaviour. Each module deploys independently."
 
 #: templates/pages/resources.html:4 templates/pages/resources.html:11 templates/partials/footer.html:28 templates/partials/header.html:16
 msgid "Ressources"
-msgstr ""
+msgstr "Resources"
 
 #: templates/pages/resources.html:5
 msgid "Veille réglementaire BCEAO/GIABA et notes de méthode sur la fiabilisation des données KYC et la surveillance des transactions."
-msgstr ""
+msgstr "BCEAO/GIABA regulatory watch and method notes on KYC data remediation and transaction monitoring."
 
 #: templates/pages/resources.html:12
 msgid "Veille réglementaire et notes de méthode"
-msgstr ""
+msgstr "Regulatory watch and method notes"
 
 #: templates/pages/resources.html:36
 msgid "Premières publications en préparation"
-msgstr ""
+msgstr "First publications in preparation"
 
 #: templates/pages/resources.html:38
 msgid "Nos notes de veille sont en cours de rédaction. Écrivez-nous à"
-msgstr ""
+msgstr "Our watch notes are being written. Write to us at"
 
 #: templates/pages/resources.html:39
 msgid "pour être prévenu de leur parution."
-msgstr ""
+msgstr "to be notified when they are published."
 
 #: templates/pages/resources.html:14
 msgid "Ce que nous apprenons sur le terrain, mis à disposition des équipes conformité et contrôle permanent de la zone."
-msgstr ""
+msgstr "What we learn in the field, made available to the compliance and permanent control teams of the region."
 
 #: templates/partials/chart_sanctions.html:9
 msgid "Le superviseur a changé de comportement en 2025"
-msgstr ""
+msgstr "The supervisor changed its behaviour in 2025"
 
 #: templates/partials/chart_sanctions.html:82
 msgid "Voir les données sous forme de tableau"
-msgstr ""
+msgstr "View the data as a table"
 
 #: templates/partials/chart_sanctions.html:86
 msgid "Mesure"
-msgstr ""
+msgstr "Measure"
 
 #: templates/partials/chart_sanctions.html:86
 msgid "Évolution"
-msgstr ""
+msgstr "Change"
 
 #: templates/partials/chart_sanctions.html:89
 msgid "Injonctions"
-msgstr ""
+msgstr "Injunctions"
 
 #: templates/partials/chart_sanctions.html:90
 msgid "Blâmes"
-msgstr ""
+msgstr "Reprimands"
 
 #: templates/partials/chart_sanctions.html:91
 msgid "Avertissements"
-msgstr ""
+msgstr "Warnings"
 
 #: templates/partials/chart_sanctions.html:91
 msgid "stable"
-msgstr ""
+msgstr "stable"
 
 #: templates/partials/chart_sanctions.html:92
 msgid "Sanctions pécuniaires"
-msgstr ""
+msgstr "Financial penalties"
 
 #: templates/partials/chart_sanctions.html:16
 msgid "Mesures prononcées par la Commission Bancaire de l'UMOA à l'encontre des établissements assujettis. Le nombre d'injonctions a doublé en un an, les sanctions pécuniaires ont augmenté de 118 %. Les motifs récurrents : dispositif LBC/FT non conforme, contrôle interne défaillant, gouvernance insuffisante."
-msgstr ""
+msgstr "Measures issued by the WAMU Banking Commission against supervised institutions. The number of injunctions doubled in one year, and financial penalties rose by 118%. Recurring grounds: non-compliant AML/CFT framework, deficient internal control, insufficient governance."
 
 #: templates/partials/chart_sanctions.html:78
 msgid "Source : Commission Bancaire de l'UMOA — 82 missions de vérification menées en 2025 sur 493 assujettis, soit une probabilité de contrôle supérieure à 16 % dans l'année."
-msgstr ""
+msgstr "Source: WAMU Banking Commission — 82 inspection missions carried out in 2025 across 493 supervised institutions, an inspection probability above 16% within the year."
 
 #: templates/partials/footer.html:25
 msgid "Société"
-msgstr ""
+msgstr "Company"
 
 #: templates/partials/footer.html:45
 msgid "Tous droits réservés."
-msgstr ""
+msgstr "All rights reserved."
 
 #: templates/partials/footer.html:11
 msgid "Éditeur de logiciels de conformité pour les banques et établissements financiers d'Afrique de l'Ouest."
-msgstr ""
+msgstr "Publisher of compliance software for banks and financial institutions in West Africa."
 
 #: templates/partials/header.html:4
 msgid "accueil"
-msgstr ""
+msgstr "home"
 
 #: templates/partials/header.html:9
 msgid "Ouvrir le menu"
-msgstr ""
+msgstr "Open the menu"
 
 #: templates/partials/header.html:13
 msgid "Navigation principale"
-msgstr ""
+msgstr "Main navigation"
 
 #: templates/partials/header.html:17
 msgid "Demander une démo"
-msgstr ""
+msgstr "Request a demo"
+
+#: templates/pages/legal.html:27
+msgid "L'ensemble des contenus de ce site — textes, éléments graphiques, logiciels présentés et marques — est la propriété de {{ legal_name }} ou fait l'objet d'une autorisation d'usage. Toute reproduction sans accord écrit préalable est interdite."
+msgstr "All the content on this site — text, graphics, software presented and trade marks — is the property of {{ legal_name }} or is used under licence. Any reproduction without prior written consent is prohibited."
+
+#: templates/pages/privacy.html:31
+msgid "Les données ne sont accessibles qu'aux associés de {{ legal_name }}. Elles ne sont ni cédées ni louées à des tiers."
+msgstr "Data is accessible only to the partners of {{ legal_name }}. It is neither sold nor rented to third parties."

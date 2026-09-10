@@ -23,9 +23,9 @@ TEMPLATE_DIR = "templates"
 
 # {% translate "texte" %} / {% trans "texte" %}
 TRANS_TAG = re.compile(r"""{%\s*(?:translate|trans)\s+("|')(?P<msg>[^"']*?)\1""")
-# {% blocktranslate %}texte{% endblocktranslate %}
+# {% blocktranslate [with ...] %}texte{% endblocktranslate %}
 BLOCK_TAG = re.compile(
-    r"{%\s*blocktranslate\s*%}(?P<msg>.*?){%\s*endblocktranslate\s*%}", re.S
+    r"{%\s*blocktranslate(?:\s[^%]*)?\s*%}(?P<msg>.*?){%\s*endblocktranslate\s*%}", re.S
 )
 
 

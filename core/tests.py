@@ -1,4 +1,7 @@
+from io import StringIO
+
 from django.core import mail
+from django.core.management import call_command
 from django.test import TestCase, override_settings
 from django.urls import reverse
 
@@ -128,3 +131,23 @@ class BrandConfigurationTests(TestCase):
         """Changer le nom de la société ne doit demander qu'une seule modification."""
         response = self.client.get(reverse("about"))
         self.assertContains(response, "Testix")
+
+
+class TranslationTests(TestCase):
+    """Le selecteur FR/EN doit reellement changer la langue du site."""
+
+    def test_home_is_served_in_english(self):
+        self.client.post(
+            reverse("set_language"), {"language": "en", "next": reverse("home")}
+        )
+        response = self.client.get(reverse("home"))
+        self.assertContains(response, "Your customer data is your first compliance risk.")
+        self.assertContains(response, 'lang="en"')
+
+    def test_home_stays_french_by_default(self):
+        response = self.client.get(reverse("home"))
+        self.assertContains(response, "Vos données clients sont votre premier risque")
+        self.assertContains(response, 'lang="fr"')
+
+    def test_catalog_has_no_untranslated_string(self):
+        call_command("build_translations", "--check", stdout=StringIO())

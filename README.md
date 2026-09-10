@@ -81,9 +81,32 @@ Django (`/admin/`). Trois notes de démarrage sont fournies par
 Les demandes reçues via le formulaire de contact sont consultables dans
 l'administration, avec suivi « traité / non traité » et notes internes.
 
+## Traduction FR / EN
+
+Le site est bilingue : le sélecteur du pied de page bascule entre le français
+(langue par défaut) et l'anglais. Les chaînes vivent dans `core/content.py`, les
+templates et les formulaires ; le catalogue anglais est dans
+`locale/en/LC_MESSAGES/`.
+
+`makemessages` et `compilemessages` de Django dépendent des binaires GNU gettext,
+absents des postes Windows. La commande `build_translations` fait le même travail
+en Python pur :
+
+```bash
+pip install -r requirements-dev.txt
+python manage.py build_translations            # extrait, met à jour les .po, compile les .mo
+python manage.py build_translations --check    # échoue si une chaîne n'est pas traduite
+```
+
+Elle conserve les traductions déjà saisies et marque comme obsolètes les chaînes
+disparues des sources. Après avoir ajouté du texte, marquez-le (`{% translate %}`
+ou `{% blocktranslate %}` dans un template, `gettext_lazy` en Python), relancez la
+commande, puis complétez le `msgstr` vide dans `locale/en/LC_MESSAGES/django.po`.
+
 ## Tests
 
 ```bash
+pip install -r requirements-dev.txt   # polib, requis par le test du catalogue
 python manage.py test
 ```
 

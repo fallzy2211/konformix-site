@@ -1,0 +1,2 @@
+# Outils de developpement (non requis en production)
+polib==1.2.0
