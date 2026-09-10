@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: konformix-site\n"
-"POT-Creation-Date: 2026-09-10 19:12+0000\n"
+"POT-Creation-Date: 2026-09-10 19:19+0000\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1084,14 +1084,6 @@ msgstr "stable"
 msgid "Sanctions pécuniaires"
 msgstr "Financial penalties"
 
-#: templates/partials/chart_sanctions.html:16
-msgid "Mesures prononcées par la Commission Bancaire de l'UMOA à l'encontre des établissements assujettis. Le nombre d'injonctions a doublé en un an, les sanctions pécuniaires ont augmenté de 118 %. Les motifs récurrents : dispositif LBC/FT non conforme, contrôle interne défaillant, gouvernance insuffisante."
-msgstr "Measures issued by the WAMU Banking Commission against supervised institutions. The number of injunctions doubled in one year, and financial penalties rose by 118%. Recurring grounds: non-compliant AML/CFT framework, deficient internal control, insufficient governance."
-
-#: templates/partials/chart_sanctions.html:78
-msgid "Source : Commission Bancaire de l'UMOA — 82 missions de vérification menées en 2025 sur 493 assujettis, soit une probabilité de contrôle supérieure à 16 % dans l'année."
-msgstr "Source: WAMU Banking Commission — 82 inspection missions carried out in 2025 across 493 supervised institutions, an inspection probability above 16% within the year."
-
 #: templates/partials/footer.html:25
 msgid "Société"
 msgstr "Company"
@@ -1120,10 +1112,70 @@ msgstr "Main navigation"
 msgid "Demander une démo"
 msgstr "Request a demo"
 
+#: templates/base.html:7
+msgid "Konformix édite deux logiciels de conformité pour les banques d'Afrique de l'Ouest : fiabilisation des données KYC et profilage des clients et des transactions. Calibré sur la réglementation BCEAO."
+msgstr "Konformix publishes two compliance software products for West African banks: KYC data remediation and customer and transaction profiling. Calibrated on BCEAO regulation."
+
+#: templates/base.html:13
+msgid "Logiciels de conformité pour les banques d'Afrique de l'Ouest."
+msgstr "Compliance software for West African banks."
+
+#: templates/base.html:33
+msgid "Éditeur de logiciels de conformité et de lutte contre le blanchiment pour les banques d'Afrique de l'Ouest."
+msgstr "Publisher of compliance and anti-money-laundering software for West African banks."
+
+#: templates/pages/404.html:8
+msgid "Cette page n'existe pas"
+msgstr "This page does not exist"
+
+#: templates/pages/about.html:5
+msgid "Konformix est fondée à Dakar par deux praticiens de la conformité et du contrôle permanent en banque. Notre mission : rendre la conformité mesurable dans les établissements d'Afrique de l'Ouest."
+msgstr "Konformix was founded in Dakar by two practitioners of banking compliance and permanent control. Our mission: make compliance measurable in West African institutions."
+
+#: templates/pages/about.html:12
+msgid "Nous avons construit l'outil que nous aurions voulu avoir."
+msgstr "We built the tool we wish we had had."
+
+#: templates/pages/about.html:42
+msgid "L'équipe fondatrice"
+msgstr "The founding team"
+
+#: templates/pages/home.html:35
+msgid "Complétude des pièces d'identité"
+msgstr "Completeness of identity documents"
+
+#: templates/pages/legal.html:23
+msgid "À compléter : raison sociale et adresse de l'hébergeur."
+msgstr "To be completed: company name and address of the host."
+
+#: templates/pages/privacy.html:36
+msgid "Conformément à la loi n°2008-12 du 25 janvier 2008 sur la protection des données à caractère personnel au Sénégal, vous disposez d'un droit d'accès, de rectification, d'opposition et de suppression. Pour l'exercer, écrivez à"
+msgstr "Under Senegalese law no. 2008-12 of 25 January 2008 on the protection of personal data, you have a right of access, rectification, objection and deletion. To exercise it, write to"
+
+#: templates/pages/product_detail.html:56
+msgid "L'autre module"
+msgstr "The other module"
+
+#: templates/pages/products.html:12
+msgid "Deux logiciels pour un dispositif de conformité qui tient devant l'inspection"
+msgstr "Two software products for a compliance framework that holds up to inspection"
+
+#: templates/pages/products.html:72
+msgid "Nous préparons la démonstration à partir d'un extrait anonymisé de votre référentiel, pas d'un jeu de données fictif."
+msgstr "We build the demonstration from an anonymised extract of your own master file, not from a fictitious data set."
+
 #: templates/pages/legal.html:27
-msgid "L'ensemble des contenus de ce site — textes, éléments graphiques, logiciels présentés et marques — est la propriété de {{ legal_name }} ou fait l'objet d'une autorisation d'usage. Toute reproduction sans accord écrit préalable est interdite."
-msgstr "All the content on this site — text, graphics, software presented and trade marks — is the property of {{ legal_name }} or is used under licence. Any reproduction without prior written consent is prohibited."
+msgid "L'ensemble des contenus de ce site — textes, éléments graphiques, logiciels présentés et marques — est la propriété de %(legal_name)s ou fait l'objet d'une autorisation d'usage. Toute reproduction sans accord écrit préalable est interdite."
+msgstr "All the content on this site — text, graphics, software presented and trade marks — is the property of %(legal_name)s or is used under licence. Any reproduction without prior written consent is prohibited."
 
 #: templates/pages/privacy.html:31
-msgid "Les données ne sont accessibles qu'aux associés de {{ legal_name }}. Elles ne sont ni cédées ni louées à des tiers."
-msgstr "Data is accessible only to the partners of {{ legal_name }}. It is neither sold nor rented to third parties."
+msgid "Les données ne sont accessibles qu'aux associés de %(legal_name)s. Elles ne sont ni cédées ni louées à des tiers."
+msgstr "Data is accessible only to the partners of %(legal_name)s. It is neither sold nor rented to third parties."
+
+#: templates/partials/chart_sanctions.html:16
+msgid "Mesures prononcées par la Commission Bancaire de l'UMOA à l'encontre des établissements assujettis. Le nombre d'injonctions a doublé en un an, les sanctions pécuniaires ont augmenté de 118 %%. Les motifs récurrents : dispositif LBC/FT non conforme, contrôle interne défaillant, gouvernance insuffisante."
+msgstr "Measures issued by the WAMU Banking Commission against supervised institutions. The number of injunctions doubled in one year, and financial penalties rose by 118%%. Recurring grounds: non-compliant AML/CFT framework, deficient internal control, insufficient governance."
+
+#: templates/partials/chart_sanctions.html:78
+msgid "Source : Commission Bancaire de l'UMOA — 82 missions de vérification menées en 2025 sur 493 assujettis, soit une probabilité de contrôle supérieure à 16 %% dans l'année."
+msgstr "Source: WAMU Banking Commission — 82 inspection missions carried out in 2025 across 493 supervised institutions, an inspection probability above 16%% within the year."

@@ -22,11 +22,15 @@ PY_DIRS = ("core", "config")
 TEMPLATE_DIR = "templates"
 
 # {% translate "texte" %} / {% trans "texte" %}
-TRANS_TAG = re.compile(r"""{%\s*(?:translate|trans)\s+("|')(?P<msg>[^"']*?)\1""")
+TRANS_TAG = re.compile(
+    r"""{%\s*(?:translate|trans)\s+(?P<q>["'])(?P<msg>(?:(?!(?P=q)).)*)(?P=q)"""
+)
 # {% blocktranslate [with ...] %}texte{% endblocktranslate %}
 BLOCK_TAG = re.compile(
     r"{%\s*blocktranslate(?:\s[^%]*)?\s*%}(?P<msg>.*?){%\s*endblocktranslate\s*%}", re.S
 )
+# {{ variable }} a l'interieur d'un blocktranslate
+BLOCK_VAR = re.compile(r"{{\s*(\w+)\s*}}")
 
 
 class Command(BaseCommand):
@@ -87,9 +91,15 @@ class Command(BaseCommand):
                 add(match.group("msg"), f"{rel}:{line}")
             for match in BLOCK_TAG.finditer(text):
                 line = text.count("\n", 0, match.start()) + 1
-                add(match.group("msg").strip(), f"{rel}:{line}")
+                add(self._block_msgid(match.group("msg")), f"{rel}:{line}")
 
         return found
+
+    @staticmethod
+    def _block_msgid(raw: str) -> str:
+        """Meme normalisation que Django : % litteral double, variable en %(nom)s."""
+        msg = raw.strip().replace("%", "%%")
+        return BLOCK_VAR.sub(lambda m: "%(" + m.group(1) + ")s", msg)
 
     def _from_python(self, path: Path):
         """Appels _( "..." ) / gettext( "..." ) a argument litteral."""

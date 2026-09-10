@@ -98,6 +98,9 @@ python manage.py build_translations            # extrait, met à jour les .po, c
 python manage.py build_translations --check    # échoue si une chaîne n'est pas traduite
 ```
 
+Les articles de la rubrique Ressources échappent à ce mécanisme : ils vivent en
+base et restent affichés dans la langue de rédaction.
+
 Elle conserve les traductions déjà saisies et marque comme obsolètes les chaînes
 disparues des sources. Après avoir ajouté du texte, marquez-le (`{% translate %}`
 ou `{% blocktranslate %}` dans un template, `gettext_lazy` en Python), relancez la
