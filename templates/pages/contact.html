@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block title %}Contact & démonstration — {{ brand.name }}{% endblock %}
+{% block description %}Demandez une démonstration de Konformix Kontrol ou Konformix Vigil, ou un diagnostic de fiabilité de votre référentiel client.{% endblock %}
+
+{% block content %}
+
+<section class="section">
+  <div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:start">
+
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h1 style="font-size:clamp(1.9rem,4vw,2.7rem)">Demander une démonstration</h1>
+      <p class="lede">
+        Décrivez-nous brièvement votre contexte. Nous revenons vers vous sous un
+        jour ouvré avec une proposition de créneau.
+      </p>
+
+      <div class="card" style="margin-top:1.8rem">
+        <h3>Le diagnostic de fiabilité</h3>
+        <p>
+          Notre point d'entrée habituel : vous nous transmettez un extrait
+          anonymisé de votre référentiel client, nous vous remettons sous deux
+          semaines un rapport chiffré de sa qualité. Sans engagement, et
+          exploitable même si vous ne poursuivez pas avec nous.
+        </p>
+      </div>
+
+      <div style="margin-top:1.8rem;font-size:.94rem;color:var(--text-muted)">
+        <p style="margin-bottom:.4rem"><strong style="color:var(--text)">E-mail</strong><br>
+          <a href="mailto:{{ brand.email }}">{{ brand.email }}</a></p>
+        <p style="margin-bottom:.4rem"><strong style="color:var(--text)">Téléphone</strong><br>
+          <a href="tel:{{ brand.phone|cut:' ' }}">{{ brand.phone }}</a></p>
+        <p><strong style="color:var(--text)">Adresse</strong><br>{{ brand.address }}</p>
+      </div>
+    </div>
+
+    <div class="form-card">
+      {% if messages %}
+        {% for m in messages %}
+        <div class="alert alert--success">{{ m }}</div>
+        {% endfor %}
+      {% endif %}
+
+      {% if form.non_field_errors %}
+        <ul class="errorlist">{% for e in form.non_field_errors %}<li>{{ e }}</li>{% endfor %}</ul>
+      {% endif %}
+
+      <form method="post" action="{% url 'contact' %}" novalidate>
+        {% csrf_token %}
+        {{ form.website }}
+        <input type="hidden" name="source" value="demo">
+
+        <div class="form-grid">
+          <div class="form-row">
+            <label for="{{ form.full_name.id_for_label }}">{{ form.full_name.label }}</label>
+            {{ form.full_name }}{{ form.full_name.errors }}
+          </div>
+          <div class="form-row">
+            <label for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
+            {{ form.email }}{{ form.email.errors }}
+          </div>
+          <div class="form-row">
+            <label for="{{ form.organisation.id_for_label }}">{{ form.organisation.label }}</label>
+            {{ form.organisation }}{{ form.organisation.errors }}
+          </div>
+          <div class="form-row">
+            <label for="{{ form.job_title.id_for_label }}">{{ form.job_title.label }}</label>
+            {{ form.job_title }}{{ form.job_title.errors }}
+          </div>
+          <div class="form-row">
+            <label for="{{ form.country.id_for_label }}">{{ form.country.label }}</label>
+            {{ form.country }}{{ form.country.errors }}
+          </div>
+          <div class="form-row">
+            <label for="{{ form.phone.id_for_label }}">{{ form.phone.label }}</label>
+            {{ form.phone }}{{ form.phone.errors }}
+          </div>
+          <div class="form-row form-row--full">
+            <label for="{{ form.interest.id_for_label }}">{{ form.interest.label }}</label>
+            {{ form.interest }}{{ form.interest.errors }}
+          </div>
+          <div class="form-row form-row--full">
+            <label for="{{ form.message.id_for_label }}">{{ form.message.label }}</label>
+            {{ form.message }}{{ form.message.errors }}
+          </div>
+          <div class="form-row form-row--full">
+            <label class="consent">
+              {{ form.consent }}
+              <span>{{ form.consent.label }} Voir notre <a href="{% url 'privacy' %}">politique de données personnelles</a>.</span>
+            </label>
+            {{ form.consent.errors }}
+          </div>
+        </div>
+
+        <button class="btn btn--primary" type="submit" style="margin-top:1.4rem">Envoyer ma demande</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="wrap narrow">
+    <h2>Questions fréquentes</h2>
+    <div class="faq" style="margin-top:1.4rem">
+      {% for item in faq %}
+      <details><summary>{{ item.q }}</summary><p>{{ item.a }}</p></details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (max-width: 900px) {
+    main > section:first-child > .wrap { grid-template-columns: 1fr !important; }
+  }
+</style>
+
+{% endblock %}

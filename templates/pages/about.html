@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title %}À propos — {{ brand.name }}{% endblock %}
+{% block description %}Konformix est fondée à Dakar par deux praticiens de la conformité et du contrôle permanent en banque. Notre mission : rendre la conformité mesurable dans les établissements d'Afrique de l'Ouest.{% endblock %}
+
+{% block content %}
+
+<section class="section section--tight" style="border-bottom:1px solid var(--line)">
+  <div class="wrap narrow">
+    <p class="eyebrow">À propos</p>
+    <h1>Nous avons construit l'outil que nous aurions voulu avoir.</h1>
+    <p class="lede">
+      Konformix est née d'un constat fait de l'intérieur : dans la plupart des
+      banques de la zone, la conformité produit des rapports, pas des mesures.
+      Faute d'un référentiel client fiable, les dispositifs les plus coûteux
+      restent déclaratifs.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap narrow prose">
+    <h2>Notre conviction</h2>
+    <p>
+      Depuis l'entrée en vigueur des instructions BCEAO du 18 mars 2025, le
+      superviseur n'attend plus une procédure écrite : il attend la preuve que le
+      dispositif fonctionne. Cette preuve est nécessairement chiffrée, datée et
+      traçable. Elle repose donc entièrement sur la qualité de la donnée client.
+    </p>
+    <blockquote>
+      Un dispositif de surveillance greffé sur un référentiel client non fiabilisé
+      produit du volume, pas de la détection.
+    </blockquote>
+    <p>
+      C'est pourquoi nous avons choisi de commencer par la fiabilisation des
+      données avant de proposer le profilage. L'ordre n'est pas commercial, il est
+      méthodologique.
+    </p>
+
+    <h2>Ce que nous ne faisons pas</h2>
+    <p>
+      Nous ne prétendons pas remplacer les plateformes internationales sur toute
+      leur étendue fonctionnelle. Nous ne vendons pas de modèle d'intelligence
+      artificielle dont les décisions ne pourraient pas être expliquées à un
+      inspecteur. Et nous ne demandons jamais qu'une donnée client quitte le
+      territoire où elle a été collectée.
+    </p>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="narrow">
+      <p class="eyebrow">L'équipe fondatrice</p>
+      <h2>Deux associés, une expérience du terrain bancaire</h2>
+    </div>
+    <div class="grid grid--2" style="margin-top:2.2rem">
+      {% for f in founders %}
+      <div class="card">
+        <h3>{{ f.name }}</h3>
+        <p style="color:var(--accent);font-weight:600;font-size:.88rem;margin-bottom:.5rem">{{ f.role }}</p>
+        <p>{{ f.bio }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="narrow">
+      <p class="eyebrow">Nos engagements</p>
+      <h2>Quatre principes que nous tenons</h2>
+    </div>
+    <div class="grid grid--2" style="margin-top:2rem">
+      {% for d in differentiators %}
+      <div class="card card--bordered">
+        <h3>{{ d.title }}</h3>
+        <p>{{ d.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section--tight" style="padding-block:3rem 4rem">
+  <div class="wrap">
+    <div class="cta-band">
+      <div>
+        <h2>Parlons de votre dispositif</h2>
+        <p>Un échange de trente minutes suffit à savoir si nous pouvons vous être utiles.</p>
+      </div>
+      <div class="btn-row"><a class="btn btn--accent" href="{% url 'contact' %}">Prendre contact</a></div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

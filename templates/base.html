@@ -1,0 +1,52 @@
+{% load static i18n %}<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE|default:'fr' }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ brand.name }} — {{ brand.tagline }}{% endblock %}</title>
+<meta name="description" content="{% block description %}Konformix édite deux logiciels de conformité pour les banques d'Afrique de l'Ouest : fiabilisation des données KYC et profilage des clients et des transactions. Calibré sur la réglementation BCEAO.{% endblock %}">
+<link rel="canonical" href="{% block canonical %}https://{{ brand.domain }}{{ request.path }}{% endblock %}">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ brand.name }}">
+<meta property="og:title" content="{% block og_title %}{{ brand.name }} — {{ brand.tagline }}{% endblock %}">
+<meta property="og:description" content="{% block og_description %}Logiciels de conformité pour les banques d'Afrique de l'Ouest.{% endblock %}">
+<meta property="og:url" content="https://{{ brand.domain }}{{ request.path }}">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="{% static 'img/favicon.svg' %}" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/site.css' %}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ brand.name }}",
+  "legalName": "{{ brand.legal_name }}",
+  "url": "https://{{ brand.domain }}",
+  "email": "{{ brand.email }}",
+  "foundingDate": "{{ brand.founded }}",
+  "address": { "@type": "PostalAddress", "addressLocality": "Dakar", "addressCountry": "SN" },
+  "description": "Éditeur de logiciels de conformité et de lutte contre le blanchiment pour les banques d'Afrique de l'Ouest.",
+  "areaServed": ["SN","CI","ML","BF","BJ","TG","NE","GW"]
+}
+</script>
+{% block head_extra %}{% endblock %}
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+
+{% include "partials/header.html" %}
+
+<main id="main">
+  {% block content %}{% endblock %}
+</main>
+
+{% include "partials/footer.html" %}
+
+<script src="{% static 'js/site.js' %}" defer></script>
+</body>
+</html>

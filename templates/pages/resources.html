@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Ressources — {{ brand.name }}{% endblock %}
+{% block description %}Veille réglementaire BCEAO/GIABA et notes de méthode sur la fiabilisation des données KYC et la surveillance des transactions.{% endblock %}
+
+{% block content %}
+
+<section class="section section--tight" style="border-bottom:1px solid var(--line)">
+  <div class="wrap narrow">
+    <p class="eyebrow">Ressources</p>
+    <h1>Veille réglementaire et notes de méthode</h1>
+    <p class="lede">
+      Ce que nous apprenons sur le terrain, mis à disposition des équipes
+      conformité et contrôle permanent de la zone.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    {% if articles %}
+    <div class="grid grid--3">
+      {% for a in articles %}
+      <article class="article-card">
+        <div class="article-card__meta">{{ a.get_category_display }}</div>
+        <h3><a href="{{ a.get_absolute_url }}">{{ a.title }}</a></h3>
+        <p>{{ a.excerpt }}</p>
+        <div class="article-card__foot">
+          {{ a.published_at|date:"j F Y" }} · {{ a.reading_minutes }} min de lecture
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="card" style="max-width:60ch">
+      <h3>Premières publications en préparation</h3>
+      <p>
+        Nos notes de veille sont en cours de rédaction. Écrivez-nous à
+        <a href="mailto:{{ brand.email }}">{{ brand.email }}</a> pour être prévenu
+        de leur parution.
+      </p>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+{% endblock %}

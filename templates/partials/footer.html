@@ -1,0 +1,61 @@
+{% load i18n %}
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brandmark" href="{% url 'home' %}">
+          {% include "partials/logo.html" %}
+          <span class="brandmark__word">{{ brand.name }}</span>
+        </a>
+        <p class="footer-note">
+          Éditeur de logiciels de conformité pour les banques et établissements
+          financiers d'Afrique de l'Ouest. {{ brand.address }}.
+        </p>
+      </div>
+
+      <div>
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="{% url 'product_detail' 'kontrol' %}">Konformix Kontrol</a></li>
+          <li><a href="{% url 'product_detail' 'vigil' %}">Konformix Vigil</a></li>
+          <li><a href="{% url 'products' %}">Notre démarche</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Société</h4>
+        <ul>
+          <li><a href="{% url 'about' %}">À propos</a></li>
+          <li><a href="{% url 'resources' %}">Ressources</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+          {% if brand.linkedin %}<li><a href="{{ brand.linkedin }}" rel="noopener">LinkedIn</a></li>{% endif %}
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:{{ brand.email }}">{{ brand.email }}</a></li>
+          <li><a href="tel:{{ brand.phone|cut:' ' }}">{{ brand.phone }}</a></li>
+          <li>{{ brand.address }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© {% now "Y" %} {{ brand.legal_name }}. Tous droits réservés.</div>
+      <div>
+        <a href="{% url 'legal' %}">Mentions légales</a> ·
+        <a href="{% url 'privacy' %}">Données personnelles</a>
+      </div>
+      <form class="lang-switch" action="{% url 'set_language' %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ request.path }}">
+        {% get_current_language as CURRENT %}
+        <button type="submit" name="language" value="fr" {% if CURRENT == 'fr' %}aria-current="true"{% endif %}>FR</button>
+        <span aria-hidden="true">/</span>
+        <button type="submit" name="language" value="en" {% if CURRENT == 'en' %}aria-current="true"{% endif %}>EN</button>
+      </form>
+    </div>
+  </div>
+</footer>

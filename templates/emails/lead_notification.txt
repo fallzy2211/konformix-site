@@ -1,0 +1,17 @@
+Nouvelle demande reçue sur le site.
+
+Nom          : {{ lead.full_name }}
+Fonction     : {{ lead.job_title|default:"—" }}
+Établissement: {{ lead.organisation }}
+Pays         : {{ lead.country|default:"—" }}
+E-mail       : {{ lead.email }}
+Téléphone    : {{ lead.phone|default:"—" }}
+Besoin       : {{ lead.get_interest_display }}
+Origine      : {{ lead.get_source_display }}
+Reçu le      : {{ lead.created_at|date:"d/m/Y H:i" }}
+
+Message :
+{{ lead.message|default:"(aucun message)" }}
+
+--
+Répondre sous un jour ouvré. Fiche à traiter dans l'administration du site.
