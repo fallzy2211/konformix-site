@@ -81,6 +81,23 @@ Django (`/admin/`). Trois notes de démarrage sont fournies par
 Les demandes reçues via le formulaire de contact sont consultables dans
 l'administration, avec suivi « traité / non traité » et notes internes.
 
+## Charte visuelle
+
+Le site est en charte nuit : fond sombre, accents cyan et violet, surfaces
+translucides et lueurs discrètes. Tout passe par les variables du bloc `:root`
+de `static/css/site.css` — fonds, lignes, textes, lueurs `--glow-brand` et
+`--glow-accent`. Changer la palette ne demande pas de toucher aux composants.
+
+Deux règles tenues dans la feuille de style :
+
+- une lueur ne porte jamais seule une limite d'élément, elle s'ajoute à une
+  bordure lisible ;
+- le cyan et le violet ne se croisent jamais sur un même texte. Les couples
+  texte / fond dépassent tous 4,5:1, et les deux séries du graphique 3:1.
+
+Le logo et le favicon reprennent le dégradé de marque ; ils sont dans
+`templates/partials/logo.html` et `static/img/favicon.svg`.
+
 ## Pictogrammes
 
 Les icônes sont un sprite SVG unique, `templates/partials/icon_sprite.html`,
