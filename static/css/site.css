@@ -699,3 +699,28 @@ textarea.field { resize: vertical; min-height: 100px; }
 @media (max-width: 940px) {
   .product-mark { width: min(78%, 320px); }
 }
+
+/* ---------- Signe de marque en tete du heros d'accueil ---------- */
+.brand-mark {
+  position: relative;
+  width: clamp(64px, 9vw, 88px);
+  aspect-ratio: 1;
+  margin-bottom: 1.25rem;
+}
+.brand-mark__halo {
+  position: absolute;
+  inset: -22%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, .38), rgba(167, 139, 250, .22) 46%, transparent 68%);
+  filter: blur(18px);
+}
+.brand-mark__art {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 22%;
+  filter: drop-shadow(0 0 14px rgba(56, 189, 248, .45)) drop-shadow(0 12px 28px rgba(3, 5, 11, .6));
+}
+@media (prefers-reduced-motion: no-preference) {
+  .brand-mark__halo { animation: pm-breathe 6s ease-in-out infinite; }
+}
