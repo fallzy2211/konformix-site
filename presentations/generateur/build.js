@@ -387,8 +387,32 @@ async function slideClosing(pres, p) {
   s.addNotes("Conclure sur le diagnostic à deux semaines : engagement faible pour le client, chiffres en main pour la suite. Repartir avec une date d'extraction.");
 }
 
+function slideAgenda(pres, p) {
+  const s = pres.addSlide();
+  s.background = { color: PAPER };
+  heading(s, "Sommaire", "Ce que nous allons parcourir",
+    "Quinze pages, quatre temps : qui nous sommes, pourquoi le sujet est urgent, ce que fait le module, comment nous le mettons en place.");
+  const parts = [
+    { n: "01", t: "La société", d: "Konformix en bref et l'équipe fondatrice", pg: "page 3" },
+    { n: "02", t: "Le contexte et le constat", d: "Cadre UEMOA, posture du superviseur, faiblesses du référentiel client", pg: "pages 4 à 6" },
+    { n: "03", t: "Le module " + p.name.replace("Konformix ", ""), d: "Promesse, fonctionnalités, mise en pratique et bénéfices", pg: "pages 7 à 10" },
+    { n: "04", t: "La mise en œuvre", d: "Interlocuteurs, positionnement, démarche en quatre étapes et objections", pg: "pages 11 à 15" },
+  ];
+  parts.forEach((it, i) => {
+    const y = 2.3 + i * 1.12;
+    card(s, M, y, 11.83, 0.95, i === 2 ? { line: BRANDC } : {});
+    s.addText(it.n, txt({ x: M + 0.4, y: y + 0.24, w: 0.8, h: 0.5, fontSize: 22, bold: true, fontFace: HEAD, color: i === 2 ? BRANDC : ACCENT }));
+    s.addText(it.t, txt({ x: M + 1.35, y: y + 0.3, w: 3.7, h: 0.38, fontSize: 14.5, bold: true, color: "FFFFFF" }));
+    s.addText(it.d, txt({ x: M + 5.2, y: y + 0.3, w: 4.7, h: 0.5, fontSize: 12, color: MUTED, lineSpacing: 16 }));
+    s.addText(it.pg, txt({ x: M + 9.95, y: y + 0.32, w: 1.5, h: 0.3, fontSize: 11, color: DIM, align: "right" }));
+  });
+  footer(s, p);
+  s.addNotes("Annoncer le déroulé et le temps : une vingtaine de minutes de présentation, le reste en échange. Proposer au client de sauter directement au temps qui l'intéresse.");
+}
+
 // ---------------------------------------------------------------- montage
-async function build(key, outDir) {
+async function build(key, outDir, opts) {
+  opts = opts || {};
   const p = PRODUCTS[key];
   const pres = new pptxgen();
   pres.layout = "LAYOUT_WIDE";
@@ -398,6 +422,9 @@ async function build(key, outDir) {
   pres.subject = p.kicker;
 
   await slideCover(pres, p);
+  // Le sommaire n'a de sens que dans la presentation projetee : le modele .potx
+  // en est depourvu, ses pages etant destinees a etre reordonnees.
+  if (opts.agenda) slideAgenda(pres, p);
   await slideCompany(pres, p);
   slideContext(pres, p);
   slideChart(pres, p);
@@ -412,13 +439,15 @@ async function build(key, outDir) {
   await slideFaq(pres, p);
   await slideClosing(pres, p);
 
-  const out = path.join(outDir, "konformix-" + key + ".pptx");
+  const out = path.join(outDir, "konformix-" + key + (opts.agenda ? "" : "-modele") + ".pptx");
   await pres.writeFile({ fileName: out });
   console.log("écrit :", out);
 }
 
 (async () => {
   const outDir = process.argv[2] || ".";
-  await build("kontrol", outDir);
-  await build("vigil", outDir);
+  for (const key of ["kontrol", "vigil"]) {
+    await build(key, outDir, { agenda: true });  // presentation projetee, avec sommaire
+    await build(key, outDir, { agenda: false }); // base du modele .potx, sans sommaire
+  }
 })();

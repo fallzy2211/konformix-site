@@ -12,28 +12,33 @@ toucher à la mise en page.
 
 ```bash
 npm install pptxgenjs react react-dom react-icons sharp
-node build.js .          # écrit konformix-kontrol.pptx et konformix-vigil.pptx
+node build.js .
 ```
 
-Le `.potx` se fabrique à partir du `.pptx` en remplaçant, dans
+Quatre fichiers sont écrits : `konformix-<module>.pptx`, la présentation
+projetée avec son sommaire, et `konformix-<module>-modele.pptx`, la même
+sans sommaire, qui sert de base au `.potx`.
+
+Le `.potx` se fabrique à partir du fichier `-modele` en remplaçant, dans
 `[Content_Types].xml`, le type `presentationml.presentation.main+xml` par
 `presentationml.template.main+xml`.
 
-## Plan des quatorze diapositives
+## Plan des quinze diapositives
 
 1. Couverture — logo, module, promesse
-2. La société — Konformix en bref et l'équipe fondatrice
-3. Le contexte — trois chiffres du cadre UEMOA
-4. Le signal — mesures de la Commission Bancaire de l'UMOA, 2024 contre 2025
-5. Le constat — quatre faiblesses du référentiel client
-6. Le module — promesse et résultat visé
-7. Fonctionnalités — les six briques
-8. En pratique — les cinq indicateurs (Kontrol) ou seuil fixe contre profil (Vigil)
-9. Bénéfices — trois gains mesurables
-10. Interlocuteurs — quatre fonctions et leur besoin
-11. Positionnement — quatre différenciateurs
-12. La démarche — quatre étapes
-13. Objections — trois questions fréquentes
-14. Prochaine étape — le diagnostic et le contact
+2. Sommaire — quatre temps et leur pagination (présentation projetée seulement)
+3. La société — Konformix en bref et l'équipe fondatrice
+4. Le contexte — trois chiffres du cadre UEMOA
+5. Le signal — mesures de la Commission Bancaire de l'UMOA, 2024 contre 2025
+6. Le constat — quatre faiblesses du référentiel client
+7. Le module — promesse et résultat visé
+8. Fonctionnalités — les six briques
+9. En pratique — les cinq indicateurs (Kontrol) ou seuil fixe contre profil (Vigil)
+10. Bénéfices — trois gains mesurables
+11. Interlocuteurs — quatre fonctions et leur besoin
+12. Positionnement — quatre différenciateurs
+13. La démarche — quatre étapes
+14. Objections — trois questions fréquentes
+15. Prochaine étape — le diagnostic et le contact
 
 Chaque diapositive porte une note de présentateur.
