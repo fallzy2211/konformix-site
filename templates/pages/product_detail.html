@@ -7,17 +7,20 @@
 {% block content %}
 
 <section class="hero" style="padding-block:clamp(2.8rem,6vw,4.5rem)">
-  <div class="wrap narrow">
-    <p class="eyebrow"><svg class="icon icon--inline" aria-hidden="true"><use href="#i-{{ product.icon }}"></use></svg>{{ product.kicker }}</p>
-    <h1>{{ product.name }}</h1>
-    <p class="lede">{{ product.summary }}</p>
-    <div class="product-card__outcome" style="max-width:60ch">
-      <strong>{% translate "Résultat visé" %} :</strong> {{ product.outcome }}
+  <div class="wrap hero__grid">
+    <div>
+      <p class="eyebrow"><svg class="icon icon--inline" aria-hidden="true"><use href="#i-{{ product.icon }}"></use></svg>{{ product.kicker }}</p>
+      <h1>{{ product.name }}</h1>
+      <p class="lede">{{ product.summary }}</p>
+      <div class="product-card__outcome" style="max-width:60ch">
+        <strong>{% translate "Résultat visé" %} :</strong> {{ product.outcome }}
+      </div>
+      <div class="btn-row" style="margin-top:1.5rem">
+        <a class="btn btn--primary" href="{% url 'contact' %}?interet={{ product.key }}">{% translate "Demander une démonstration" %}</a>
+        <a class="btn btn--ghost" href="{% url 'products' %}">{% translate "Voir toutes les solutions" %}</a>
+      </div>
     </div>
-    <div class="btn-row" style="margin-top:1.5rem">
-      <a class="btn btn--primary" href="{% url 'contact' %}?interet={{ product.key }}">{% translate "Demander une démonstration" %}</a>
-      <a class="btn btn--ghost" href="{% url 'products' %}">{% translate "Voir toutes les solutions" %}</a>
-    </div>
+    {% include "partials/product_mark.html" %}
   </div>
 </section>
 

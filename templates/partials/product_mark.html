@@ -1,0 +1,63 @@
+{% comment %}
+Logo de grande taille pour une page produit.
+Le trace est propre a chaque module : bouclier note pour Kontrol, radar de
+surveillance pour Vigil. La lueur est decorative (aria-hidden) et s'ajoute
+toujours a un trace lisible, conformement a la charte.
+{% endcomment %}
+<div class="product-mark product-mark--{{ product.key }}" aria-hidden="true">
+  <span class="product-mark__halo"></span>
+  {% if product.key == "kontrol" %}
+  <svg class="product-mark__art" viewBox="0 0 200 200" role="presentation" focusable="false">
+    <defs>
+      <linearGradient id="pm-kontrol-face" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#38BDF8"/>
+        <stop offset="100%" stop-color="#A78BFA"/>
+      </linearGradient>
+      <linearGradient id="pm-kontrol-edge" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0%" stop-color="#7DD3FC"/>
+        <stop offset="100%" stop-color="#F8FAFF"/>
+      </linearGradient>
+    </defs>
+    <g class="product-mark__rings" fill="none" stroke="url(#pm-kontrol-edge)">
+      <circle cx="100" cy="100" r="86" stroke-opacity=".14"/>
+      <circle cx="100" cy="100" r="74" stroke-opacity=".22" stroke-dasharray="3 9" stroke-linecap="round"/>
+    </g>
+    <path class="product-mark__plate"
+          d="M100 24 34 50v42c0 33 27 62 66 76 39-14 66-43 66-76V50L100 24Z"
+          fill="url(#pm-kontrol-face)" fill-opacity=".16"
+          stroke="url(#pm-kontrol-face)" stroke-width="3"/>
+    <path class="product-mark__arc" d="M66 112a34 34 0 0 1 68 0"
+          fill="none" stroke="url(#pm-kontrol-edge)" stroke-width="6" stroke-linecap="round" stroke-opacity=".55"/>
+    <path class="product-mark__needle" d="M100 112 124 89" fill="none"
+          stroke="#F8FAFF" stroke-width="6" stroke-linecap="round"/>
+    <path class="product-mark__check" d="m80 129 13 13 30-31" fill="none"
+          stroke="#38BDF8" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  {% elif product.key == "vigil" %}
+  <svg class="product-mark__art" viewBox="0 0 200 200" role="presentation" focusable="false">
+    <defs>
+      <linearGradient id="pm-vigil-face" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#A78BFA"/>
+        <stop offset="100%" stop-color="#38BDF8"/>
+      </linearGradient>
+      <linearGradient id="pm-vigil-sweep" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#38BDF8" stop-opacity=".55"/>
+        <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <g class="product-mark__rings" fill="none" stroke="url(#pm-vigil-face)">
+      <circle cx="100" cy="100" r="86" stroke-opacity=".14"/>
+      <circle cx="100" cy="100" r="70" stroke-opacity=".30" stroke-width="2"/>
+      <circle cx="100" cy="100" r="48" stroke-opacity=".38" stroke-width="2"/>
+      <circle cx="100" cy="100" r="26" stroke-opacity=".46" stroke-width="2"/>
+    </g>
+    <path class="product-mark__sweep" d="M100 100V14a86 86 0 0 1 74 43L100 100Z" fill="url(#pm-vigil-sweep)"/>
+    <g fill="none" stroke="url(#pm-vigil-face)" stroke-width="2" stroke-opacity=".35">
+      <path d="M100 14v172M14 100h172"/>
+    </g>
+    <circle class="product-mark__blip" cx="140" cy="72" r="7" fill="#34D399"/>
+    <circle class="product-mark__blip product-mark__blip--late" cx="72" cy="132" r="5" fill="#F87171"/>
+    <circle cx="100" cy="100" r="9" fill="#F8FAFF"/>
+  </svg>
+  {% endif %}
+</div>

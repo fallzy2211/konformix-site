@@ -634,3 +634,68 @@ textarea.field { resize: vertical; min-height: 100px; }
   .card .icon--card { transition: transform .25s ease; }
   .card:hover .icon--card { transform: translateY(-2px); }
 }
+
+/* ==========================================================================
+   LOGO DE PAGE PRODUIT
+   Grand signe lumineux propre a chaque module. Decoratif : il double le titre,
+   ne le remplace jamais, et la lueur reste posee sur un trace deja lisible.
+   ========================================================================== */
+.product-mark {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(100%, 420px);
+  aspect-ratio: 1;
+  margin-inline: auto;
+}
+.product-mark__halo {
+  position: absolute;
+  inset: 6%;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(56, 189, 248, .30), transparent 62%),
+    radial-gradient(circle at 62% 30%, rgba(167, 139, 250, .26), transparent 58%);
+  filter: blur(26px);
+}
+.product-mark--vigil .product-mark__halo {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(167, 139, 250, .30), transparent 62%),
+    radial-gradient(circle at 38% 68%, rgba(56, 189, 248, .26), transparent 58%);
+}
+.product-mark__art {
+  position: relative;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 18px rgba(56, 189, 248, .35)) drop-shadow(0 18px 40px rgba(3, 5, 11, .65));
+}
+.product-mark--vigil .product-mark__art {
+  filter: drop-shadow(0 0 18px rgba(167, 139, 250, .35)) drop-shadow(0 18px 40px rgba(3, 5, 11, .65));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .product-mark__halo { animation: pm-breathe 6s ease-in-out infinite; }
+  .product-mark__rings { animation: pm-spin 38s linear infinite; transform-origin: 50% 50%; }
+  .product-mark--vigil .product-mark__rings { animation: none; }
+  .product-mark__sweep { animation: pm-spin 5.5s linear infinite; transform-origin: 50% 50%; }
+  .product-mark__blip { animation: pm-blip 5.5s ease-out infinite; }
+  .product-mark__blip--late { animation-delay: 2.4s; }
+  .product-mark__needle { animation: pm-needle 6s ease-in-out infinite; transform-origin: 50% 56%; }
+}
+
+@keyframes pm-breathe {
+  0%, 100% { opacity: .75; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.06); }
+}
+@keyframes pm-spin { to { transform: rotate(360deg); } }
+@keyframes pm-blip {
+  0%, 6%   { opacity: 1; }
+  60%, 100%{ opacity: .15; }
+}
+@keyframes pm-needle {
+  0%, 100% { transform: rotate(-16deg); }
+  50%      { transform: rotate(14deg); }
+}
+
+@media (max-width: 940px) {
+  .product-mark { width: min(78%, 320px); }
+}
