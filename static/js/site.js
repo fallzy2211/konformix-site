@@ -11,28 +11,65 @@
   if (toggle && nav) {
     var mq = window.matchMedia("(max-width: 900px)");
 
-    function applyNav() {
-      if (mq.matches) {
-        nav.hidden = toggle.getAttribute("aria-expanded") !== "true";
-      } else {
+    var closeTimer = null;
+
+    // hidden coupe le rendu : il faut le retirer avant d'animer a l'ouverture,
+    // et ne le reposer qu'une fois l'animation de fermeture terminee.
+    function applyNav(animate) {
+      if (closeTimer) {
+        clearTimeout(closeTimer);
+        closeTimer = null;
+      }
+      if (!mq.matches) {
         nav.hidden = false;
+        nav.classList.remove("is-open");
         toggle.setAttribute("aria-expanded", "false");
+        return;
+      }
+      if (toggle.getAttribute("aria-expanded") === "true") {
+        nav.hidden = false;
+        // Lire une metrique force le calcul du style ferme : la transition part
+        // donc du bon etat. Un requestAnimationFrame ne conviendrait pas, il ne
+        // s'execute pas dans un onglet que le navigateur ne dessine pas.
+        if (animate && !reduce) void nav.offsetWidth;
+        nav.classList.add("is-open");
+        return;
+      }
+      nav.classList.remove("is-open");
+      if (animate && !reduce) {
+        closeTimer = setTimeout(function () {
+          closeTimer = null;
+          if (toggle.getAttribute("aria-expanded") !== "true") nav.hidden = true;
+        }, 280); // duree de la transition d'opacite et de translation
+      } else {
+        nav.hidden = true;
       }
     }
 
     toggle.addEventListener("click", function () {
       var open = toggle.getAttribute("aria-expanded") === "true";
       toggle.setAttribute("aria-expanded", String(!open));
-      applyNav();
+      applyNav(true);
     });
 
-    mq.addEventListener("change", applyNav);
-    applyNav();
+    mq.addEventListener("change", function () {
+      applyNav(false);
+    });
+    applyNav(false);
+
+    // Suivre un lien laisse la page en place quand l'ancre est sur la meme
+    // page : sans cela le panneau resterait ouvert par-dessus le contenu.
+    nav.addEventListener("click", function (e) {
+      if (e.target.closest("a") && mq.matches) {
+        toggle.setAttribute("aria-expanded", "false");
+        applyNav(true);
+      }
+    });
 
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") {
         toggle.setAttribute("aria-expanded", "false");
-        applyNav();
+        applyNav(true);
         toggle.focus();
       }
     });

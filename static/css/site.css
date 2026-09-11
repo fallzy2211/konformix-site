@@ -161,8 +161,23 @@ ul, ol { margin: 0 0 1.1em; padding-left: 1.2em; }
 .nav-toggle {
   margin-left: auto; display: none; background: none; border: 1px solid var(--line-strong);
   border-radius: 8px; width: 40px; height: 38px; cursor: pointer; color: var(--text);
+  position: relative; transition: border-color .2s, background-color .2s;
 }
-.nav-toggle span { display: block; width: 18px; height: 1.5px; background: currentColor; margin: 3.5px auto; }
+.nav-toggle:hover { border-color: var(--brand); }
+.nav-toggle[aria-expanded="true"] { border-color: var(--brand); background: rgba(56,189,248,.08); }
+/* Les trois barres sont superposees au centre et ecartees par transform : c'est
+   la seule propriete qui s'anime sans declencher de recalcul de mise en page. */
+.nav-toggle span {
+  position: absolute; left: 50%; top: 50%;
+  width: 18px; height: 1.5px; margin: -.75px 0 0 -9px;
+  background: currentColor; border-radius: 2px;
+  transition: transform .3s cubic-bezier(.22,.61,.36,1), opacity .18s linear;
+}
+.nav-toggle span:nth-child(1) { transform: translateY(-5.5px); }
+.nav-toggle span:nth-child(3) { transform: translateY(5.5px); }
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; transform: scaleX(.2); }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: rotate(-45deg); }
 
 @media (max-width: 900px) {
   .nav-toggle { display: block; }
@@ -172,9 +187,27 @@ ul, ol { margin: 0 0 1.1em; padding-left: 1.2em; }
     padding: .5rem var(--gutter) 1.25rem; box-shadow: var(--shadow-md);
   }
   .nav[hidden] { display: none; }
+  /* Le panneau s'ouvre depuis le haut. Sans JS la classe is-open n'arrive
+     jamais : on part donc de l'etat ouvert et le script pose l'etat ferme. */
+  .js-anim .nav {
+    opacity: 0; transform: translateY(-10px);
+    transition: opacity .22s ease, transform .28s cubic-bezier(.22,.61,.36,1);
+  }
+  .js-anim .nav.is-open { opacity: 1; transform: none; }
+  /* Les entrees arrivent en cascade, assez court pour ne pas faire attendre. */
+  .js-anim .nav.is-open > * { animation: nav-item-in .3s cubic-bezier(.22,.61,.36,1) both; }
+  .js-anim .nav.is-open > *:nth-child(1) { animation-delay: .04s; }
+  .js-anim .nav.is-open > *:nth-child(2) { animation-delay: .08s; }
+  .js-anim .nav.is-open > *:nth-child(3) { animation-delay: .12s; }
+  .js-anim .nav.is-open > *:nth-child(4) { animation-delay: .16s; }
   .nav a { padding: .8rem 0; border-bottom: 1px solid var(--line); }
   .nav a[aria-current="page"] { border-bottom-color: var(--line); color: var(--brand); }
   .nav__cta { margin: .9rem 0 0; justify-content: center; }
+}
+
+@keyframes nav-item-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: none; }
 }
 
 /* ---------- Hero ---------- */
