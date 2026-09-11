@@ -8,6 +8,8 @@ changer le nom de la société ne demande qu'une seule modification ici.
 from pathlib import Path
 import os
 
+from django.core.exceptions import ImproperlyConfigured
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -51,14 +53,21 @@ BRAND = {
 # Sécurité / environnement
 # ---------------------------------------------------------------------------
 SECRET_KEY = env("DJANGO_SECRET_KEY", "dev-only-change-me-in-production")
-DEBUG = env_bool("DJANGO_DEBUG", True)
+
+# Presence d'un environnement d'hebergement gere : Railway publie ces variables
+# dans chaque conteneur, y compris quand l'operateur n'en a defini aucune.
+RAILWAY_PUBLIC_DOMAIN = env("RAILWAY_PUBLIC_DOMAIN")
+ON_MANAGED_HOST = bool(RAILWAY_PUBLIC_DOMAIN or env("RAILWAY_ENVIRONMENT_NAME"))
+
+# En ligne, le mode debogage ne doit jamais s'activer par oubli : il exposerait
+# la configuration dans les pages d'erreur. En local, il reste actif par defaut.
+DEBUG = env_bool("DJANGO_DEBUG", not ON_MANAGED_HOST)
 ALLOWED_HOSTS = env_list("DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1,[::1]")
 CSRF_TRUSTED_ORIGINS = env_list("DJANGO_CSRF_TRUSTED_ORIGINS", "")
 
 # Railway attribue un domaine a chaque deploiement et le publie dans
 # l'environnement. On l'autorise sans intervention manuelle, sans quoi la
 # premiere mise en ligne repond 400 (DisallowedHost) puis echoue en CSRF.
-RAILWAY_PUBLIC_DOMAIN = env("RAILWAY_PUBLIC_DOMAIN")
 if RAILWAY_PUBLIC_DOMAIN:
     ALLOWED_HOSTS.append(RAILWAY_PUBLIC_DOMAIN)
     CSRF_TRUSTED_ORIGINS.append(f"https://{RAILWAY_PUBLIC_DOMAIN}")
@@ -142,6 +151,19 @@ DATABASES = {
 }
 
 DATABASE_URL = env("DATABASE_URL")
+
+# Sans base rattachee, Django retomberait sur un fichier SQLite cree dans le
+# conteneur. Ce fichier disparait a chaque redemarrage et n'est pas partage avec
+# l'etape de pre-deploiement : le site repondrait "no such table" sur toutes les
+# pages lisant la base. Mieux vaut refuser de demarrer et le dire.
+if ON_MANAGED_HOST and not DATABASE_URL:
+    raise ImproperlyConfigured(
+        "DATABASE_URL est absente alors que le service tourne chez un "
+        "hebergeur gere. Ajoutez une base PostgreSQL au projet, puis, dans les "
+        "variables du service web, la reference DATABASE_URL=${{Postgres.DATABASE_URL}}. "
+        "Voir DEPLOY.md."
+    )
+
 if DATABASE_URL:
     from urllib.parse import urlparse
 

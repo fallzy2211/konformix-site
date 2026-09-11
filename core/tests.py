@@ -7,6 +7,7 @@ from unittest import mock
 
 from django.conf import settings
 from django.core import mail
+from django.core.exceptions import ImproperlyConfigured
 from django.core.management import call_command
 from django.http import HttpResponse
 from django.test import RequestFactory, TestCase, override_settings
@@ -212,7 +213,11 @@ class DeploymentTests(TestCase):
             self.assertIsNone(middleware.process_request(request))
 
     def test_railway_domain_is_trusted(self):
-        with mock.patch.dict(os.environ, {"RAILWAY_PUBLIC_DOMAIN": "konformix.up.railway.app"}):
+        hosted = {
+            "RAILWAY_PUBLIC_DOMAIN": "konformix.up.railway.app",
+            "DATABASE_URL": "postgres://u:p@db.host:5432/konformix",
+        }
+        with mock.patch.dict(os.environ, hosted):
             module = importlib.reload(importlib.import_module("config.settings"))
             self.assertIn("konformix.up.railway.app", module.ALLOWED_HOSTS)
             self.assertIn("https://konformix.up.railway.app", module.CSRF_TRUSTED_ORIGINS)
@@ -230,3 +235,23 @@ class DeploymentTests(TestCase):
         self.assertEqual(default["HOST"], "db.host")
         self.assertEqual(default["PORT"], 5433)
         self.assertEqual(default["NAME"], "konformix")
+
+
+    def test_managed_host_without_database_refuses_to_start(self):
+        """Sans base rattachee, Django retomberait sur un SQLite ephemere."""
+        with mock.patch.dict(os.environ, {"RAILWAY_PUBLIC_DOMAIN": "x.up.railway.app"}):
+            os.environ.pop("DATABASE_URL", None)
+            with self.assertRaises(ImproperlyConfigured):
+                importlib.reload(importlib.import_module("config.settings"))
+        importlib.reload(importlib.import_module("config.settings"))
+
+    def test_debug_is_off_by_default_on_a_managed_host(self):
+        hosted = {
+            "RAILWAY_PUBLIC_DOMAIN": "x.up.railway.app",
+            "DATABASE_URL": "postgres://u:p@db.host:5432/konformix",
+        }
+        with mock.patch.dict(os.environ, hosted):
+            os.environ.pop("DJANGO_DEBUG", None)
+            module = importlib.reload(importlib.import_module("config.settings"))
+            self.assertFalse(module.DEBUG)
+        importlib.reload(importlib.import_module("config.settings"))

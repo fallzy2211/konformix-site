@@ -13,9 +13,20 @@ Durée : une quinzaine de minutes, dont l'essentiel en attente du premier build.
 1. Sur <https://railway.app>, **New Project → Deploy from GitHub repo**, puis
    choisissez `fallzy2211/konformix-site`.
 2. Dans le projet créé, **New → Database → Add PostgreSQL**.
+3. **Rattachez la base au service web**, c'est l'étape qu'on oublie : Railway
+   crée `DATABASE_URL` dans le service PostgreSQL, pas dans le vôtre. Service
+   web → **Variables** → **New Variable**, nom `DATABASE_URL`, valeur :
 
-Railway injecte alors automatiquement `DATABASE_URL` dans le service web. Rien
-à recopier à la main.
+   ```
+   ${{Postgres.DATABASE_URL}}
+   ```
+
+   Remplacez `Postgres` par le nom exact du service de base s'il diffère.
+
+Sans ce rattachement, le service refuse de démarrer avec un message explicite.
+C'est voulu : autrement Django se replierait sur un fichier SQLite créé dans le
+conteneur, effacé à chaque redémarrage, et le site répondrait
+`no such table: core_article` sur la rubrique Ressources.
 
 ## 2. Générer la clé secrète
 
@@ -53,6 +64,9 @@ DJANGO_EMAIL_BACKEND=django.core.mail.backends.console.EmailBackend
 DEFAULT_FROM_EMAIL=contact@konformix.com
 LEAD_NOTIFICATION_EMAILS=commercial@konformix.com
 ```
+
+`DJANGO_DEBUG` vaut `False` d'office chez un hébergeur géré, la ligne
+ci-dessus ne fait que le rendre visible.
 
 `DJANGO_ALLOWED_HOSTS` et `DJANGO_CSRF_TRUSTED_ORIGINS` ne sont pas nécessaires
 tant que vous restez sur le domaine `*.up.railway.app` : `config/settings.py`
@@ -131,6 +145,7 @@ chaque déploiement n'écrase aucune modification faite depuis l'administration.
 | Échec CSRF à l'envoi du formulaire | `DJANGO_CSRF_TRUSTED_ORIGINS` sans le préfixe `https://` |
 | Page sans mise en forme | `collectstatic` en échec au build, à lire dans les journaux de construction |
 | Sonde de santé en échec | base PostgreSQL non rattachée, donc `DATABASE_URL` absente |
+| `no such table: core_article` | même cause : le service tourne sur un SQLite éphémère faute de `DATABASE_URL` |
 | Boucle de redirection | terminaison TLS en amont mal détectée, vérifiez que `DJANGO_DEBUG` vaut bien `False` |
 
 Les journaux se lisent dans l'onglet **Deployments** du service, section
