@@ -1,0 +1,5 @@
+# Le script d'entree du conteneur doit garder des fins de ligne Unix : avec des
+# CRLF, le shell de l'image ne trouve pas l'interpreteur et le demarrage echoue.
+*.sh text eol=lf
+Dockerfile text eol=lf
+docker-compose.yml text eol=lf

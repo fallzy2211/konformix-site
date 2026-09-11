@@ -156,7 +156,12 @@ DATABASE_URL = env("DATABASE_URL")
 # conteneur. Ce fichier disparait a chaque redemarrage et n'est pas partage avec
 # l'etape de pre-deploiement : le site repondrait "no such table" sur toutes les
 # pages lisant la base. Mieux vaut refuser de demarrer et le dire.
-if ON_MANAGED_HOST and not DATABASE_URL:
+# L'etape de construction de l'image voit les variables de la plateforme mais
+# pas forcement la base : collectstatic n'en a pas besoin, on lui laisse une
+# sortie explicite plutot que de faire echouer le build.
+SKIP_DB_CHECK = env_bool("DJANGO_SKIP_DB_CHECK", False)
+
+if ON_MANAGED_HOST and not DATABASE_URL and not SKIP_DB_CHECK:
     raise ImproperlyConfigured(
         "DATABASE_URL est absente alors que le service tourne chez un "
         "hebergeur gere. Ajoutez une base PostgreSQL au projet, puis, dans les "

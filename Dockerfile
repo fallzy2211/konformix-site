@@ -15,7 +15,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN DJANGO_SECRET_KEY=build-only DJANGO_DEBUG=False \
+# DJANGO_SKIP_DB_CHECK : la base n'est pas jointe pendant la construction, et
+# collectstatic ne l'interroge pas.
+RUN DJANGO_SECRET_KEY=build-only DJANGO_DEBUG=False DJANGO_SKIP_DB_CHECK=1 \
     python manage.py collectstatic --noinput
 
 RUN useradd --create-home appuser && chown -R appuser /app
@@ -23,6 +25,6 @@ USER appuser
 
 EXPOSE 8000
 
-# Forme shell obligatoire : Railway injecte le port a l'execution, et la forme
-# exec ne developpe pas les variables.
-CMD gunicorn config.wsgi:application --bind "0.0.0.0:${PORT:-8000}" --workers "${WEB_CONCURRENCY:-3}" --timeout 60 --access-logfile - --error-logfile -
+# Invoque par "sh" plutot que par le bit d'execution : celui-ci ne survit pas
+# toujours a un depot clone depuis Windows.
+ENTRYPOINT ["sh", "/app/docker-entrypoint.sh"]

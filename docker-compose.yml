@@ -17,9 +17,6 @@ services:
     env_file: .env
     environment:
       DATABASE_URL: postgres://konformix:${POSTGRES_PASSWORD:-konformix}@db:5432/konformix
-    command: >
-      sh -c "python manage.py migrate --noinput &&
-             gunicorn config.wsgi:application --bind 0.0.0.0:8000 --workers 3"
     ports:
       - "8000:8000"
     depends_on:

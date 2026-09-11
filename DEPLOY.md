@@ -130,9 +130,13 @@ EMAIL_HOST_PASSWORD=...
 | Étape | Commande | Où c'est défini |
 |---|---|---|
 | Construction | `pip install`, puis `collectstatic` | `Dockerfile` |
-| Avant bascule | `migrate --noinput` puis `seed_content --publish` | `railway.json` |
-| Exécution | Gunicorn sur le port fourni par l'hébergeur | `Dockerfile` |
+| Démarrage | `migrate --noinput`, `seed_content --publish`, puis Gunicorn | `docker-entrypoint.sh` |
 | Contrôle | appel de `/healthz` | `railway.json` |
+
+Les migrations tournent au démarrage du conteneur, pas dans une commande de
+pré-déploiement de la plateforme : ce réglage dépend de l'hébergeur et peut ne
+pas être appliqué, auquel cas le site répond `relation "core_article" does not
+exist`. Les deux commandes sont idempotentes.
 
 `seed_content` ne crée un article que s'il n'existe pas déjà : le rejouer à
 chaque déploiement n'écrase aucune modification faite depuis l'administration.
@@ -146,6 +150,7 @@ chaque déploiement n'écrase aucune modification faite depuis l'administration.
 | Page sans mise en forme | `collectstatic` en échec au build, à lire dans les journaux de construction |
 | Sonde de santé en échec | base PostgreSQL non rattachée, donc `DATABASE_URL` absente |
 | `no such table: core_article` | même cause : le service tourne sur un SQLite éphémère faute de `DATABASE_URL` |
+| `relation "core_article" does not exist` | base rattachée mais migrations non appliquées, à lire dans les journaux de déploiement au démarrage |
 | Boucle de redirection | terminaison TLS en amont mal détectée, vérifiez que `DJANGO_DEBUG` vaut bien `False` |
 
 Les journaux se lisent dans l'onglet **Deployments** du service, section
