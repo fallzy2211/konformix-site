@@ -516,6 +516,9 @@ textarea.field { resize: vertical; min-height: 100px; }
 
 /* ---------- Bloc graphique ---------- */
 .figure {
+  /* Les navigateurs donnent 40 px de marge laterale a <figure> : sur petit
+     ecran cela amputait le graphique du quart de sa largeur. */
+  margin: 0;
   background: var(--surface); border: 1px solid var(--line);
   border-radius: var(--radius-lg); padding: clamp(1.2rem, 3vw, 1.9rem);
   box-shadow: var(--shadow-sm);
@@ -529,6 +532,7 @@ textarea.field { resize: vertical; min-height: 100px; }
 
 .chart-wrap { position: relative; overflow-x: auto; }
 .chart { width: 100%; min-width: 460px; height: auto; display: block; }
+.cat--short { display: none; }
 .chart .grid-line { stroke: var(--grid); stroke-width: 1; }
 .chart .axis-line { stroke: var(--line-strong); stroke-width: 1; }
 .chart .bar-rect { filter: drop-shadow(0 0 10px rgba(56,189,248,.22)); }
@@ -568,6 +572,20 @@ textarea.field { resize: vertical; min-height: 100px; }
 /* Pour les barres qui touchent le haut du cadre, l'infobulle bascule dessous. */
 .tip--below { transform: translate(-50%, 22%); }
 .tip b { display: block; font-size: .72rem; font-weight: 600; color: var(--accent); letter-spacing: .04em; text-transform: uppercase; }
+
+/* Petit ecran : le graphique tenait sur 460 px minimum, donc en defilement
+   horizontal. On le laisse se reduire et on compense en agrandissant les
+   textes du SVG, dont la taille est exprimee dans le repere du viewBox. */
+@media (max-width: 700px) {
+  .figure { padding: 1.1rem .85rem; }
+  .chart-wrap { overflow-x: visible; }
+  .chart { min-width: 0; }
+  .chart .tick { font-size: 24px; }
+  .chart .val { font-size: 26px; font-weight: 700; }
+  .chart .cat--full { display: none; }
+  .chart .cat--short { display: block; font-size: 24px; }
+  .legend { margin-left: 0; width: 100%; }
+}
 
 .figure__source { font-size: .78rem; color: var(--text-muted); margin: 1rem 0 0; }
 .figure details { margin-top: .7rem; }
