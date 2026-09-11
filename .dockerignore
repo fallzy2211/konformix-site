@@ -1,0 +1,21 @@
+# Environnements et caches locaux
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Donnees et secrets locaux
+db.sqlite3
+*.sqlite3
+.env
+media/
+staticfiles/
+
+# Outillage
+.git/
+.github/
+.claude/
+*.md
+!README.md

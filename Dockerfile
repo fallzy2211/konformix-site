@@ -23,4 +23,6 @@ USER appuser
 
 EXPOSE 8000
 
-CMD ["gunicorn", "config.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "3", "--timeout", "60"]
+# Forme shell obligatoire : Railway injecte le port a l'execution, et la forme
+# exec ne developpe pas les variables.
+CMD gunicorn config.wsgi:application --bind "0.0.0.0:${PORT:-8000}" --workers "${WEB_CONCURRENCY:-3}" --timeout 60 --access-logfile - --error-logfile -

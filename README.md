@@ -149,6 +149,17 @@ configuration.
 
 ## Déploiement
 
+### Railway
+
+Le dépôt est prêt pour un déploiement par conteneur : `Dockerfile`,
+`.dockerignore` et `railway.json` sont versionnés. La marche à suivre complète,
+variables comprises, est dans **[DEPLOY.md](DEPLOY.md)**.
+
+En résumé : créer le projet depuis le dépôt GitHub, ajouter une base PostgreSQL,
+renseigner `DJANGO_SECRET_KEY` et `DJANGO_DEBUG=False`, publier un domaine.
+`RAILWAY_PUBLIC_DOMAIN` est reconnu automatiquement, il n'y a pas d'hôte
+autorisé à saisir à la main.
+
 ### Docker
 
 ```bash
@@ -182,6 +193,9 @@ HTTPS, `X-Frame-Options: DENY`) s'activent automatiquement dès que
 ```bash
 python manage.py check --deploy
 ```
+
+L'adresse `/healthz` sert de sonde de santé à l'hébergeur : elle vérifie que
+la base répond et reste accessible en HTTP, sans redirection.
 
 ## SEO
 

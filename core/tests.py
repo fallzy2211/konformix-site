@@ -1,11 +1,15 @@
+import importlib
+import os
 import re
 from io import StringIO
 from pathlib import Path
+from unittest import mock
 
 from django.conf import settings
 from django.core import mail
 from django.core.management import call_command
-from django.test import TestCase, override_settings
+from django.http import HttpResponse
+from django.test import RequestFactory, TestCase, override_settings
 from django.urls import reverse
 
 from . import content
@@ -186,3 +190,43 @@ class IconTests(TestCase):
         used = set(re.findall(r'<use href="#i-([a-z-]*)"', html))
         self.assertTrue(used)
         self.assertFalse(used - self._sprite_ids())
+
+
+class DeploymentTests(TestCase):
+    """Reglages dont depend la mise en ligne."""
+
+    def test_healthcheck_answers(self):
+        response = self.client.get("/healthz")
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.content, b"ok")
+
+    def test_healthcheck_is_exempt_from_https_redirect(self):
+        """La sonde interroge le service en HTTP : une 301 la ferait echouer."""
+        from django.middleware.security import SecurityMiddleware
+
+        with override_settings(
+            SECURE_SSL_REDIRECT=True, SECURE_REDIRECT_EXEMPT=[r"^healthz/?$"]
+        ):
+            middleware = SecurityMiddleware(lambda r: HttpResponse("ok"))
+            request = RequestFactory().get("/healthz")
+            self.assertIsNone(middleware.process_request(request))
+
+    def test_railway_domain_is_trusted(self):
+        with mock.patch.dict(os.environ, {"RAILWAY_PUBLIC_DOMAIN": "konformix.up.railway.app"}):
+            module = importlib.reload(importlib.import_module("config.settings"))
+            self.assertIn("konformix.up.railway.app", module.ALLOWED_HOSTS)
+            self.assertIn("https://konformix.up.railway.app", module.CSRF_TRUSTED_ORIGINS)
+            self.assertIn("healthcheck.railway.app", module.ALLOWED_HOSTS)
+        importlib.reload(importlib.import_module("config.settings"))
+
+    def test_database_url_password_is_decoded(self):
+        with mock.patch.dict(
+            os.environ, {"DATABASE_URL": "postgres://user:p%40ss%2Fword@db.host:5433/konformix"}
+        ):
+            module = importlib.reload(importlib.import_module("config.settings"))
+            default = module.DATABASES["default"]
+        importlib.reload(importlib.import_module("config.settings"))
+        self.assertEqual(default["PASSWORD"], "p@ss/word")
+        self.assertEqual(default["HOST"], "db.host")
+        self.assertEqual(default["PORT"], 5433)
+        self.assertEqual(default["NAME"], "konformix")

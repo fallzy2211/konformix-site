@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.contrib import messages
 from django.core.mail import send_mail
+from django.db import OperationalError, connections
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.template.loader import render_to_string
@@ -139,6 +140,16 @@ def legal(request):
 
 def privacy(request):
     return render(request, "pages/privacy.html", _base_context("privacy"))
+
+
+@require_GET
+def healthz(request):
+    """Sonde de sante de l'hebergeur : verifie que la base repond."""
+    try:
+        connections["default"].cursor().close()
+    except OperationalError:
+        return HttpResponse("database unavailable", status=503, content_type="text/plain")
+    return HttpResponse("ok", content_type="text/plain")
 
 
 @require_GET

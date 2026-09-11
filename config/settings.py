@@ -55,8 +55,24 @@ DEBUG = env_bool("DJANGO_DEBUG", True)
 ALLOWED_HOSTS = env_list("DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1,[::1]")
 CSRF_TRUSTED_ORIGINS = env_list("DJANGO_CSRF_TRUSTED_ORIGINS", "")
 
+# Railway attribue un domaine a chaque deploiement et le publie dans
+# l'environnement. On l'autorise sans intervention manuelle, sans quoi la
+# premiere mise en ligne repond 400 (DisallowedHost) puis echoue en CSRF.
+RAILWAY_PUBLIC_DOMAIN = env("RAILWAY_PUBLIC_DOMAIN")
+if RAILWAY_PUBLIC_DOMAIN:
+    ALLOWED_HOSTS.append(RAILWAY_PUBLIC_DOMAIN)
+    CSRF_TRUSTED_ORIGINS.append(f"https://{RAILWAY_PUBLIC_DOMAIN}")
+    # La sonde de sante interrogeant le service par son domaine interne.
+    ALLOWED_HOSTS.append("healthcheck.railway.app")
+    private = env("RAILWAY_PRIVATE_DOMAIN")
+    if private:
+        ALLOWED_HOSTS.append(private)
+
 if not DEBUG:
     SECURE_SSL_REDIRECT = env_bool("DJANGO_SECURE_SSL_REDIRECT", True)
+    # La sonde de sante de l'hebergeur interroge le service en HTTP interne :
+    # sans exemption, elle ne recoit qu'une redirection permanente.
+    SECURE_REDIRECT_EXEMPT = [r"^healthz/?$"]
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
     SECURE_HSTS_SECONDS = 31536000
@@ -129,15 +145,20 @@ DATABASE_URL = env("DATABASE_URL")
 if DATABASE_URL:
     from urllib.parse import urlparse
 
+    from urllib.parse import unquote
+
     parsed = urlparse(DATABASE_URL)
+    # Les hebergeurs geres produisent des mots de passe aleatoires : le composant
+    # est encode dans l'URL et doit etre decode avant d'atteindre le pilote.
     DATABASES["default"] = {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": parsed.path.lstrip("/"),
-        "USER": parsed.username,
-        "PASSWORD": parsed.password,
+        "NAME": unquote(parsed.path.lstrip("/")),
+        "USER": unquote(parsed.username or ""),
+        "PASSWORD": unquote(parsed.password or ""),
         "HOST": parsed.hostname,
         "PORT": parsed.port or 5432,
         "CONN_MAX_AGE": 600,
+        "OPTIONS": {"sslmode": env("DJANGO_DB_SSLMODE", "prefer")},
     }
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
