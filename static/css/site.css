@@ -830,3 +830,6 @@ textarea.field { resize: vertical; min-height: 100px; }
   margin: 2rem auto 0; max-width: 68ch; text-align: center;
   font-size: .9rem; color: var(--text-muted);
 }
+
+/* ---------- Retour au catalogue, en bas d'une page produit ---------- */
+.module-all { justify-content: center; margin-top: 2.4rem; }

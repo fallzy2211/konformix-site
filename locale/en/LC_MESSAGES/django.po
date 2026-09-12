@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: konformix-site\n"
-"POT-Creation-Date: 2026-09-12 13:47+0000\n"
+"POT-Creation-Date: 2026-09-12 16:32+0000\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -204,10 +204,6 @@ msgstr "KYC data remediation"
 msgid "Profilage clients & transactions"
 msgstr "Customer & transaction profiling"
 
-#: core/models.py:17
-msgid "Les deux modules"
-msgstr "Both modules"
-
 #: core/models.py:18
 msgid "Autre besoin"
 msgstr "Another need"
@@ -244,17 +240,9 @@ msgstr "Compliance software for West African banks"
 msgid "Vos données clients sont votre premier risque de conformité."
 msgstr "Your customer data is your first compliance risk."
 
-#: core/content.py:14
-msgid "Konformix industrialise deux chantiers que les banques de l'UEMOA traitent encore sous Excel : la fiabilisation des dossiers KYC et la surveillance des clients et des transactions. Conçu à Dakar, pour les exigences de la BCEAO et du GIABA."
-msgstr "Konformix industrialises two areas that WAEMU banks still handle in Excel: KYC file remediation and customer and transaction monitoring. Designed in Dakar, for the requirements of the BCEAO and GIABA."
-
 #: core/content.py:19 templates/pages/contact.html:14 templates/pages/product_detail.html:19
 msgid "Demander une démonstration"
 msgstr "Request a demonstration"
-
-#: core/content.py:20
-msgid "Voir les deux modules"
-msgstr "See both modules"
 
 #: core/content.py:42
 msgid "Le problème n'est pas le manque de règles. C'est la qualité de la donnée."
@@ -820,14 +808,6 @@ msgstr "Source"
 msgid "Le constat"
 msgstr "The situation"
 
-#: templates/pages/home.html:90
-msgid "Nos deux modules"
-msgstr "Our two modules"
-
-#: templates/pages/home.html:91
-msgid "Une plateforme, deux chantiers qui se renforcent"
-msgstr "One platform, two efforts that reinforce each other"
-
 #: templates/pages/home.html:103 templates/pages/product_detail.html:16
 msgid "Résultat visé"
 msgstr "Target outcome"
@@ -871,10 +851,6 @@ msgstr "Request the assessment"
 #: templates/pages/home.html:18
 msgid "Diagnostic de fiabilité de votre référentiel client livré en deux semaines, sans engagement."
 msgstr "Reliability assessment of your customer master file delivered in two weeks, with no commitment."
-
-#: templates/pages/home.html:93
-msgid "Kontrol assainit la donnée ; Vigil s'en sert pour produire des alertes crédibles. Les deux modules fonctionnent séparément, mais l'un décuple la valeur de l'autre."
-msgstr "Kontrol cleans up the data; Vigil uses it to produce credible alerts. Both modules work on their own, but each multiplies the value of the other."
 
 #: templates/pages/home.html:137
 msgid "Nous ne vendons pas un projet de dix-huit mois. Chaque étape produit un livrable exploitable, y compris si vous décidez de ne pas poursuivre."
@@ -976,10 +952,6 @@ msgstr "Thirty-six months from the last contact, unless a contractual relationsh
 msgid "Les données traitées dans le cadre de nos prestations logicielles font l'objet d'un contrat de sous-traitance distinct. Elles restent hébergées sur l'infrastructure de l'établissement client ou dans un centre de données de la région, selon la configuration retenue, et ne transitent jamais par ce site."
 msgstr "Data processed as part of our software services is covered by a separate processing agreement. It remains hosted on the client institution's infrastructure or in a data centre in the region, depending on the chosen configuration, and never passes through this site."
 
-#: templates/pages/product_detail.html:20
-msgid "Voir toutes les solutions"
-msgstr "See all solutions"
-
 #: templates/pages/product_detail.html:29
 msgid "Fonctionnalités"
 msgstr "Features"
@@ -987,10 +959,6 @@ msgstr "Features"
 #: templates/pages/product_detail.html:44
 msgid "Ce que nous demandent les directions de la conformité"
 msgstr "What compliance departments ask us"
-
-#: templates/pages/products.html:5
-msgid "Konformix Kontrol fiabilise les données KYC, Konformix Vigil profile les clients et surveille les transactions. Deux modules calibrés sur la réglementation BCEAO."
-msgstr "Konformix Kontrol makes KYC data reliable, Konformix Vigil profiles customers and monitors transactions. Two modules calibrated on BCEAO regulation."
 
 #: templates/pages/products.html:43
 msgid "Déploiement"
@@ -1104,10 +1072,6 @@ msgstr "Main navigation"
 msgid "Demander une démo"
 msgstr "Request a demo"
 
-#: templates/base.html:9
-msgid "Konformix édite deux logiciels de conformité pour les banques d'Afrique de l'Ouest : fiabilisation des données KYC et profilage des clients et des transactions. Calibré sur la réglementation BCEAO."
-msgstr "Konformix publishes two compliance software products for West African banks: KYC data remediation and customer and transaction profiling. Calibrated on BCEAO regulation."
-
 #: templates/base.html:15
 msgid "Logiciels de conformité pour les banques d'Afrique de l'Ouest."
 msgstr "Compliance software for West African banks."
@@ -1143,14 +1107,6 @@ msgstr "To be completed: company name and address of the host."
 #: templates/pages/privacy.html:36
 msgid "Conformément à la loi n°2008-12 du 25 janvier 2008 sur la protection des données à caractère personnel au Sénégal, vous disposez d'un droit d'accès, de rectification, d'opposition et de suppression. Pour l'exercer, écrivez à"
 msgstr "Under Senegalese law no. 2008-12 of 25 January 2008 on the protection of personal data, you have a right of access, rectification, objection and deletion. To exercise it, write to"
-
-#: templates/pages/product_detail.html:59
-msgid "L'autre module"
-msgstr "The other module"
-
-#: templates/pages/products.html:12
-msgid "Deux logiciels pour un dispositif de conformité qui tient devant l'inspection"
-msgstr "Two software products for a compliance framework that holds up to inspection"
 
 #: templates/pages/products.html:64
 msgid "Nous préparons la démonstration à partir d'un extrait anonymisé de votre référentiel, pas d'un jeu de données fictif."
@@ -1195,6 +1151,83 @@ msgstr "See the detailed sheet"
 #: templates/pages/products.html:35
 msgid "Chaque fiche détaille les fonctionnalités du module, le résultat visé et les questions que nous posent les directions de la conformité."
 msgstr "Each sheet details the module's features, its target outcome and the questions compliance departments ask us."
+
+#: core/content.py:14
+msgid "Konformix industrialise les chantiers que les banques de l'UEMOA traitent encore sous Excel : la fiabilisation des dossiers KYC et la surveillance des clients et des transactions. Conçu à Dakar, pour les exigences de la BCEAO et du GIABA."
+msgstr "Konformix industrialises the work that WAEMU banks still handle in Excel: KYC file remediation, and customer and transaction monitoring. Designed in Dakar, for the requirements of the BCEAO and GIABA."
+
+#: core/content.py:20
+msgid "Voir nos modules"
+msgstr "See our modules"
+
+#: core/models.py:17
+msgid "Plusieurs modules"
+msgstr "Several modules"
+
+#: templates/base.html:9
+msgid "Konformix édite des logiciels de conformité pour les banques d'Afrique de l'Ouest : fiabilisation des données KYC et profilage des clients et des transactions. Calibré sur la réglementation BCEAO."
+msgstr "Konformix publishes compliance software for West African banks: KYC data remediation, and customer and transaction profiling. Calibrated on BCEAO regulation."
+
+#: templates/pages/home.html:90
+msgid "Nos modules"
+msgstr "Our modules"
+
+#: templates/pages/home.html:91
+msgid "Une plateforme, des chantiers qui se renforcent"
+msgstr "One platform, work that reinforces itself"
+
+#: templates/pages/home.html:93
+msgid "Kontrol assainit la donnée ; Vigil s'en sert pour produire des alertes crédibles. Chaque module se déploie séparément, mais leur combinaison décuple leur valeur."
+msgstr "Kontrol cleans up the data; Vigil uses it to produce credible alerts. Each module deploys on its own, but together they multiply each other's value."
+
+#: templates/pages/product_detail.html:20 templates/pages/product_detail.html:73
+msgid "Voir tous nos modules"
+msgstr "See all our modules"
+
+#: templates/pages/product_detail.html:59
+msgid "Les autres modules"
+msgstr "The other modules"
+
+#: templates/pages/products.html:5
+msgid "Konformix Kontrol fiabilise les données KYC, Konformix Vigil profile les clients et surveille les transactions. Des modules calibrés sur la réglementation BCEAO."
+msgstr "Konformix Kontrol makes KYC data reliable, Konformix Vigil profiles customers and monitors transactions. Modules calibrated on BCEAO regulation."
+
+#: templates/pages/products.html:12
+msgid "Des logiciels pour un dispositif de conformité qui tient devant l'inspection"
+msgstr "Software for a compliance framework that holds up to inspection"
+
+#~ msgid "Les deux modules"
+#~ msgstr "Both modules"
+
+#~ msgid "Konformix industrialise deux chantiers que les banques de l'UEMOA traitent encore sous Excel : la fiabilisation des dossiers KYC et la surveillance des clients et des transactions. Conçu à Dakar, pour les exigences de la BCEAO et du GIABA."
+#~ msgstr "Konformix industrialises two areas that WAEMU banks still handle in Excel: KYC file remediation and customer and transaction monitoring. Designed in Dakar, for the requirements of the BCEAO and GIABA."
+
+#~ msgid "Voir les deux modules"
+#~ msgstr "See both modules"
+
+#~ msgid "Nos deux modules"
+#~ msgstr "Our two modules"
+
+#~ msgid "Une plateforme, deux chantiers qui se renforcent"
+#~ msgstr "One platform, two efforts that reinforce each other"
+
+#~ msgid "Kontrol assainit la donnée ; Vigil s'en sert pour produire des alertes crédibles. Les deux modules fonctionnent séparément, mais l'un décuple la valeur de l'autre."
+#~ msgstr "Kontrol cleans up the data; Vigil uses it to produce credible alerts. Both modules work on their own, but each multiplies the value of the other."
+
+#~ msgid "Voir toutes les solutions"
+#~ msgstr "See all solutions"
+
+#~ msgid "Konformix Kontrol fiabilise les données KYC, Konformix Vigil profile les clients et surveille les transactions. Deux modules calibrés sur la réglementation BCEAO."
+#~ msgstr "Konformix Kontrol makes KYC data reliable, Konformix Vigil profiles customers and monitors transactions. Two modules calibrated on BCEAO regulation."
+
+#~ msgid "Konformix édite deux logiciels de conformité pour les banques d'Afrique de l'Ouest : fiabilisation des données KYC et profilage des clients et des transactions. Calibré sur la réglementation BCEAO."
+#~ msgstr "Konformix publishes two compliance software products for West African banks: KYC data remediation and customer and transaction profiling. Calibrated on BCEAO regulation."
+
+#~ msgid "L'autre module"
+#~ msgstr "The other module"
+
+#~ msgid "Deux logiciels pour un dispositif de conformité qui tient devant l'inspection"
+#~ msgstr "Two software products for a compliance framework that holds up to inspection"
 
 #~ msgid "Fiche détaillée"
 #~ msgstr "Detailed sheet"

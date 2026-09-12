@@ -14,7 +14,7 @@ class Lead(models.Model):
     class Interest(models.TextChoices):
         KONTROL = "kontrol", _("Fiabilisation des données KYC")
         VIGIL = "vigil", _("Profilage clients & transactions")
-        BOTH = "both", _("Les deux modules")
+        BOTH = "both", _("Plusieurs modules")
         OTHER = "other", _("Autre besoin")
 
     full_name = models.CharField(_("nom complet"), max_length=150)

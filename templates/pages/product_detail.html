@@ -17,7 +17,7 @@
       </div>
       <div class="btn-row" style="margin-top:1.5rem">
         <a class="btn btn--primary" href="{% url 'contact' %}?interet={{ product.key }}">{% translate "Demander une démonstration" %}</a>
-        <a class="btn btn--ghost" href="{% url 'products' %}">{% translate "Voir toutes les solutions" %}</a>
+        <a class="btn btn--ghost" href="{% url 'products' %}">{% translate "Voir tous nos modules" %}</a>
       </div>
     </div>
     {% include "partials/product_mark.html" %}
@@ -53,10 +53,10 @@
   </div>
 </section>
 
-{% if others %}
 <section class="section">
   <div class="wrap">
-    <div class="narrow"><h2>{% translate "L'autre module" %}</h2></div>
+    {% if others %}
+    <div class="narrow"><h2>{% translate "Les autres modules" %}</h2></div>
     <div class="grid grid--2" style="margin-top:1.8rem">
       {% for p in others %}
       <article class="product-card">
@@ -67,8 +67,12 @@
       </article>
       {% endfor %}
     </div>
+    {% endif %}
+
+    <div class="btn-row module-all">
+      <a class="btn btn--ghost" href="{% url 'products' %}">{% translate "Voir tous nos modules" %}</a>
+    </div>
   </div>
 </section>
-{% endif %}
 
 {% endblock %}

@@ -11,13 +11,13 @@ HERO = {
     "eyebrow": _("Logiciels de conformité pour les banques d'Afrique de l'Ouest"),
     "title": _("Vos données clients sont votre premier risque de conformité."),
     "subtitle": (
-        _("Konformix industrialise deux chantiers que les banques de l'UEMOA "
+        _("Konformix industrialise les chantiers que les banques de l'UEMOA "
         "traitent encore sous Excel : la fiabilisation des dossiers KYC et la "
         "surveillance des clients et des transactions. Conçu à Dakar, pour les "
         "exigences de la BCEAO et du GIABA.")
     ),
     "cta_primary": _("Demander une démonstration"),
-    "cta_secondary": _("Voir les deux modules"),
+    "cta_secondary": _("Voir nos modules"),
 }
 
 TRUST_STATS = [
