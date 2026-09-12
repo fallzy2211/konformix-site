@@ -136,9 +136,17 @@ ul, ol { margin: 0 0 1.1em; padding-left: 1.2em; }
 /* ---------- En-tête ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(8, 12, 23, .82);
-  backdrop-filter: saturate(150%) blur(10px);
-  border-bottom: 1px solid var(--line);
+  /* Verre depoli : le contenu defile visiblement dessous, mais floute assez
+     pour que les libelles gardent leur contraste. */
+  background: rgba(8, 12, 23, .55);
+  backdrop-filter: saturate(170%) blur(18px);
+  -webkit-backdrop-filter: saturate(170%) blur(18px);
+  border-bottom: 1px solid rgba(31, 42, 64, .8);
+}
+/* Sans flou d'arriere-plan, la transparence rendrait le texte illisible :
+   on retombe alors sur un fond presque opaque. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .site-header { background: rgba(8, 12, 23, .94); }
 }
 .site-header__inner {
   display: flex; align-items: center; gap: 1.5rem;
@@ -183,6 +191,8 @@ ul, ol { margin: 0 0 1.1em; padding-left: 1.2em; }
   .nav-toggle { display: block; }
   .nav {
     position: absolute; inset: 68px 0 auto; flex-direction: column; align-items: stretch;
+    /* Le panneau deroulant recouvre le contenu : il reste opaque, sans quoi
+       le heros se lit derriere les libelles du menu. */
     gap: 0; background: var(--surface); border-bottom: 1px solid var(--line);
     padding: .5rem var(--gutter) 1.25rem; box-shadow: var(--shadow-md);
   }
@@ -744,9 +754,14 @@ textarea.field { resize: vertical; min-height: 100px; }
 /* ---------- En-tete au defilement ---------- */
 .site-header { transition: background .25s, box-shadow .25s, border-color .25s; }
 .site-header.is-scrolled {
-  background: rgba(5, 8, 15, .92);
+  background: rgba(5, 8, 15, .68);
+  backdrop-filter: saturate(180%) blur(22px);
+  -webkit-backdrop-filter: saturate(180%) blur(22px);
   border-bottom-color: var(--line-strong);
   box-shadow: 0 10px 30px -22px rgba(0, 0, 0, .95);
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .site-header.is-scrolled { background: rgba(5, 8, 15, .97); }
 }
 
 /* ---------- Soulignement des liens de navigation ---------- */
