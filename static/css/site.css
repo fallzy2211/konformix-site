@@ -813,3 +813,20 @@ textarea.field { resize: vertical; min-height: 100px; }
 .js-anim .reveal.s1 { transition-delay: .07s }
 .js-anim .reveal.s2 { transition-delay: .14s }
 .js-anim .reveal.s3 { transition-delay: .21s }
+
+/* ---------- Les deux modules cote a cote (page Solutions) ---------- */
+.product-duo { align-items: stretch; gap: clamp(1.2rem, 3vw, 2rem); }
+.product-card--duo {
+  align-items: center;
+  text-align: center;
+  padding-block: clamp(1.8rem, 4vw, 2.6rem);
+}
+.product-card--duo h2 { font-family: var(--font-display); font-weight: 500; margin: 0; }
+.product-card--duo p { color: var(--text-muted); max-width: 46ch; margin: 0; }
+.product-card--duo .product-card__kicker { color: var(--accent); }
+.product-card--duo .btn-row { justify-content: center; margin-top: auto; padding-top: 1.4rem; }
+.product-mark--compact { width: min(100%, 236px); margin-bottom: .4rem; }
+.product-duo__note {
+  margin: 2rem auto 0; max-width: 68ch; text-align: center;
+  font-size: .9rem; color: var(--text-muted);
+}

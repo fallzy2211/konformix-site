@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: konformix-site\n"
-"POT-Creation-Date: 2026-09-11 19:37+0000\n"
+"POT-Creation-Date: 2026-09-12 13:47+0000\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -248,7 +248,7 @@ msgstr "Your customer data is your first compliance risk."
 msgid "Konformix industrialise deux chantiers que les banques de l'UEMOA traitent encore sous Excel : la fiabilisation des dossiers KYC et la surveillance des clients et des transactions. Conçu à Dakar, pour les exigences de la BCEAO et du GIABA."
 msgstr "Konformix industrialises two areas that WAEMU banks still handle in Excel: KYC file remediation and customer and transaction monitoring. Designed in Dakar, for the requirements of the BCEAO and GIABA."
 
-#: core/content.py:19 templates/pages/contact.html:14 templates/pages/product_detail.html:18
+#: core/content.py:19 templates/pages/contact.html:14 templates/pages/product_detail.html:19
 msgid "Demander une démonstration"
 msgstr "Request a demonstration"
 
@@ -752,7 +752,7 @@ msgstr "personal data policy"
 msgid "Envoyer ma demande"
 msgstr "Send my request"
 
-#: templates/pages/contact.html:102 templates/pages/product_detail.html:40
+#: templates/pages/contact.html:102 templates/pages/product_detail.html:43
 msgid "Questions fréquentes"
 msgstr "Frequently asked questions"
 
@@ -764,123 +764,123 @@ msgstr "Tell us briefly about your context. We get back to you within one busine
 msgid "Notre point d'entrée habituel : vous nous transmettez un extrait anonymisé de votre référentiel client, nous vous remettons sous deux semaines un rapport chiffré de sa qualité. Sans engagement, et exploitable même si vous ne poursuivez pas avec nous."
 msgstr "Our usual starting point: you send us an anonymised extract of your customer master file, and within two weeks we hand you a quantified report on its quality. No commitment, and usable even if you do not continue with us."
 
-#: templates/pages/home.html:24
+#: templates/pages/home.html:25
 msgid "Fiabilité du référentiel"
 msgstr "Master file reliability"
 
-#: templates/pages/home.html:29
+#: templates/pages/home.html:30
 msgid "score global"
 msgstr "overall score"
 
-#: templates/pages/home.html:30
+#: templates/pages/home.html:31
 msgid "pts / trimestre"
 msgstr "pts / quarter"
 
-#: templates/pages/home.html:36
+#: templates/pages/home.html:37
 msgid "Bénéficiaires effectifs renseignés"
 msgstr "Beneficial owners recorded"
 
-#: templates/pages/home.html:36
+#: templates/pages/home.html:37
 msgid "critique"
 msgstr "critical"
 
-#: templates/pages/home.html:37
+#: templates/pages/home.html:38
 msgid "Dossiers mis à jour"
 msgstr "Files updated"
 
-#: templates/pages/home.html:37
+#: templates/pages/home.html:38
 msgid "mois"
 msgstr "months"
 
-#: templates/pages/home.html:37
+#: templates/pages/home.html:38
 msgid "à suivre"
 msgstr "to watch"
 
-#: templates/pages/home.html:38
+#: templates/pages/home.html:39
 msgid "Doublons clients résolus"
 msgstr "Duplicate customers resolved"
 
-#: templates/pages/home.html:38
+#: templates/pages/home.html:39
 msgid "conforme"
 msgstr "compliant"
 
-#: templates/pages/home.html:43
+#: templates/pages/home.html:44
 msgid "Campagne « BE personnes morales »"
 msgstr "“Corporate beneficial owners” campaign"
 
-#: templates/pages/home.html:43
+#: templates/pages/home.html:44
 msgid "agences en retard"
 msgstr "branches behind schedule"
 
-#: templates/pages/home.html:55
+#: templates/pages/home.html:56
 msgid "Source"
 msgstr "Source"
 
-#: templates/pages/home.html:69
+#: templates/pages/home.html:70
 msgid "Le constat"
 msgstr "The situation"
 
-#: templates/pages/home.html:89
+#: templates/pages/home.html:90
 msgid "Nos deux modules"
 msgstr "Our two modules"
 
-#: templates/pages/home.html:90
+#: templates/pages/home.html:91
 msgid "Une plateforme, deux chantiers qui se renforcent"
 msgstr "One platform, two efforts that reinforce each other"
 
-#: templates/pages/home.html:102 templates/pages/product_detail.html:15 templates/pages/products.html:27
+#: templates/pages/home.html:103 templates/pages/product_detail.html:16
 msgid "Résultat visé"
 msgstr "Target outcome"
 
-#: templates/pages/home.html:104 templates/pages/product_detail.html:63
+#: templates/pages/home.html:105 templates/pages/product_detail.html:66
 msgid "Découvrir"
 msgstr "Discover"
 
-#: templates/pages/home.html:115
+#: templates/pages/home.html:116
 msgid "Pourquoi nous"
 msgstr "Why us"
 
-#: templates/pages/home.html:116
+#: templates/pages/home.html:117
 msgid "Ce qui nous distingue des plateformes internationales"
 msgstr "What sets us apart from international platforms"
 
-#: templates/pages/home.html:133 templates/partials/footer.html:20
+#: templates/pages/home.html:134 templates/partials/footer.html:20
 msgid "Notre démarche"
 msgstr "Our approach"
 
-#: templates/pages/home.html:134
+#: templates/pages/home.html:135
 msgid "Des résultats mesurables dès la deuxième semaine"
 msgstr "Measurable results from the second week"
 
-#: templates/pages/home.html:155
+#: templates/pages/home.html:156
 msgid "À qui nous parlons"
 msgstr "Who we talk to"
 
-#: templates/pages/home.html:156
+#: templates/pages/home.html:157
 msgid "Quatre interlocuteurs, un même besoin de preuve"
 msgstr "Four counterparts, one shared need for proof"
 
-#: templates/pages/home.html:174
+#: templates/pages/home.html:175
 msgid "Commençons par mesurer, pas par vendre."
 msgstr "Let's start by measuring, not by selling."
 
-#: templates/pages/home.html:180
+#: templates/pages/home.html:181
 msgid "Demander le diagnostic"
 msgstr "Request the assessment"
 
-#: templates/pages/home.html:17
+#: templates/pages/home.html:18
 msgid "Diagnostic de fiabilité de votre référentiel client livré en deux semaines, sans engagement."
 msgstr "Reliability assessment of your customer master file delivered in two weeks, with no commitment."
 
-#: templates/pages/home.html:92
+#: templates/pages/home.html:93
 msgid "Kontrol assainit la donnée ; Vigil s'en sert pour produire des alertes crédibles. Les deux modules fonctionnent séparément, mais l'un décuple la valeur de l'autre."
 msgstr "Kontrol cleans up the data; Vigil uses it to produce credible alerts. Both modules work on their own, but each multiplies the value of the other."
 
-#: templates/pages/home.html:136
+#: templates/pages/home.html:137
 msgid "Nous ne vendons pas un projet de dix-huit mois. Chaque étape produit un livrable exploitable, y compris si vous décidez de ne pas poursuivre."
 msgstr "We do not sell an eighteen-month project. Every stage produces a usable deliverable, including if you decide not to go further."
 
-#: templates/pages/home.html:176
+#: templates/pages/home.html:177
 msgid "Envoyez-nous un extrait anonymisé de votre référentiel client. Nous vous remettons sous deux semaines un diagnostic chiffré de sa fiabilité — sans engagement de votre part."
 msgstr "Send us an anonymised extract of your customer master file. Within two weeks we hand you a quantified assessment of its reliability — with no commitment on your part."
 
@@ -976,15 +976,15 @@ msgstr "Thirty-six months from the last contact, unless a contractual relationsh
 msgid "Les données traitées dans le cadre de nos prestations logicielles font l'objet d'un contrat de sous-traitance distinct. Elles restent hébergées sur l'infrastructure de l'établissement client ou dans un centre de données de la région, selon la configuration retenue, et ne transitent jamais par ce site."
 msgstr "Data processed as part of our software services is covered by a separate processing agreement. It remains hosted on the client institution's infrastructure or in a data centre in the region, depending on the chosen configuration, and never passes through this site."
 
-#: templates/pages/product_detail.html:19
+#: templates/pages/product_detail.html:20
 msgid "Voir toutes les solutions"
 msgstr "See all solutions"
 
-#: templates/pages/product_detail.html:26
+#: templates/pages/product_detail.html:29
 msgid "Fonctionnalités"
 msgstr "Features"
 
-#: templates/pages/product_detail.html:41
+#: templates/pages/product_detail.html:44
 msgid "Ce que nous demandent les directions de la conformité"
 msgstr "What compliance departments ask us"
 
@@ -992,27 +992,19 @@ msgstr "What compliance departments ask us"
 msgid "Konformix Kontrol fiabilise les données KYC, Konformix Vigil profile les clients et surveille les transactions. Deux modules calibrés sur la réglementation BCEAO."
 msgstr "Konformix Kontrol makes KYC data reliable, Konformix Vigil profiles customers and monitors transactions. Two modules calibrated on BCEAO regulation."
 
-#: templates/pages/products.html:41
-msgid "Fiche détaillée"
-msgstr "Detailed sheet"
-
-#: templates/pages/products.html:42
-msgid "Demander une démo de"
-msgstr "Request a demo of"
-
-#: templates/pages/products.html:51
+#: templates/pages/products.html:43
 msgid "Déploiement"
 msgstr "Roll-out"
 
-#: templates/pages/products.html:52
+#: templates/pages/products.html:44
 msgid "Comment se déroule un projet Konformix"
 msgstr "How a Konformix project unfolds"
 
-#: templates/pages/products.html:71
+#: templates/pages/products.html:63
 msgid "Une démonstration sur vos propres données"
 msgstr "A demonstration on your own data"
 
-#: templates/pages/products.html:74
+#: templates/pages/products.html:66
 msgid "Nous contacter"
 msgstr "Contact us"
 
@@ -1140,7 +1132,7 @@ msgstr "We built the tool we wish we had had."
 msgid "L'équipe fondatrice"
 msgstr "The founding team"
 
-#: templates/pages/home.html:35
+#: templates/pages/home.html:36
 msgid "Complétude des pièces d'identité"
 msgstr "Completeness of identity documents"
 
@@ -1152,7 +1144,7 @@ msgstr "To be completed: company name and address of the host."
 msgid "Conformément à la loi n°2008-12 du 25 janvier 2008 sur la protection des données à caractère personnel au Sénégal, vous disposez d'un droit d'accès, de rectification, d'opposition et de suppression. Pour l'exercer, écrivez à"
 msgstr "Under Senegalese law no. 2008-12 of 25 January 2008 on the protection of personal data, you have a right of access, rectification, objection and deletion. To exercise it, write to"
 
-#: templates/pages/product_detail.html:56
+#: templates/pages/product_detail.html:59
 msgid "L'autre module"
 msgstr "The other module"
 
@@ -1160,7 +1152,7 @@ msgstr "The other module"
 msgid "Deux logiciels pour un dispositif de conformité qui tient devant l'inspection"
 msgstr "Two software products for a compliance framework that holds up to inspection"
 
-#: templates/pages/products.html:72
+#: templates/pages/products.html:64
 msgid "Nous préparons la démonstration à partir d'un extrait anonymisé de votre référentiel, pas d'un jeu de données fictif."
 msgstr "We build the demonstration from an anonymised extract of your own master file, not from a fictitious data set."
 
@@ -1195,3 +1187,17 @@ msgstr "penalties"
 #: templates/partials/chart_sanctions.html:75
 msgid "Amendes"
 msgstr "Penalties"
+
+#: templates/pages/products.html:29
+msgid "Voir la fiche détaillée"
+msgstr "See the detailed sheet"
+
+#: templates/pages/products.html:35
+msgid "Chaque fiche détaille les fonctionnalités du module, le résultat visé et les questions que nous posent les directions de la conformité."
+msgstr "Each sheet details the module's features, its target outcome and the questions compliance departments ask us."
+
+#~ msgid "Fiche détaillée"
+#~ msgstr "Detailed sheet"
+
+#~ msgid "Demander une démo de"
+#~ msgstr "Request a demo of"

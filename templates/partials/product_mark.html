@@ -4,7 +4,7 @@ Le trace est propre a chaque module : bouclier note pour Kontrol, radar de
 surveillance pour Vigil. La lueur est decorative (aria-hidden) et s'ajoute
 toujours a un trace lisible, conformement a la charte.
 {% endcomment %}
-<div class="product-mark product-mark--{{ product.key }}" aria-hidden="true">
+<div class="product-mark product-mark--{{ product.key }}{% if compact %} product-mark--compact{% endif %}" aria-hidden="true">
   <span class="product-mark__halo"></span>
   {% if product.key == "kontrol" %}
   <svg class="product-mark__art" viewBox="0 0 200 200" role="presentation" focusable="false">

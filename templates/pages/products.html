@@ -16,34 +16,26 @@
   </div>
 </section>
 
-{% for p in products %}
-<section class="section {% cycle '' 'section--alt' %}">
+<section class="section">
   <div class="wrap">
-    <div class="narrow">
-      <p class="eyebrow"><svg class="icon icon--inline" aria-hidden="true"><use href="#i-{{ p.icon }}"></use></svg>{{ p.kicker }}</p>
-      <h2>{{ p.name }}</h2>
-      <p class="lede">{{ p.summary }}</p>
-      <div class="product-card__outcome" style="max-width:62ch">
-        <strong>{% translate "Résultat visé" %} :</strong> {{ p.outcome }}
-      </div>
-    </div>
-
-    <ul class="feature-list" style="margin-top:2.4rem">
-      {% for f in p.features %}
-      <li>
-        <h4><svg class="icon icon--feature" aria-hidden="true"><use href="#i-{{ f.icon }}"></use></svg>{{ f.title }}</h4>
-        <p>{{ f.text }}</p>
-      </li>
+    <div class="grid grid--2 product-duo">
+      {% for p in products %}
+      <article class="product-card product-card--duo">
+        {% include "partials/product_mark.html" with product=p compact=1 %}
+        <span class="product-card__kicker">{{ p.kicker }}</span>
+        <h2>{{ p.name }}</h2>
+        <p>{{ p.summary }}</p>
+        <div class="btn-row" style="margin-top:1.4rem">
+          <a class="btn btn--primary" href="{% url 'product_detail' p.key %}">{% translate "Voir la fiche détaillée" %}</a>
+        </div>
+      </article>
       {% endfor %}
-    </ul>
-
-    <div class="btn-row" style="margin-top:2rem">
-      <a class="btn btn--primary" href="{% url 'product_detail' p.key %}">{% translate "Fiche détaillée" %}</a>
-      <a class="btn btn--ghost" href="{% url 'contact' %}?interet={{ p.key }}">{% translate "Demander une démo de" %} {{ p.name }}</a>
     </div>
+    <p class="product-duo__note">
+      {% blocktranslate %}Chaque fiche détaille les fonctionnalités du module, le résultat visé et les questions que nous posent les directions de la conformité.{% endblocktranslate %}
+    </p>
   </div>
 </section>
-{% endfor %}
 
 <section class="section section--ink">
   <div class="wrap">
